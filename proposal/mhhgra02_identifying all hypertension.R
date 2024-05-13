@@ -156,4 +156,3 @@ cp1_encounter_check = cp1 %>%
   mutate(criterion1_date_minus549 = criterion1_date - days(549)) %>% 
   mhhgra_encounter_check_supreme(.) %>% 
   dplyr::filter(n>=1)
-

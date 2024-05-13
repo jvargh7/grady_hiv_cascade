@@ -1,8 +1,40 @@
 rm(list=ls());gc();source(".Rprofile")
 
+cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS")) %>% 
+  rename(detection_date = criterion2_date,
+         criterion1_date = contact_date
+         ) %>% 
+  group_by(mrn) %>% 
+  dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
+  ungroup() %>% 
+  dplyr::select(mrn,criterion1_date,detection_date) %>% 
+  rename(earliest_detection_date = detection_date)
+
+# Denominators for each year
+cp1 %>% 
+  mutate(detection_year = lubridate::year(earliest_detection_date))  %>% 
+  arrange(detection_year) %>% 
+  group_by(detection_year) %>% 
+  summarize(n = n()) %>% 
+  mutate(cumulative_counts = cumsum(n)) %>% 
+  ungroup()
+
+
+# Filter to only records on or after earliest_detection_date
+
 ############################# Data Prepared ##############################
-dr_hussen_encounter_table <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS"))
-dr_hussen_bp_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_bp_0217.RDS"))
+dr_hussen_encounter_table <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS")) %>% 
+  left_join(cp1 %>% 
+              dplyr::select(mrn,earliest_detection_date),
+            by="mrn") %>% 
+  dplyr::filter(contact_date >= earliest_detection_date)
+
+dr_hussen_bp_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_bp_0217.RDS")) %>% 
+  left_join(cp1 %>% 
+              dplyr::select(mrn,earliest_detection_date),
+            by="mrn") %>% 
+  dplyr::filter(contact_date >= earliest_detection_date)
+
 
 dr_hussen_bp_0217 %>% 
   dplyr::filter(mrn %in% cp1$mrn) %>% 
@@ -35,10 +67,7 @@ htn_medication_dispensed <- readRDS(paste0(path_grady_hiv_cascade_folder,"/worki
               distinct(drug_name,.keep_all=TRUE),
             by = c("drug_name" = "drug_name"))
 
-cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS")) %>% 
-  group_by(mrn) %>% 
-  dplyr::filter(contact_date == min(contact_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
-  ungroup()
+
 
 
 ############################# Join Data ##############################
@@ -60,24 +89,59 @@ htn_medication_all <- bind_rows(htn_medication_ordered %>%
                                                 drug_class) %>% 
                                   rename(contact_date = dispensed_date) %>% 
                                   mutate(type = "Dispensed")) %>% 
-  distinct(person_key,mrn,contact_date,drug_name,drug_class,.keep_all=TRUE)
+  distinct(person_key,mrn,contact_date,drug_name,drug_class,.keep_all=TRUE) %>% 
+  left_join(cp1 %>% 
+              dplyr::select(mrn,earliest_detection_date),
+            by="mrn") %>% 
+  dplyr::filter(contact_date >= earliest_detection_date)
 
 # join together
 encounter_data <- dr_hussen_encounter_table %>% 
-  dplyr::select(mrn, person_key, contact_date)  %>% 
+  distinct(mrn, contact_date)  %>% 
   full_join(dr_hussen_bp_0217 %>% 
-              dplyr::select(person_key,mrn,contact_date,sbp,dbp),
+              dplyr::select(mrn,contact_date,sbp,dbp),
             by = c("mrn", "contact_date"),
             relationship = "many-to-many") %>% 
-  full_join(htn_medication_all,
+  full_join(htn_medication_all %>% 
+              dplyr::select(mrn,contact_date,drug_name,drug_class,type),
             by = c("mrn", "contact_date"),
             relationship = "many-to-many") %>% 
   mutate(treat = case_when(is.na(drug_name) ~  0, TRUE ~ 1)) %>% 
-  mutate(control = case_when(sbp < 140 & dbp < 90 ~ 1, TRUE ~ 0)) %>% 
+  mutate(control = case_when(sbp < 140 & dbp < 90 ~ 1, 
+                             sbp >= 140 | dbp >= 90 ~ 0,
+                             TRUE ~ NA_real_)) %>% 
   dplyr::filter(mrn %in% cp1$mrn) %>% 
-  distinct(person_key,mrn,contact_date,sbp,dbp,drug_name,
-           drug_class,type,treat,control)
+  distinct(mrn,contact_date,sbp,dbp,drug_name,
+           drug_class,type,treat,control) 
 
+
+treat_ever <- encounter_data %>% 
+  group_by(mrn,contact_date) %>% 
+  summarize(treat_date = sum(treat,na.rm=TRUE)) %>%
+  ungroup() %>% 
+  group_by(mrn) %>% 
+  summarize(treat_date_count = sum(treat_date),
+            treat_latest = max(contact_date)) %>% 
+  mutate(treat_ever = case_when(treat_date_count >= 1 ~ 1,
+                                   TRUE ~ 0)) %>% 
+  ungroup() 
+
+
+
+control_latest = encounter_data %>% 
+  dplyr::filter(!is.na(control)) %>% 
+  group_by(mrn) %>% 
+  dplyr::filter(contact_date == max(contact_date)) %>% 
+  ungroup() %>% 
+  group_by(mrn,contact_date) %>% 
+  summarize(control_latest = sum(control,na.rm=TRUE)) %>% 
+  mutate(control_latest = case_when(control_latest >= 1 ~ 1,
+                                    TRUE ~ 0)) %>% 
+  rename(control_date = contact_date)
+
+cascade <- treat_ever %>% 
+  full_join(control_latest,
+            by=c("mrn"))
 
 #treat_percent <-
 
@@ -85,22 +149,6 @@ encounter_data <- dr_hussen_encounter_table %>%
 
 
 #############################################################################
-
-encounter_data_new <- encounter_data %>% 
-    dplyr::select(person_key,mrn,contact_date,treat,control) %>% 
-  group_by(person_key,mrn,contact_date) %>% 
-  summarize(treat_new = sum(treat,na.rm=TRUE),
-            control_new = sum(control,na.rm=TRUE)) %>%
-  ungroup() %>% 
-  group_by(person_key,mrn) %>% 
-  mutate(treat_new2 = sum(treat_new),
-            control_new2 = case_when(contact_date == max(contact_date) ~ control_new,
-                                    TRUE ~ NA_real_)) %>% 
-  dplyr::filter(contact_date == max(contact_date)) %>% 
-  mutate(treat_new = case_when(treat_new >= 1 ~ 1,
-                               TRUE ~ 0)) %>%
-  mutate(control_new = case_when(control_new >= 1 ~ 1,
-                               TRUE ~ 0))
 
 
 ############## NEED MODIFY ############
