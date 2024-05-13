@@ -10,6 +10,10 @@ if(Sys.info()["user"]=="JVARGH7"){
   path_grady_hiv_cascade_folder <- "C:/Cloud/OneDrive - Emory University/Papers/GRADY HIV Care Cascade"
 }
 
+if(Sys.info()["user"]=="JGUO258"){
+  path_grady_hiv_cascade_folder <- "C:/Users/JGUO258/OneDrive - Emory/GRADY HIV Care Cascade"
+}
+
 
 
 options(survey.adjust.domain.lonely=TRUE)
