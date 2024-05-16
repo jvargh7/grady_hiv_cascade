@@ -9,7 +9,16 @@ cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS"))
   dplyr::filter(contact_date == min(contact_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
   ungroup()
 
-dr_hussen_cohort_0216 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_cohort_0216.RDS"))
+cp_dm <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp2_diabetes.RDS")) 
+
+dr_hussen_cohort_0216 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_cohort_0216.RDS")) %>% 
+  dplyr::filter(birth_sex == "Male") %>% 
+  mutate(cp1 = case_when(mrn %in% cp1$mrn ~ 1,
+                         TRUE ~ 0),
+         cp_dm = case_when(mrn%in%cp_dm$mrn ~ 1,
+                           TRUE ~ 0))
+
+
 sexual_orientation <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/sexual orientation.RDS"))
 
 dr_hussen_cohort_0216 %>% 

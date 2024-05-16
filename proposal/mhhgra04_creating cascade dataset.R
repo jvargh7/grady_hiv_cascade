@@ -11,6 +11,8 @@ cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS"))
   rename(earliest_detection_date = detection_date)
 
 
+summary(dr_hussen_encounter_table$contact_date)
+
 dr_hussen_encounter_table <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS")) %>% 
   left_join(cp1 %>% 
               dplyr::select(mrn,earliest_detection_date),

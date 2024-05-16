@@ -25,9 +25,7 @@ dr_hussen_0217 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN_021
   rename_at(vars(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_0217") %>% dplyr::select(variable) %>% pull()),
             ~readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_0217") %>% dplyr::select(new_var) %>% pull()) %>% 
   mutate(dt_0 = lubridate::dmy(dt_0),
-         birth_date = lubridate::dmy(birth_date),
-         gender = case_when(is.na(gender) ~ birth_sex,
-                            TRUE ~ gender)) %>% 
+         birth_date = lubridate::dmy(birth_date)) %>% 
   rename(alive = status) %>% 
   mutate(alive = case_when(alive == "Alive" ~ 1,
                            TRUE ~ 0)) %>% 
@@ -81,9 +79,7 @@ dr_hussen_cohort_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUS
   rename_at(vars(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_COHORT_0216") %>% dplyr::select(variable) %>% pull()),
             ~readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_COHORT_0216") %>% dplyr::select(new_var) %>% pull()) %>% 
   mutate(dt_0 = lubridate::dmy(dt_0),
-         birth_date = lubridate::dmy(birth_date),
-         gender = case_when(is.na(gender) ~ birth_sex,
-                            TRUE ~ gender)) %>% 
+         birth_date = lubridate::dmy(birth_date)) %>% 
   rename(alive = status) %>% 
   mutate(alive = case_when(alive == "Alive" ~ 1,
                            TRUE ~ 0)) %>% 
