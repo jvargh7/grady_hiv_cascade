@@ -53,11 +53,15 @@ total <- bind_rows(cp1,
 
   
 table1_data <- total %>% 
-  left_join(dr_hussen_0217, 
+  left_join(dr_hussen_0217 %>% 
+              dplyr::select(mrn, dt_0_age, birth_sex, race, iv_drug_user, 
+                            alcohol_use, insurance, bmi), 
             by = "mrn") %>% 
-  left_join(sexual_orientation,
+  left_join(sexual_orientation %>% 
+              dplyr::select(mrn, hivrf_msm),
             by = "mrn") %>% 
-  dplyr::filter(birth.sex == "Male") %>% 
+  dplyr::filter(birth_sex == "Male") %>% 
+  distinct(mrn, .keep_all = TRUE) %>% 
   mutate(age_category = case_when(
       between(dt_0_age, 18, 29) ~ "18-29",
       between(dt_0_age, 30, 44) ~ "30-44",
@@ -80,10 +84,10 @@ library(gtsummary)
 library(labelled)
 
 var_label(table1_data) <- list(
-  dt_0_age = "Age in years",
-  age_category = "Age (%)",
-  race_black = "Black Males",
-  hivrf_msm = "Sexual orientation",
+  bmi = "Body Mass Index",
+  age_category = "Age in years",
+  is_black = "Black Males",
+  is_smm = "Sexual Minority Men",
   iv_drug_user = "Intravenous drug user",
   alcohol_use = "Alcohol user",
   insurance = "Insurance coverage",
@@ -92,11 +96,9 @@ var_label(table1_data) <- list(
  
 
 table_one <- table1_data |>
-  select("cp1", "race_black", "hivrf_msm", "insurance", "dt_0_age", "iv_drug_user", 
-         "alcohol_use", "age_category") |>
+  select("cp1", "is_black", "is_smm", "insurance", "age_category", "bmi", 
+         "iv_drug_user", "alcohol_use") |>
   tbl_summary(by = cp1, 
-              type = list(c(dt_0_age, hba1c, ldl, hdl, ast, serum_creatinine, 
-                            glucose, alt, fastingglucose) ~ "continuous"),
               statistic = list(
                 all_continuous() ~ "{mean} ({sd})",
                 all_categorical() ~ "{n} ({p}%)"
@@ -104,12 +106,6 @@ table_one <- table1_data |>
               digits = all_continuous() ~ 2,
               missing_text = "(Missing)") |>
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Hypertension Status**") |>
-  add_overall() 
-
-saveRDS(
-  table_one,
-  file = paste0(path_grady_hiv_cascade_folder,"grady_hiv_table1.RDS")
-)
-
-
-
+  add_overall() |> 
+  as_gt() |> 
+  gt::gtsave(filename = paste0(path_grady_hiv_cascade_folder,"/figures/grady_hiv_htn_table1.docx"))
