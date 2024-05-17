@@ -26,15 +26,16 @@ noncp1 <- dr_hussen_encounter_table %>%
   distinct(mrn,contact_date)
 
 # non-cp1 + cp1
-
-# N = 4834 ~ non-htn + htn Males
-df <- bind_rows(cascade,
-                noncp1 %>% rename(detection_date = contact_date)) %>% 
+total <- bind_rows(cascade,
+                   noncp1 %>% rename(detection_date = contact_date)) %>% 
   mutate(cp1 = case_when(
     mrn %in% cp1$mrn ~ 1,
-    TRUE ~ 0)) %>% 
+    TRUE ~ 0))
+
+# N = 4834 ~ non-htn + htn Males
+total_population <- total %>% 
   left_join(dr_hussen_0217 %>% 
-              dplyr::select(mrn, dt_0_age, birth_sex, race, gender), 
+              dplyr::select(mrn, dt_0_age, birth_sex, race), 
             by = "mrn") %>% 
   left_join(sexual_orientation %>% 
               dplyr::select(mrn, hivrf_msm),
@@ -54,7 +55,11 @@ df <- bind_rows(cascade,
     is_smm = case_when(
       hivrf_msm == 1 ~ "Sexual Minority Men",
       hivrf_msm == NA ~ "",
-      TRUE ~ "Heterosexual Men")) %>%
+      TRUE ~ "Heterosexual Men"))
+
+###################################################################################
+# define groups
+df <- total_population %>%
   mutate(rasegrp = case_when(
     is_black == "Black" & is_smm == "Sexual Minority Men" ~ "Black Sexual Minority Men",
     is_black == "Black" & is_smm == "Heterosexual Men" ~ "Black Heterosexual Men",
@@ -62,10 +67,6 @@ df <- bind_rows(cascade,
     is_black == "Other Race" & is_smm == "Heterosexual Men" ~ "Non-Black Heterosexual Men",
     TRUE ~ "Unknown"
   ))
-
-###################################################################################
-# define groups
- 
 
 ################################################################
 age_all <- df %>% 
@@ -119,21 +120,21 @@ age_count_data <- age_all %>%
   left_join(age_tested, by = "age_category") %>%
   left_join(age_treated, by = "age_category") %>%
   left_join(age_controlled, by = "age_category") %>%
-  mutate(is_ltcutoff =case_when(all < strata_cutoff ~ NA_real_,
-                                TRUE ~ 1)) %>% 
+  group_by(age_category) %>%
   mutate(
-    a1 = (htn / all)*100*is_ltcutoff,
-    a2 = (tested / all)*100*is_ltcutoff,
-    a3 = (treated / all)*100*is_ltcutoff,
-    a4 = (controlled / all)*100*is_ltcutoff,
-    b1 = (htn / all)*100*is_ltcutoff,
-    b2 = (tested / htn)*100*is_ltcutoff,
-    b3 = (treated / tested)*100*is_ltcutoff,
-    b4 = (controlled / tested)*100*is_ltcutoff,
-    c1 = (1- tested / htn)*100*is_ltcutoff,
-    c2 = (1- treated / htn)*100*is_ltcutoff,
-    c3 = (1- controlled / htn)*100*is_ltcutoff
-  ) 
+    a1 = (htn / all)*100,
+    a2 = (tested / all)*100,
+    a3 = (treated / all)*100,
+    a4 = (controlled / all)*100,
+    b1 = (htn / all)*100,
+    b2 = (tested / htn)*100,
+    b3 = (treated / tested)*100,
+    b4 = (controlled / tested)*100,
+    c1 = (1- tested / htn)*100,
+    c2 = (1- treated / htn)*100,
+    c3 = (1- controlled / htn)*100
+  ) %>%
+  ungroup()
 
 ##############################################################
 rase_all <- df %>% 
@@ -186,98 +187,90 @@ race_sexo_count_data <- rase_all %>%
   left_join(rase_tested, by = "rasegrp") %>%
   left_join(rase_treated, by = "rasegrp") %>%
   left_join(rase_controlled, by = "rasegrp") %>%
-  mutate(is_ltcutoff =case_when(all < strata_cutoff ~ NA_real_,
-                                TRUE ~ 1)) %>%
+  group_by(rasegrp) %>%
   mutate(
-    a1 = (htn / all)*100*is_ltcutoff,
-    a2 = (tested / all)*100*is_ltcutoff,
-    a3 = (treated / all)*100*is_ltcutoff,
-    a4 = (controlled / all)*100*is_ltcutoff,
-    b1 = (htn / all)*100*is_ltcutoff,
-    b2 = (tested / htn)*100*is_ltcutoff,
-    b3 = (treated / tested)*100*is_ltcutoff,
-    b4 = (controlled / tested)*100*is_ltcutoff,
-    c1 = (1- tested / htn)*100*is_ltcutoff,
-    c2 = (1- treated / htn)*100*is_ltcutoff,
-    c3 = (1- controlled / htn)*100*is_ltcutoff
-  ) 
+    a1 = (htn / all)*100,
+    a2 = (tested / all)*100,
+    a3 = (treated / all)*100,
+    a4 = (controlled / all)*100,
+    b1 = (htn / all)*100,
+    b2 = (tested / htn)*100,
+    b3 = (treated / tested)*100,
+    b4 = (controlled / tested)*100,
+    c1 = (1- tested / htn)*100,
+    c2 = (1- treated / htn)*100,
+    c3 = (1- controlled / htn)*100
+  ) %>%
+  ungroup()
 
-# Age and Race combination -----------
-
-age_rase_all <- df %>% 
-  arrange(rasegrp,age_category) %>% 
-  group_by(rasegrp,age_category) %>% 
+##############################################################
+total_all <- df %>% 
   summarize(n = n()) %>% 
   mutate(all = n) %>% 
   dplyr::select(-n) %>% 
   ungroup()
 
-age_rase_htn <- df %>% 
+total_htn <- df %>% 
   dplyr::filter(cp1 == 1) %>%
-  arrange(rasegrp,age_category) %>% 
-  group_by(rasegrp,age_category) %>% 
   summarize(n = n()) %>% 
   mutate(htn = n) %>% 
   dplyr::select(-n) %>% 
   ungroup()
 
-age_rase_tested <- df %>%
+total_tested <- df %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1) %>%
-  arrange(rasegrp,age_category) %>% 
-  group_by(rasegrp,age_category) %>% 
   summarize(n = n()) %>% 
   mutate(tested = n) %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-age_rase_treated <- df %>%
+total_treated <- df %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1) %>%
-  arrange(rasegrp,age_category) %>% 
-  group_by(rasegrp,age_category) %>% 
   summarize(n = n()) %>% 
   mutate(treated = n) %>% 
   dplyr::select(-n) %>% 
   ungroup()
 
-age_rase_controlled <- df %>%
+total_controlled <- df %>%
   # dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1 & control_latest == 1) %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1 & control_latest == 1) %>%
-  arrange(rasegrp,age_category) %>% 
-  group_by(rasegrp,age_category) %>% 
   summarize(n = n()) %>% 
   mutate(controlled = n) %>% 
   dplyr::select(-n) %>% 
   ungroup()
 
-age_race_sexo_count_data <- age_rase_all %>%
-  left_join(age_rase_htn, by = c("rasegrp","age_category")) %>%
-  left_join(age_rase_tested, by = c("rasegrp","age_category"))%>%
-  left_join(age_rase_treated, by = c("rasegrp","age_category"))%>%
-  left_join(age_rase_controlled, by = c("rasegrp","age_category")) %>%
-  mutate(is_ltcutoff =case_when(all < strata_cutoff ~ NA_real_,
-                                TRUE ~ 1)) %>% 
+total_count_data <- total_all %>%
+  cross_join(total_htn) %>%
+  cross_join(total_tested) %>%
+  cross_join(total_treated) %>%
+  cross_join(total_controlled) %>%
   mutate(
-    a1 = (htn / all)*100*is_ltcutoff,
-    a2 = (tested / all)*100*is_ltcutoff,
-    a3 = (treated / all)*100*is_ltcutoff,
-    a4 = (controlled / all)*100*is_ltcutoff,
-    b1 = (htn / all)*100*is_ltcutoff,
-    b2 = (tested / htn)*100*is_ltcutoff,
-    b3 = (treated / tested)*100*is_ltcutoff,
-    b4 = (controlled / tested)*100*is_ltcutoff,
-    c1 = (1- tested / htn)*100*is_ltcutoff,
-    c2 = (1- treated / htn)*100*is_ltcutoff,
-    c3 = (1- controlled / htn)*100*is_ltcutoff
-  ) 
+    a1 = (htn / all)*100,
+    a2 = (tested / all)*100,
+    a3 = (treated / all)*100,
+    a4 = (controlled / all)*100,
+    b1 = (htn / all)*100,
+    b2 = (tested / htn)*100,
+    b3 = (treated / tested)*100,
+    b4 = (controlled / tested)*100,
+    c1 = (1- tested / htn)*100,
+    c2 = (1- treated / htn)*100,
+    c3 = (1- controlled / htn)*100
+  ) %>% 
+  mutate(group = "Total")
 
 
-bardata <- bind_rows(age_count_data %>% mutate(rasegrp = "Total") , 
-                     race_sexo_count_data %>% mutate(age_category = "Total"),
-                     age_race_sexo_count_data)
+bardata <- bind_rows(age_count_data %>% 
+                       rename(group = age_category), 
+                     race_sexo_count_data %>% 
+                       rename(group = rasegrp),
+                     total_count_data)
 
 
 saveRDS(bardata,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barchart_data.RDS"))
 
 
+write.xlsx(bardata,paste0(path_grady_hiv_cascade_folder,
+                          "/working/cleaned/barchart_data.xlsx"))
 
 
