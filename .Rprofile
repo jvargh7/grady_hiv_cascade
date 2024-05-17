@@ -14,7 +14,7 @@ if(Sys.info()["user"]=="JGUO258"){
   path_grady_hiv_cascade_folder <- "C:/Users/JGUO258/OneDrive - Emory/GRADY HIV Care Cascade"
 }
 
-
+strata_cutoff = 30
 
 options(survey.adjust.domain.lonely=TRUE)
 options(survey.lonely.psu="adjust")
