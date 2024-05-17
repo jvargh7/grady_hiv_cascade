@@ -125,4 +125,4 @@ dr_hussen_cohort_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUS
 saveRDS(dr_hussen_cohort_0216,paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_cohort_0216.RDS"))
 
 dr_hussen_cohort_0216 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_cohort_0216.RDS"))
-
+table(dr_hussen_cohort_0216$birth_sex)

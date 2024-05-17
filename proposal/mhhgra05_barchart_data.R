@@ -42,7 +42,7 @@ total_population <- total %>%
             by = "mrn") %>%
   dplyr::filter(birth_sex == "Male") %>% 
   distinct(mrn, .keep_all = TRUE) %>% 
-  mutate(rasegrp = case_when(
+  mutate(age_category = case_when(
     between(dt_0_age, 18, 29) ~ "18-29",
     between(dt_0_age, 30, 44) ~ "30-44",
     between(dt_0_age, 45, 64) ~ "45-64",
@@ -69,7 +69,7 @@ df <- total_population %>%
   ))
 
 ################################################################
-all <- df %>% 
+age_all <- df %>% 
   arrange(age_category) %>% 
   group_by(age_category) %>% 
   summarize(n = n()) %>% 
@@ -77,7 +77,7 @@ all <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-htn <- df %>% 
+age_htn <- df %>% 
   dplyr::filter(cp1 == 1) %>%
   arrange(age_category) %>% 
   group_by(age_category) %>% 
@@ -86,7 +86,7 @@ htn <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-tested <- df %>%
+age_tested <- df %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1) %>%
   arrange(age_category) %>% 
   group_by(age_category) %>% 
@@ -95,7 +95,7 @@ tested <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-treated <- df %>%
+age_treated <- df %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1) %>%
   arrange(age_category) %>% 
   group_by(age_category) %>% 
@@ -104,8 +104,10 @@ treated <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-controlled <- df %>%
-  dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1 & control_latest == 1) %>%
+# We may want to define control among people who are tested
+age_controlled <- df %>%
+  # dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1 & control_latest == 1) %>%
+  dplyr::filter(cp1 == 1 & bp_measured == 1 & control_latest == 1) %>%
   arrange(age_category) %>% 
   group_by(age_category) %>% 
   summarize(n = n()) %>% 
@@ -113,11 +115,11 @@ controlled <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-age_count_data <- all %>%
-  merge(htn, by = "age_category", all.x = TRUE) %>%
-  merge(tested, by = "age_category", all.x = TRUE) %>%
-  merge(treated, by = "age_category", all.x = TRUE) %>%
-  merge(controlled, by = "age_category", all.x = TRUE) %>%
+age_count_data <- age_all %>%
+  left_join(age_htn, by = "age_category") %>%
+  left_join(age_tested, by = "age_category") %>%
+  left_join(age_treated, by = "age_category") %>%
+  left_join(age_controlled, by = "age_category") %>%
   group_by(age_category) %>%
   mutate(
     a1 = (htn / all)*100,
@@ -135,7 +137,7 @@ age_count_data <- all %>%
   ungroup()
 
 ##############################################################
-all <- df %>% 
+rase_all <- df %>% 
   arrange(rasegrp) %>% 
   group_by(rasegrp) %>% 
   summarize(n = n()) %>% 
@@ -143,7 +145,7 @@ all <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-htn <- df %>% 
+rase_htn <- df %>% 
   dplyr::filter(cp1 == 1) %>%
   arrange(rasegrp) %>% 
   group_by(rasegrp) %>% 
@@ -152,7 +154,7 @@ htn <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-tested <- df %>%
+rase_tested <- df %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1) %>%
   arrange(rasegrp) %>% 
   group_by(rasegrp) %>% 
@@ -161,7 +163,7 @@ tested <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-treated <- df %>%
+rase_treated <- df %>%
   dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1) %>%
   arrange(rasegrp) %>% 
   group_by(rasegrp) %>% 
@@ -170,8 +172,9 @@ treated <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-controlled <- df %>%
-  dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1 & control_latest == 1) %>%
+rase_controlled <- df %>%
+  # dplyr::filter(cp1 == 1 & bp_measured == 1 & treat_ever == 1 & control_latest == 1) %>%
+  dplyr::filter(cp1 == 1 & bp_measured == 1 & control_latest == 1) %>%
   arrange(rasegrp) %>% 
   group_by(rasegrp) %>% 
   summarize(n = n()) %>% 
@@ -179,11 +182,11 @@ controlled <- df %>%
   dplyr::select(-n) %>% 
   ungroup()
 
-race_sexo_count_data <- all %>%
-  merge(htn, by = "rasegrp", all.x = TRUE) %>%
-  merge(tested, by = "rasegrp", all.x = TRUE) %>%
-  merge(treated, by = "rasegrp", all.x = TRUE) %>%
-  merge(controlled, by = "rasegrp", all.x = TRUE) %>%
+race_sexo_count_data <- rase_all %>%
+  left_join(rase_htn, by = "rasegrp") %>%
+  left_join(rase_tested, by = "rasegrp") %>%
+  left_join(rase_treated, by = "rasegrp") %>%
+  left_join(rase_controlled, by = "rasegrp") %>%
   group_by(rasegrp) %>%
   mutate(
     a1 = (htn / all)*100,
