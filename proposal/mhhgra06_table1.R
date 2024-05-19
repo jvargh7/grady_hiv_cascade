@@ -68,10 +68,15 @@ table1_data <- total %>%
       between(dt_0_age, 45, 64) ~ "45-64",
       dt_0_age >= 65 ~ ">= 65")) %>% 
   mutate(cp1 = if_else(cp1 == 1, "Hypertension", "No Hypertension")) %>% 
-  mutate(is_black = case_when(!is.na(race) == "black" ~ "Black",
-                              TRUE ~ "Other Race"),
-         is_smm = case_when(!is.na(hivrf_msm) == 1 ~ "Sexual Minority Men",
-                            TRUE ~ "Heterosexual Men"))
+  mutate(is_black = case_when(
+    race == "black" ~ "Black",
+    race == "unknown" ~ "Unknown",
+    TRUE ~ "Other Race"
+  ),
+  is_smm = case_when(
+    hivrf_msm == 1 ~ "Sexual Minority Men",
+    hivrf_msm == NA ~ "",
+    TRUE ~ "Heterosexual Men"))
 
 table1_data$age_category <- factor(
   table1_data$age_category,
