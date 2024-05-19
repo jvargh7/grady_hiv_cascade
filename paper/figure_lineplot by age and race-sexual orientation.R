@@ -31,7 +31,7 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
     theme_bw() +
     scale_color_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
     scale_y_continuous(limits=c(0,100),breaks=seq(0,100,20)) +
-    xlab("") +ylab("Proportion (%)") +
+    xlab("") +ylab("Percentage (%)") +
     theme(legend.position = "bottom",
           axis.text = element_text(size = 14),
           axis.title = element_text(size = 14),
@@ -46,7 +46,7 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
     theme_bw() +
     scale_color_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
     scale_y_continuous(limits=c(0,100),breaks=seq(0,100,20)) +
-    xlab("") +ylab("Proportion (%)") +
+    xlab("") +ylab("Percentage (%)") +
     theme(legend.position = "bottom",
           axis.text = element_text(size = 14),
           axis.title = element_text(size = 14),
@@ -61,7 +61,7 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
     theme_bw() +
     scale_color_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
     scale_y_continuous(limits=c(0,100),breaks=seq(0,100,20)) +
-    xlab("") +ylab("Proportion (%)") +
+    xlab("") +ylab("Percentage (%)") +
     theme(legend.position = "bottom",
           axis.text = element_text(size = 14),
           axis.title = element_text(size = 14),
@@ -76,7 +76,7 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
     theme_bw() +
     scale_color_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
     scale_y_continuous(limits=c(0,100),breaks=seq(0,100,20)) +
-    xlab("") +ylab("Proportion (%)") +
+    xlab("") +ylab("Percentage (%)") +
     theme(legend.position = "bottom",
           axis.text = element_text(size = 14),
           axis.title = element_text(size = 14),
