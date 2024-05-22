@@ -2,7 +2,7 @@ rm(list=ls());gc();source(".Rprofile")
 
 cp2 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp2_diabetes.RDS"))  %>% 
   group_by(mrn) %>% 
-  dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
+  dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_dm == 1 from here since it was added above 
   ungroup() %>% 
   rename(earliest_detection_date = detection_date)
 
@@ -121,12 +121,12 @@ age_count_data <- age_all %>%
     a3 = (treated / all)*100*is_ltcutoff,
     #a4 = (controlled / all)*100*is_ltcutoff,
     #b1 = (dm / all)*100*is_ltcutoff,
-    #b2 = (tested / htn)*100*is_ltcutoff,
+    #b2 = (tested / dm)*100*is_ltcutoff,
     #b3 = (treated / tested)*100*is_ltcutoff,
     #b4 = (controlled / tested)*100*is_ltcutoff,
-    #c1 = (1- tested / htn)*100*is_ltcutoff,
+    #c1 = (1- tested / dm)*100*is_ltcutoff,
     c2 = (1- treated / dm)*100*is_ltcutoff,
-    #c3 = (1- controlled / htn)*100*is_ltcutoff
+    #c3 = (1- controlled / dm)*100*is_ltcutoff
   ) 
 
 ##############################################################
@@ -188,12 +188,12 @@ race_sexo_count_data <- rase_all %>%
     a3 = (treated / all)*100*is_ltcutoff,
     #a4 = (controlled / all)*100*is_ltcutoff,
     #b1 = (dm / all)*100*is_ltcutoff,
-    #b2 = (tested / htn)*100*is_ltcutoff,
+    #b2 = (tested / dm)*100*is_ltcutoff,
     #b3 = (treated / tested)*100*is_ltcutoff,
     #b4 = (controlled / tested)*100*is_ltcutoff,
-    #c1 = (1- tested / htn)*100*is_ltcutoff,
+    #c1 = (1- tested / dm)*100*is_ltcutoff,
     c2 = (1- treated / dm)*100*is_ltcutoff,
-    #c3 = (1- controlled / htn)*100*is_ltcutoff
+    #c3 = (1- controlled / dm)*100*is_ltcutoff
   ) 
 
 # Age and Race combination -----------
@@ -211,7 +211,7 @@ age_rase_dm <- df %>%
   arrange(rasegrp,age_category) %>% 
   group_by(rasegrp,age_category) %>% 
   summarize(n = n()) %>% 
-  mutate(htn = n) %>% 
+  mutate(dm = n) %>% 
   dplyr::select(-n) %>% 
   ungroup()
 
@@ -245,24 +245,24 @@ age_rase_treated <- df %>%
 #   ungroup()
 
 age_race_sexo_count_data <- age_rase_all %>%
-  left_join(age_rase_htn, by = c("rasegrp","age_category")) %>%
-  left_join(age_rase_tested, by = c("rasegrp","age_category"))%>%
+  left_join(age_rase_dm, by = c("rasegrp","age_category")) %>%
+  #left_join(age_rase_tested, by = c("rasegrp","age_category"))%>%
   left_join(age_rase_treated, by = c("rasegrp","age_category"))%>%
-  left_join(age_rase_controlled, by = c("rasegrp","age_category")) %>%
+  #left_join(age_rase_controlled, by = c("rasegrp","age_category")) %>%
   mutate(is_ltcutoff =case_when(all < strata_cutoff ~ NA_real_,
                                 TRUE ~ 1)) %>% 
   mutate(
-    a1 = (htn / all)*100*is_ltcutoff,
-    a2 = (tested / all)*100*is_ltcutoff,
+    a1 = (dm / all)*100*is_ltcutoff,
+    #a2 = (tested / all)*100*is_ltcutoff,
     a3 = (treated / all)*100*is_ltcutoff,
-    a4 = (controlled / all)*100*is_ltcutoff,
-    b1 = (htn / all)*100*is_ltcutoff,
-    b2 = (tested / htn)*100*is_ltcutoff,
-    b3 = (treated / tested)*100*is_ltcutoff,
-    b4 = (controlled / tested)*100*is_ltcutoff,
-    c1 = (1- tested / htn)*100*is_ltcutoff,
-    c2 = (1- treated / htn)*100*is_ltcutoff,
-    c3 = (1- controlled / htn)*100*is_ltcutoff
+    #a4 = (controlled / all)*100*is_ltcutoff,
+    # #b1 = (dm / all)*100*is_ltcutoff,
+    # b2 = (tested / dm)*100*is_ltcutoff,
+    # b3 = (treated / tested)*100*is_ltcutoff,
+    # b4 = (controlled / tested)*100*is_ltcutoff,
+    # c1 = (1- tested / dm)*100*is_ltcutoff,
+    c2 = (1- treated / dm)*100*is_ltcutoff,
+    #c3 = (1- controlled / dm)*100*is_ltcutoff
   ) 
 
 
@@ -271,7 +271,7 @@ bardata <- bind_rows(age_count_data %>% mutate(rasegrp = "Total") ,
                      age_race_sexo_count_data)
 
 
-saveRDS(bardata,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barchart_data.RDS"))
+saveRDS(bardata,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/dm_barchart_data.RDS"))
 
 library(openxlsx)
 write.xlsx(bardata,paste0(path_grady_hiv_cascade_folder,

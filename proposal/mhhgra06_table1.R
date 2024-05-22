@@ -11,11 +11,6 @@ cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS"))
   ungroup() %>% 
   dplyr::select(mrn,detection_date)
 
-dr_hussen_encounter_table <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS"))
-#lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/lab history.RDS"))
-#dr_hussen_cohort_0216 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_cohort_0216.RDS"))
-sexual_orientation <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/sexual orientation.RDS"))
-dr_hussen_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_0217.RDS"))
 ### Total Patients
 # non-cp1 | non-htn patients
 
@@ -67,7 +62,7 @@ table1_data <- total %>%
       between(dt_0_age, 30, 44) ~ "30-44",
       between(dt_0_age, 45, 64) ~ "45-64",
       dt_0_age >= 65 ~ ">= 65")) %>% 
-  mutate(cp1 = if_else(cp1 == 1, "Hypertension", "No Hypertension")) %>% 
+  mutate(htn = if_else(cp1 == 1, "Hypertension", "No Hypertension")) %>% 
   mutate(is_black = case_when(
     race == "black" ~ "Black",
     race == "unknown" ~ "Unknown",
@@ -76,17 +71,26 @@ table1_data <- total %>%
   is_smm = case_when(
     hivrf_msm == 1 ~ "Sexual Minority Men",
     hivrf_msm == NA ~ "",
-    TRUE ~ "Heterosexual Men"))
+    TRUE ~ "Heterosexual Men")) %>% 
+  mutate(rasegrp = case_when(
+    is_black == "Black" & is_smm == "Sexual Minority Men" ~ "Black Sexual Minority Men",
+    is_black == "Black" & is_smm == "Heterosexual Men" ~ "Black Heterosexual Men",
+    is_black == "Other Race" & is_smm == "Sexual Minority Men" ~ "Non-Black Sexual Minority Men",
+    is_black == "Other Race" & is_smm == "Heterosexual Men" ~ "Non-Black Heterosexual Men",
+    TRUE ~ "Unknown"
+  ))
+
+saveRDS(table1_data,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_table1_data.RDS"))
+
+############################### Table 1 ############################################
+library(gtsummary)
+library(labelled)
 
 table1_data$age_category <- factor(
   table1_data$age_category,
   levels = c("18-29", "30-44", "45-64", ">= 65"),
   ordered = TRUE
 )
-
-############################### Table 1 ############################################
-library(gtsummary)
-library(labelled)
 
 var_label(table1_data) <- list(
   bmi = "Body Mass Index",
@@ -96,14 +100,14 @@ var_label(table1_data) <- list(
   iv_drug_user = "Intravenous drug user",
   alcohol_use = "Alcohol user",
   insurance = "Insurance coverage",
-  cp1 = "Hypertension Status"
+  htn = "Hypertension Status"
 )
  
 
 table_one <- table1_data |>
-  select("cp1", "is_black", "is_smm", "insurance", "age_category", "bmi", 
+  select("htn", "is_black", "is_smm", "insurance", "age_category", "bmi", 
          "iv_drug_user", "alcohol_use") |>
-  tbl_summary(by = cp1, 
+  tbl_summary(by = htn, 
               statistic = list(
                 all_continuous() ~ "{mean} ({sd})",
                 all_categorical() ~ "{n} ({p}%)"
@@ -114,3 +118,4 @@ table_one <- table1_data |>
   add_overall() |> 
   as_gt() |> 
   gt::gtsave(filename = paste0(path_grady_hiv_cascade_folder,"/figures/grady_hiv_htn_table1.docx"))
+

@@ -59,3 +59,12 @@ icd10_dm_qualifying <- c("E11\\.")
 icd10_otherdm_excluding <- c("R73\\.01", "R73.02", "R73\\.0", "R81\\.", "E88\\.81", "Z13\\.1", "E13\\.", "E08\\.", "E09\\.")
 icd10_t1dm <- c("E10\\.")
 icd10_gdm <- c("O24\\.")
+
+
+dr_hussen_bp_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_bp_0217.RDS"))
+dr_hussen_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_0217.RDS"))
+sexual_orientation <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/sexual orientation.RDS"))
+dr_hussen_encounter_table <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS"))
+htn_cascade <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_cascade.RDS"))
+htn_bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_barchart_data.RDS"))
+
