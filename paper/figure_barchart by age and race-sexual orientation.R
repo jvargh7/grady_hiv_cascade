@@ -5,9 +5,9 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
 
 (fig_age = bardata %>% 
   dplyr::filter(rasegrp == "Total") %>% 
-  dplyr::select(age_category,a1:a4) %>% 
-  pivot_longer(cols=-one_of("age_category"),names_to = "level",values_to="value") %>% 
-  mutate(level = factor(level,levels=c("a1","a2","a3","a4"),
+  dplyr::select(age_category,a1:a4,b1:b4) %>% 
+  pivot_longer(cols=-one_of("age_category"),names_to = c(".value","level"),values_to="value",names_pattern = "(a|b)(.*)") %>% 
+  mutate(level = factor(level,levels=c("1","2","3","4"),
                         labels=c("Detection",
                                  "Blood Pressure \nChecked",
                                  "Treated",
@@ -16,8 +16,9 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
                                levels=c("18-29","30-44","45-64",">= 65"),
                                labels=c("18-29","30-44","45-64","≥65"),ordered = TRUE
                                )) %>% 
-  ggplot(data=.,aes(x=age_category,fill=level,y=value)) +
-  geom_col(position=position_dodge(width=0.9)) +
+  ggplot(data=.,aes(x=age_category,y=a/2)) +
+  geom_col(aes(fill=level,y=a),position=position_dodge(width=0.9)) + 
+  geom_text(aes(label=round(b,1),group=level),position=position_dodge(width=0.9))+
   theme_bw() +
   scale_fill_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
   scale_y_continuous(limits=c(0,100),breaks=seq(0,100,20)) +
@@ -30,11 +31,11 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
 
 (fig_rase = bardata %>% 
     dplyr::filter(age_category == "Total",rasegrp != "Unknown") %>% 
-    dplyr::select(rasegrp,a1:a4) %>% 
-    pivot_longer(cols=-one_of("rasegrp"),names_to = "level",values_to="value") %>% 
-    mutate(level = factor(level,levels=c("a1","a2","a3","a4"),
+    dplyr::select(rasegrp,a1:a4,b1:b4) %>% 
+    pivot_longer(cols=-one_of("rasegrp"),names_to = c(".value","level"),values_to="value",names_pattern = "(a|b)(.*)") %>% 
+    mutate(level = factor(level,levels=c("1","2","3","4"),
                           labels=c("Detection",
-                                   "Testing",
+                                   "Blood Pressure \nChecked",
                                    "Treated",
                                    "Controlled")),
            rasegrp = factor(rasegrp,
@@ -44,8 +45,9 @@ bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/barcha
                                           "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"),
                             ordered = TRUE
            )) %>% 
-    ggplot(data=.,aes(x=rasegrp,fill=level,y=value)) +
-    geom_col(position=position_dodge(width=0.9)) +
+    ggplot(data=.,aes(x=rasegrp,y=a/2)) +
+    geom_col(aes(fill=level,y=a),position=position_dodge(width=0.9)) + 
+    geom_text(aes(label=round(b,1),group=level),position=position_dodge(width=0.9))+
     theme_bw() +
     scale_fill_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
     scale_y_continuous(limits=c(0,100),breaks=seq(0,100,20)) +

@@ -137,7 +137,11 @@ cp1 <- bind_rows(
                                    TRUE ~ 0))  %>% 
   # Moved the line here
   dplyr::filter(prevalent_htn == 1) %>% 
-  distinct(mrn,contact_date,.keep_all=TRUE) 
+  distinct(mrn,contact_date,.keep_all=TRUE)  # %>% 
+  # 
+  # rename(criterion1_date = contact_date) %>%
+  # mutate(detection_date = case_when(prevalent_dm == 10 ~ criterion1_date,
+  #                                   TRUE ~ criterion2_date)) 
 
 
 

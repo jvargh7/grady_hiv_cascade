@@ -41,9 +41,26 @@ dr_hussen_lab_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN
 
 saveRDS(dr_hussen_lab_0216,paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS"))
 
+dr_hussen_lab_0216 %>% 
+  dplyr::filter(str_detect(description,"HIV")) %>% 
+  group_by(description) %>% 
+  tally() %>% View()
+
+dr_hussen_lab_0216 %>% 
+  dplyr::filter(description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT")) %>% 
+  View()
+
+dr_hussen_lab_0216 %>% 
+  dplyr::filter(description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT")) %>% 
+  dplyr::filter(str_detect(result_original,"[A-Za-z]+")) %>% 
+  distinct(result_original) %>% 
+  View()
 
 lab_history <- dr_hussen_lab_0216 %>% 
-  mutate(glucose = case_when(loinc_code %in% glucose_loinc ~ 1,
+  mutate(hiv_viral_load = case_when(loinc_code %in% c("20447-9") ~ 1,
+                                    description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT") & str_detect(lab,"RNA COPIES") ~ 1,
+                                    TRUE ~ 0),
+         glucose = case_when(loinc_code %in% glucose_loinc ~ 1,
                              TRUE ~ 0),
          fastingglucose = case_when(loinc_code %in% fastingglucose_loinc ~ 1,
                                  TRUE ~ 0),
@@ -57,6 +74,9 @@ lab_history <- dr_hussen_lab_0216 %>%
                          TRUE ~ 0),
          hdl = case_when(loinc_code %in% hdl_loinc ~ 1,
                          TRUE ~ 0),
+         tgl = case_when(loinc_code %in% tgl_loinc ~ 1,
+                         loinc_code == "" & str_detect(description,"^(TRIGLY|Trigly)") & str_detect(description,"(SERUM|Serum)") ~ 1,
+                         TRUE ~ 0),
          alt = case_when(loinc_code %in% alt_loinc ~ 1,
                          loinc_code == "" & str_detect(description,"(^ALT$|^ALT\\s)") ~ 1,
                          TRUE ~ 0),
@@ -65,7 +85,8 @@ lab_history <- dr_hussen_lab_0216 %>%
                          TRUE ~ 0)
          
   ) %>% 
-  mutate(variable = case_when(glucose == 1 ~ "glucose",
+  mutate(variable = case_when(hiv_viral_load == 1 ~ "hiv_viral_load",
+                              glucose == 1 ~ "glucose",
                               fastingglucose == 1 ~ "fastingglucose",
                               serumcreatinine == 1 ~ "serum_creatinine",
                               hba1c == 1 ~ "hba1c",
@@ -73,14 +94,19 @@ lab_history <- dr_hussen_lab_0216 %>%
                               hdl == 1 ~ "hdl",
                               alt == 1 ~ "alt",
                               ast == 1 ~ "ast",
+                              tgl == 1 ~ "tgl",
                               TRUE ~ NA_character_))   %>% 
-  dplyr::filter(!is.na(variable), !is.na(result_original) & result_original > 0) %>% 
+  dplyr::filter(!is.na(variable), !is.na(result_original)) %>% 
+  mutate(result_numeric = case_when(result_original == "Not detected" ~ 0.0001,
+                                    result_original == "Not Detected" ~ 0.0001,
+                                    TRUE ~ as.numeric(result_original))) %>% 
+  dplyr::filter(result_numeric > 0) %>% 
   group_by(mrn,variable) %>% 
   dplyr::filter(lab_date == max(lab_date)) %>% 
   ungroup() %>% 
   # USED distinct --------
-distinct(mrn,person_key, variable, lab_date,.keep_all=TRUE) %>% 
-  dplyr::select(person_key,mrn,lab_date,variable,result_original) %>% 
-  pivot_wider(names_from=variable,values_from=result_original)
+  distinct(mrn,person_key, variable, lab_date,.keep_all=TRUE) %>% 
+  dplyr::select(person_key,mrn,lab_date,variable,result_numeric) %>% 
+  pivot_wider(names_from=variable,values_from=result_numeric)
 
 saveRDS(lab_history,paste0(path_grady_hiv_cascade_folder,"/working/raw/lab history.RDS"))
