@@ -56,7 +56,7 @@ dr_hussen_lab_0216 %>%
   distinct(result_original) %>% 
   View()
 
-lab_history <- dr_hussen_lab_0216 %>% 
+lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS")) %>% 
   mutate(hiv_viral_load = case_when(loinc_code %in% c("20447-9") ~ 1,
                                     description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT") & str_detect(lab,"RNA COPIES") ~ 1,
                                     TRUE ~ 0),
@@ -101,11 +101,13 @@ lab_history <- dr_hussen_lab_0216 %>%
                                     result_original == "Not Detected" ~ 0.0001,
                                     TRUE ~ as.numeric(result_original))) %>% 
   dplyr::filter(result_numeric > 0) %>% 
-  group_by(mrn,variable) %>% 
-  dplyr::filter(lab_date == max(lab_date)) %>% 
-  ungroup() %>% 
+  # group_by(mrn,variable) %>% 
+  # dplyr::filter(lab_date == max(lab_date)) %>% 
+  # ungroup() %>% 
   # USED distinct --------
-  distinct(mrn,person_key, variable, lab_date,.keep_all=TRUE) %>% 
+  group_by(mrn,person_key, variable, lab_date) %>%
+  summarize(result_numeric = median(result_numeric,na.rm=TRUE)) %>% 
+  ungroup() %>% 
   dplyr::select(person_key,mrn,lab_date,variable,result_numeric) %>% 
   pivot_wider(names_from=variable,values_from=result_numeric)
 
