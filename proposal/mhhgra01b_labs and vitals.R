@@ -35,26 +35,47 @@ saveRDS(dr_hussen_bp_0217,paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_
 
 dr_hussen_lab_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN_LAB_0216.xlsx")) %>% 
   rename_at(vars(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_LAB_0216") %>% dplyr::select(variable) %>% pull()),
-            ~readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_LAB_0216") %>% dplyr::select(new_var) %>% pull()) %>% 
+            ~readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet="DR_HUSSEN_LAB_0216") %>% dplyr::select(new_var) %>% pull()) 
+
+sheet1_dr_hussen_lab_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN_LAB_0216.xlsx"),
+                                                col_names = colnames(dr_hussen_lab_0216),
+                                                sheet="Sheet1")  
+sheet2_dr_hussen_lab_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN_LAB_0216.xlsx"),
+                                                col_names = colnames(dr_hussen_lab_0216),
+                                                sheet="Sheet2") 
+sheet3_dr_hussen_lab_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN_LAB_0216.xlsx"),
+                                                col_names = colnames(dr_hussen_lab_0216),
+                                                sheet="Sheet3") 
+sheet4_dr_hussen_lab_0216 <- readxl::read_excel(paste0(path_cfar_grady_data,"/DR_HUSSEN_LAB_0216.xlsx"),
+                                                col_names = colnames(dr_hussen_lab_0216),
+                                                sheet="Sheet4") 
+
+bind_rows(dr_hussen_lab_0216,
+          sheet1_dr_hussen_lab_0216 ,
+          sheet2_dr_hussen_lab_0216,
+          sheet3_dr_hussen_lab_0216,
+          sheet4_dr_hussen_lab_0216
+          ) %>% 
   mutate(dt_0 = lubridate::dmy(dt_0),
-         lab_date = lubridate::dmy(lab_date))
+         lab_date = lubridate::dmy(lab_date)) %>% 
+saveRDS(.,paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS"))
 
-saveRDS(dr_hussen_lab_0216,paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS"))
+# readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS")) %>% 
+#   dplyr::filter(str_detect(description,"HIV")) %>% 
+#   group_by(description) %>% 
+#   tally() %>% View()
+# 
+# dr_hussen_lab_0216 %>% 
+#   dplyr::filter(description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT")) %>% 
+#   View()
+# 
+# dr_hussen_lab_0216 %>% 
+#   dplyr::filter(description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT")) %>% 
+#   dplyr::filter(str_detect(result_original,"[A-Za-z]+")) %>% 
+#   distinct(result_original) %>% 
+#   View()
 
-dr_hussen_lab_0216 %>% 
-  dplyr::filter(str_detect(description,"HIV")) %>% 
-  group_by(description) %>% 
-  tally() %>% View()
-
-dr_hussen_lab_0216 %>% 
-  dplyr::filter(description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT")) %>% 
-  View()
-
-dr_hussen_lab_0216 %>% 
-  dplyr::filter(description %in% c("HIV-1 RNA-PCR, QUANT","RW: HIV-1 RNA-PCR,QUANT")) %>% 
-  dplyr::filter(str_detect(result_original,"[A-Za-z]+")) %>% 
-  distinct(result_original) %>% 
-  View()
+dr_hussen_lab_0216 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS"))
 
 lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_lab_0216.RDS")) %>% 
   mutate(hiv_viral_load = case_when(loinc_code %in% c("20447-9") ~ 1,
@@ -70,18 +91,24 @@ lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hus
                            loinc_code %in% hba1c_loinc ~ 1,
                            TRUE ~ 0),
          ldl = case_when(loinc_code %in% ldl_loinc ~ 1,
-                         loinc_code == "" & str_detect(description,"(^LDL$|,LDL\\s|^LDL\\s)") ~ 1,
+                         is.na(loinc_code) & str_detect(lab,"(^LDL$|,LDL\\s|^LDL|Ldl)") ~ 1,
+                         is.na(loinc_code) & str_detect(description,"(^LDL$|,LDL\\s|^LDL\\s)") ~ 1,
                          TRUE ~ 0),
          hdl = case_when(loinc_code %in% hdl_loinc ~ 1,
+                         is.na(loinc_code) & str_detect(lab,"(^HDL$|,HDL\\s|^HDL|Hdl)") ~ 1,
+                         is.na(loinc_code) & str_detect(description,"(^HDL$|,HDL\\s|^HDL\\s)") ~ 1,
                          TRUE ~ 0),
          tgl = case_when(loinc_code %in% tgl_loinc ~ 1,
-                         loinc_code == "" & str_detect(description,"^(TRIGLY|Trigly)") & str_detect(description,"(SERUM|Serum)") ~ 1,
+                         is.na(loinc_code) & str_detect(description,"^(TRIGLY|Trigly)") & str_detect(description,"(SERUM|Serum)") ~ 1,
+                         is.na(loinc_code) & str_detect(lab,"^(TRIGLY|Trigly)") & str_detect(description,"(SERUM|Serum)") ~ 1,
                          TRUE ~ 0),
          alt = case_when(loinc_code %in% alt_loinc ~ 1,
-                         loinc_code == "" & str_detect(description,"(^ALT$|^ALT\\s)") ~ 1,
+                         is.na(loinc_code) & str_detect(description,"(^ALT$|^ALT\\s)") ~ 1,
+                         is.na(loinc_code) & str_detect(lab,"(^ALT$|^ALT\\s)") ~ 1,
                          TRUE ~ 0),
          ast = case_when(loinc_code %in% ast_loinc ~ 1,
-                         loinc_code == "" & str_detect(description,"(^AST$|^AST\\s)") ~ 1,
+                         is.na(loinc_code) & str_detect(description,"(^AST$|^AST\\s)") ~ 1,
+                         is.na(loinc_code) & str_detect(lab,"(^AST$|^AST\\s)") ~ 1,
                          TRUE ~ 0)
          
   ) %>% 
