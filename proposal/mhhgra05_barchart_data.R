@@ -1,30 +1,33 @@
 rm(list=ls());gc();source(".Rprofile")
 
+msm_na <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_exclusion_msm.RDS"))
+
 cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS")) %>% 
-  rename(detection_date = criterion2_date
-  ) %>% 
+  rename(detection_date = criterion2_date) %>% 
   group_by(mrn) %>% 
   dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
   ungroup() %>% 
-  dplyr::select(mrn,detection_date)
+  dplyr::select(mrn,detection_date) %>% # 4137
+  dplyr::filter(!mrn %in% msm_na$mrn) # 4095
 
 
 ### Total Patients
 # non-cp1 | non-htn patients
 
-noncp1 <- dr_hussen_encounter_table %>% 
+noncp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS")) %>% 
   dplyr::select(mrn, contact_date) %>% 
   dplyr::filter(!mrn %in% cp1$mrn) %>% 
   group_by(mrn) %>% 
   dplyr::filter(contact_date == min(contact_date)) %>% 
   ungroup() %>% 
-  distinct(mrn,contact_date)
+  distinct(mrn,contact_date) %>% # 2501
+  dplyr::filter(!mrn %in% msm_na$mrn) # 2398
 
 # non-cp1 + cp1
 
-# N = 4834 ~ non-htn + htn Males
-df <- bind_rows(htn_cascade,
-                noncp1 %>% rename(detection_date = contact_date)) %>% 
+# N = 4758 ~ non-htn + htn Males
+df <- bind_rows(readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_cascade.RDS")),
+                noncp1 %>% rename(detection_date = contact_date)) %>% # 6493
   mutate(cp1 = case_when(
     mrn %in% cp1$mrn ~ 1,
     TRUE ~ 0)) %>% 
@@ -32,9 +35,10 @@ df <- bind_rows(htn_cascade,
               dplyr::select(mrn, dt_0_age, birth_sex, race, gender), 
             by = "mrn") %>% 
   left_join(sexual_orientation %>% 
-              dplyr::select(mrn, hivrf_msm),
+              dplyr::select(mrn, hivrf_msm) %>% 
+              distinct(mrn, hivrf_msm),
             by = "mrn") %>%
-  dplyr::filter(birth_sex == "Male") %>% 
+  dplyr::filter(birth_sex == "Male") %>% # 4758
   distinct(mrn, .keep_all = TRUE) %>% 
   mutate(age_category = case_when(
     between(dt_0_age, 18, 29) ~ "18-29",
@@ -269,7 +273,7 @@ htn_bardata <- bind_rows(age_count_data %>% mutate(rasegrp = "Total") ,
                      age_race_sexo_count_data)
 
 
-saveRDS(htn_bardata,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_barchart_data.RDS"))
+#saveRDS(htn_bardata,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_barchart_data.RDS"))
 
 
 

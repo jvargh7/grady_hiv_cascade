@@ -3,24 +3,8 @@ rm(list=ls());gc();source(".Rprofile")
 library(broom)
 library(sandwich)
 
-cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS")) %>% 
-  rename(detection_date = criterion2_date
-  ) %>% 
-  group_by(mrn) %>% 
-  dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
-  ungroup() %>% 
-  dplyr::select(mrn,detection_date)
-
-noncp1 <- dr_hussen_encounter_table %>% 
-  dplyr::select(mrn, contact_date) %>% 
-  dplyr::filter(!mrn %in% cp1$mrn) %>% 
-  group_by(mrn) %>% 
-  dplyr::filter(contact_date == min(contact_date)) %>% 
-  ungroup() %>% 
-  distinct(mrn,contact_date)
-
 # non-cp1 + cp1
-total <- bind_rows(htn_cascade,
+total <- bind_rows(readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_cascade.RDS")),
                    noncp1 %>% rename(detection_date = contact_date)) %>% 
   mutate(cp1 = case_when(
     mrn %in% cp1$mrn ~ 1,
@@ -30,7 +14,8 @@ table1_data <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ht
   dplyr::filter(rasegrp != "Unknown") %>% 
   left_join(total %>% 
               dplyr::select(mrn, cp1, bp_measured, treat_ever, control_latest),
-            by = c("mrn", "cp1")) %>% 
+            by = c("mrn", "cp1")) 
+table1_data <- table1_data %>% 
   mutate(rasegrp = factor(table1_data$rasegrp, 
                           levels = c("Non-Black Heterosexual Men", "Non-Black Sexual Minority Men",
                                      "Black Heterosexual Men", "Black Sexual Minority Men")))
@@ -42,7 +27,7 @@ table1_data <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ht
 ###############################################################################################
 ### htn, cp1=1 | total population
 htn_unad <- glm(cp1 ~ rasegrp, data = table1_data, family = "poisson")
-htn_ad <- glm(cp1 ~ rasegrp + dt_0_age + insurance + bmi + iv_drug_user + alcohol_use, 
+htn_ad <- glm(cp1 ~ rasegrp + dt_0_age + insurance + bmi, 
                  data = table1_data, family = "poisson")
 
 ##### Robust CI ########
@@ -63,10 +48,11 @@ htn_ad_sum <- tidy(htn_ad, exp = FALSE) %>%
 
 
 ### tested, bp_measured=1 | htn, cp1=1
-cp1_data <- table1_data %>% dplyr::filter(cp1 == 1)
+cp1_data <- table1_data %>% 
+  dplyr::filter(cp1 == 1)
 
 test_unad <- glm(bp_measured ~ rasegrp, data = cp1_data, family = "poisson")
-test_ad <- glm(bp_measured ~ rasegrp + dt_0_age + insurance + bmi + iv_drug_user + alcohol_use, 
+test_ad <- glm(bp_measured ~ rasegrp + dt_0_age + insurance + bmi, 
                  data = cp1_data, family = "poisson")
 
 ##### Robust CI ########
@@ -88,7 +74,7 @@ test_ad_sum <- tidy(test_ad, exp = FALSE) %>%
 test_data <- table1_data %>% dplyr::filter(cp1 == 1 & bp_measured == 1)
 
 treat_unad <- glm(treat_ever ~ rasegrp, data = test_data, family = "poisson")
-treat_ad <- glm(treat_ever ~ rasegrp + dt_0_age + insurance + bmi + iv_drug_user + alcohol_use, 
+treat_ad <- glm(treat_ever ~ rasegrp + dt_0_age + insurance + bmi, 
                data = test_data, family = "poisson")
 
 ##### Robust CI ########
@@ -108,7 +94,7 @@ treat_ad_sum <- tidy(treat_ad, exp = FALSE) %>%
 
 ### controlled, control_latest=1 | tested, bp_measured=1
 control_unad <- glm(control_latest ~ rasegrp, data = test_data, family = "poisson")
-control_ad <- glm(control_latest ~ rasegrp + dt_0_age + insurance + bmi + iv_drug_user + alcohol_use, 
+control_ad <- glm(control_latest ~ rasegrp + dt_0_age + insurance + bmi, 
                 data = test_data, family = "poisson")
 
 ##### Robust CI ########

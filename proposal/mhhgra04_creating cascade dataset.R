@@ -1,14 +1,16 @@
 rm(list=ls());gc();source(".Rprofile")
 
+msm_na <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_exclusion_msm.RDS"))
+
 cp1 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS")) %>% 
   rename(detection_date = criterion2_date,
-         criterion1_date = contact_date
-  ) %>% 
+         criterion1_date = contact_date) %>% 
   group_by(mrn) %>% 
   dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
   ungroup() %>% 
   dplyr::select(mrn,criterion1_date,detection_date) %>% 
-  rename(earliest_detection_date = detection_date)
+  rename(earliest_detection_date = detection_date) %>% # 4137
+  dplyr::filter(!mrn %in% msm_na$mrn) # 4095
 
 
 summary(dr_hussen_encounter_table$contact_date)
@@ -28,32 +30,6 @@ dr_hussen_bp_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/
   dplyr::filter(contact_date >= earliest_detection_date, contact_date < (earliest_detection_date + dmonths(12)))
 
 # MEDICATION ---------
-medication_list <- readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
-  rename(drug_name = 'Drug name') %>% 
-  dplyr::select(drug_name) %>% 
-  pull() %>% 
-  unique()
-
-htn_medication_ordered <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_med_ordered_0216.RDS")) %>% 
-  dplyr::filter(str_detect(str_to_lower(description),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
-  mutate(drug_name = str_extract(str_to_lower(description),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
-  left_join(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
-              rename(drug_class = 'Drug class',
-                     drug_name = 'Drug name') %>% 
-              dplyr::select(drug_name,drug_class) %>% 
-              distinct(drug_name,.keep_all=TRUE),
-            by = c("drug_name" = "drug_name"))
-
-htn_medication_dispensed <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_med_dispensed_0216.RDS")) %>% 
-  dplyr::filter(str_detect(str_to_lower(medication_name),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
-  mutate(drug_name = str_extract(str_to_lower(medication_name),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
-  left_join(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
-              rename(drug_class = 'Drug class',
-                     drug_name = 'Drug name') %>% 
-              dplyr::select(drug_name,drug_class) %>% 
-              distinct(drug_name,.keep_all=TRUE),
-            by = c("drug_name" = "drug_name"))
-
 
 # keep distinct medications
 htn_medication_all <- bind_rows(htn_medication_ordered %>% 
@@ -128,6 +104,6 @@ cascade <- cp1 %>%
     mutate(bp_measured = case_when(mrn %in% dr_hussen_bp_0217$mrn ~ 1,
                                  TRUE ~ 0)) %>% 
   left_join(control_latest,
-            by=c("mrn"))
+            by=c("mrn")) # 4095
 
-saveRDS(cascade,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra04_cascade.RDS"))
+#saveRDS(cascade,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_cascade.RDS"))
