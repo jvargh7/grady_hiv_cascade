@@ -48,96 +48,75 @@ total <- bind_rows(cp1,
 lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/lab history.RDS")) %>%
   dplyr::select(mrn,lab_date,hiv_viral_load,hba1c,tgl,ldl)
 
-### htn 
-lab_htn <- lab_history  %>% 
+### htn
+lab_htn <- lab_history %>% 
   right_join(cp1 %>% 
                dplyr::select(mrn,detection_date), 
              by = "mrn") %>% 
   pivot_longer(cols = -c(mrn,lab_date,detection_date),
                names_to = "lab_type", 
                values_to = "lab_value") %>% 
-  dplyr::filter(!is.na(lab_date),!is.na(lab_value))
+  dplyr::filter(!is.na(lab_date))
 
 
-# latest lab_date within 1y before detection_date
-lab_htn_befdet <- lab_htn %>%  
+# [detection-1y, detection+60d]
+lab_htn_detdate <- lab_htn %>%  
   group_by(mrn, lab_type) %>% 
   mutate(date_diff = difftime(detection_date, lab_date, units = "days")) %>%
   mutate(date_diff = as.numeric(date_diff)) %>% 
-  dplyr::filter(between(date_diff, 0, 365)) %>% 
-  dplyr::filter(date_diff == min(date_diff)) %>%
-  ungroup() 
-# lab_value != NA
-lab_befdet_nna <- lab_htn_befdet %>% 
+  dplyr::filter(between(date_diff, -60, 365)) %>% 
+  ungroup() %>% 
   dplyr::filter(!is.na(lab_value)) 
-# lab_value = NA
-lab_befdet_na <- lab_htn_befdet %>% 
-  dplyr::filter(is.na(lab_value)) 
 
-# latest lab_date within 60d after detection_date
-lab_htn_aftdet <- lab_htn %>%  
-  group_by(mrn, lab_type) %>% 
-  mutate(date_diff = difftime(lab_date, detection_date, units = "days")) %>%
-  mutate(date_diff = as.numeric(date_diff)) %>% 
-  dplyr::filter(between(date_diff, 0, 90)) %>% 
+lab_htn_use <- lab_htn_detdate %>%  
+  group_by(mrn, lab_type) %>%
   dplyr::filter(date_diff == min(date_diff)) %>%
-  ungroup() %>%  # 9084
-  anti_join(lab_befdet_nna %>% 
-               dplyr::select(mrn,lab_type), 
-             by = c("mrn", "lab_type")) 
-
-# lab_value != NA
-lab_aftdet_nna <- lab_htn_aftdet %>% 
-  dplyr::filter(!is.na(lab_value)) 
-# lab_value = NA
-lab_aftdet_na <- lab_htn_aftdet %>% 
-  dplyr::filter(is.na(lab_value))  
-
-lab_htn_cca <- bind_rows(lab_befdet_nna, lab_aftdet_nna) %>% 
+  ungroup() %>% 
   dplyr::select(-date_diff,-lab_date) %>% 
-  pivot_wider(names_from = lab_type, values_from = lab_value) %>% # 2759
-  right_join(cp1 %>% dplyr::select(mrn), by = "mrn") # 4137
-# hiv_viral_load: 977 NA, 3140 nNA
+  pivot_wider(names_from = lab_type, values_from = lab_value) %>% 
+  right_join(cp1) # 4095
+  
 
 ### non-htn 
-lab_nhtn <- lab_history  %>% 
+lab_nhtn <- lab_history %>% 
   right_join(noncp1 %>% 
                dplyr::select(mrn,contact_date), 
              by = "mrn") %>% 
   pivot_longer(cols = -c(mrn,lab_date,contact_date),
                names_to = "lab_type", 
                values_to = "lab_value") %>% 
-  dplyr::filter(!is.na(lab_date),!is.na(lab_value))
+  dplyr::filter(!is.na(lab_date))
 
 
-# latest lab_date within 1y before contact_date
-lab_nhtn_befdet <- lab_nhtn %>%  
+# [contact, contact+60d]
+lab_nhtn_condate <- lab_nhtn %>%  
   group_by(mrn, lab_type) %>% 
-  mutate(date_diff = difftime(contact_date, lab_date, units = "days")) %>%
+  mutate(date_diff = difftime(lab_date, contact_date, units = "days")) %>%
   mutate(date_diff = as.numeric(date_diff)) %>% 
-  dplyr::filter(between(date_diff, 0, 365)) %>% 
+  dplyr::filter(between(date_diff, 0, 60)) %>% 
+  ungroup() %>% 
+  dplyr::filter(!is.na(lab_value)) 
+
+lab_nhtn_use <- lab_nhtn_condate %>%  
+  group_by(mrn, lab_type) %>%
   dplyr::filter(date_diff == min(date_diff)) %>%
-  ungroup()
-# lab_value != NA
-lab_nhtn_cca <- lab_nhtn_befdet %>% 
-  dplyr::filter(!is.na(lab_value)) %>% # 2555
+  ungroup() %>% 
   dplyr::select(-date_diff,-lab_date) %>% 
   pivot_wider(names_from = lab_type, values_from = lab_value) %>% 
   right_join(noncp1) %>% 
-  rename(detection_date = contact_date) # 2459
-# hiv_viral_load: 1319 NA, 1120 nNA
+  rename(detection_date = contact_date) # 2398
 
 
-lab_total <- bind_rows(lab_htn_cca,
-                       lab_nhtn_cca) %>% 
-  mutate(cp1 = case_when(mrn %in%cp1$mrn ~ 1,
+lab_total <- bind_rows(lab_htn_use,
+                       lab_nhtn_use) %>% 
+  mutate(cp1 = case_when(mrn %in% cp1$mrn ~ 1,
                          TRUE ~ 0)) %>% 
   mutate(hiv_viral_local = case_when(
     is.na(hiv_viral_load) ~ NA_real_,
     hiv_viral_load <= 200 ~ 0,
     hiv_viral_load > 200 ~ 1
   )) # 6493
-# hiv_viral_load: 2306 NA, 4270 nNA
+
 
 ##################################################
 table1_data <- lab_total %>% 
@@ -215,7 +194,6 @@ table_one <- table1_data |>
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Hypertension Status**") |>
   add_overall() |> 
   as_gt() |> 
-  #gt::gtsave("paper/grady_hiv_htn_table1.docx")
   gt::gtsave(filename = paste0(path_grady_hiv_cascade_folder,"/figures/grady_hiv_htn_table1.docx"))
 
 
