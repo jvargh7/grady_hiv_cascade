@@ -1,17 +1,23 @@
 rm(list=ls());gc();source(".Rprofile")
 
-cp2 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp2_diabetes.RDS"))  %>% 
+msm_na <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_exclusion_msm.RDS"))
+
+cp2 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp2_diabetes.RDS")) %>%
   group_by(mrn) %>% 
   dplyr::filter(detection_date == min(detection_date)) %>% # Removed prevalent_htn == 1 from here since it was added above 
   ungroup() %>% 
-  rename(earliest_detection_date = detection_date)
+  dplyr::select(mrn,criterion1_date,detection_date) %>% 
+  rename(earliest_detection_date = detection_date) %>% # 938
+  dplyr::filter(!mrn %in% msm_na$mrn) # 926
+
 
 hba1c  <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/lab history.RDS")) %>% 
   rename(contact_date = lab_date) %>% 
   left_join(cp2 %>% 
               dplyr::select(mrn,earliest_detection_date),
             by="mrn") %>% 
-  dplyr::filter(contact_date >= earliest_detection_date, contact_date < (earliest_detection_date + dmonths(12)))
+  dplyr::filter(contact_date >= earliest_detection_date, 
+                contact_date < (earliest_detection_date + dmonths(12))) # 6550
 
 dm_medication_all <- bind_rows(dm_medication_dispensed %>% 
                                  rename(contact_date = dispensed_date) %>%  
@@ -77,7 +83,7 @@ dm_cascade <- cp2 %>%
   left_join(control_latest,
             by=c("mrn")) %>% 
   dplyr::select(mrn, criterion1_date,earliest_detection_date,treat_latest,
-                treat_ever,control_latest,control_date,hba1c_measured)
+                treat_ever,control_latest,control_date,hba1c_measured) # 926
 
-saveRDS(dm_cascade,paste0(path_grady_hiv_cascade_folder,"/working/raw/dm_cascade.RDS"))
+saveRDS(dm_cascade,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/dm_cascade.RDS"))
 
