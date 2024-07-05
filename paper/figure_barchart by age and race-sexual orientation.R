@@ -73,7 +73,10 @@ ggarrange(fig_age,
 
 # ------------------------------ Age Standardization --------------------------------------------
 
-stan_bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_standardized_barchart_data.RDS"))
+stan_bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_standardized_barchart_data.RDS")) %>% 
+  mutate(standardized_rate = standardized_rate*100,
+         lower_95CI = lower_95CI*100,
+         upper_95CI = upper_95CI*100)
 
 (fig_rase_stand = stan_bardata %>% 
     rename(a = standardized_rate) %>% 
@@ -92,10 +95,10 @@ stan_bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/h
     ggplot(data=.,aes(x=rasegrp,y=a/2,group=level)) +
     geom_col(aes(fill=level,y=a),position=position_dodge(width=0.9)) + 
     geom_errorbar(aes(ymin =lower_95CI, ymax = upper_95CI), width = 0.2, position = position_dodge(0.9)) +
-    geom_text(aes(label=round(a,2),group=level),position=position_dodge(width=0.9))+
+    geom_text(aes(label=round(a,1),group=level),position=position_dodge(width=0.9))+
     theme_bw() +
     scale_fill_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
-    scale_y_continuous(limits=c(0,0.70),breaks=seq(0,0.70,0.1)) +
+    scale_y_continuous(limits=c(0,80),breaks=seq(0,80,20)) +
     xlab("") +ylab("Proportion (%)") +
     theme(legend.position = "bottom",
           axis.text = element_text(size = 12),
