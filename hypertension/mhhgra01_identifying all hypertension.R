@@ -32,7 +32,7 @@ length(unique(htn_diagnosis_earliest$person_key,htn_problem_earliest$person_key)
 
 
 # MEDICATION ---------
-medication_list <- readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
+medication_list <- readxl::read_excel("data/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
   rename(drug_name = 'Drug name') %>% 
   dplyr::select(drug_name) %>% 
   pull() %>% 
@@ -42,7 +42,7 @@ medication_list <- readxl::read_excel("proposal/MHH CFAR Grady Variable List.xls
 htn_medication_ordered <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_med_ordered_0216.RDS")) %>% 
   dplyr::filter(str_detect(str_to_lower(description),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
   mutate(drug_name = str_extract(str_to_lower(description),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
-  left_join(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
+  left_join(readxl::read_excel("data/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
               rename(drug_class = 'Drug class',
                      drug_name = 'Drug name') %>% 
               dplyr::select(drug_name,drug_class) %>% 
@@ -64,7 +64,7 @@ htn_medication_ordered_earliest <- htn_medication_ordered %>%
 htn_medication_dispensed <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_med_dispensed_0216.RDS")) %>% 
   dplyr::filter(str_detect(str_to_lower(medication_name),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
   mutate(drug_name = str_extract(str_to_lower(medication_name),pattern = paste0("(",paste0(medication_list,collapse="|"),")"))) %>% 
-  left_join(readxl::read_excel("proposal/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
+  left_join(readxl::read_excel("data/MHH CFAR Grady Variable List.xlsx",sheet = "medication") %>% 
               rename(drug_class = 'Drug class',
                      drug_name = 'Drug name') %>% 
               dplyr::select(drug_name,drug_class) %>% 
@@ -136,20 +136,19 @@ cp1 <- bind_rows(
                                    any_true >= 1 & c2_any_true >= 1 ~ 1,
                                    TRUE ~ 0))  %>% 
   # Moved the line here
-  dplyr::filter(prevalent_htn == 1) %>% 
-  distinct(mrn,contact_date,.keep_all=TRUE)  # %>% 
-  # 
-  # rename(criterion1_date = contact_date) %>%
-  # mutate(detection_date = case_when(prevalent_dm == 10 ~ criterion1_date,
-  #                                   TRUE ~ criterion2_date)) 
-
+  dplyr::filter(prevalent_htn == 1)  %>% 
+  # Take the earliest date of displaying an incident_dm
+  group_by(mrn) %>% 
+  dplyr::filter(contact_date == min(contact_date)) %>% 
+  ungroup() %>% 
+  distinct(mrn,contact_date,.keep_all=TRUE)  
 
 
 cp1 %>% 
   # dplyr::select() %>% 
-  saveRDS(.,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/cp1.RDS"))
+  saveRDS(.,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra01_cp1 hypertension.RDS"))
 
-source("proposal/mhhgra_encounter_check_supreme.R")
+source("hypertension/mhhgra_encounter_check_supreme.R")
 
 cp1_encounter_check = cp1 %>% 
   group_by(mrn) %>% 
@@ -160,3 +159,6 @@ cp1_encounter_check = cp1 %>%
   mutate(criterion1_date_minus549 = criterion1_date - days(549)) %>% 
   mhhgra_encounter_check_supreme(.) %>% 
   dplyr::filter(n>=1)
+
+
+

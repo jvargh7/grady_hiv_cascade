@@ -65,6 +65,6 @@ dr_hussen_bp_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/
 dr_hussen_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_0217.RDS"))
 sexual_orientation <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/sexual orientation.RDS"))
 dr_hussen_encounter_table <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_encounter_table.RDS"))
-htn_cascade <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_cascade.RDS"))
-htn_bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_barchart_data.RDS"))
-
+# htn_cascade <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_cascade.RDS"))
+# htn_bardata <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/htn_barchart_data.RDS"))
+# 

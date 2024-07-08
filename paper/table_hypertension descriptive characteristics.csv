@@ -1,0 +1,31 @@
+variable,group,Overall,Detected Hypertension,No Hypertension
+alcohol_use_missing,NA,2528,1487,1041
+alt,NA,18 [13 [27,19 [13 [28,17 [13 [26
+alt_missing,NA,706,376,330
+ast,NA,21 [17 [27,21 [17 [27,21 [17 [27
+ast_missing,NA,706,376,330
+bmi,NA,26.4 [6.2,27.4 [6.5,24.7 [5.3
+bmi_missing,NA,58,14,44
+dt_0_age_missing,NA,0,0,0
+glucose,NA,99.4 [40,104.4 [44.8,90.8 [28.2
+glucose_missing,NA,674,350,324
+hba1c,NA,5.6 [5.2 [6,5.7 [5.3 [6.2,5.4 [5 [5.7
+hba1c_missing,NA,3122,1764,1358
+hdl,NA,44.7 [13.7,44.7 [13.3,44.5 [14.5
+hdl_missing,NA,2711,1572,1139
+hiv_viral_load_lt200,NA,3607 [97.7%,2286 [98.2%,1321 [96.9%
+hiv_viral_load_lt200_missing,NA,1151,652,499
+is_black,Black,3915 [82.3%,2429 [82.7%,1486 [81.6%
+is_black,Other Race,825 [17.3%,500 [17%,325 [17.9%
+is_black,Unknown,18 [0.4%,9 [0.3%,9 [0.5%
+is_smm,Heterosexual Men,1439 [30.2%,942 [32.1%,497 [27.3%
+is_smm,Sexual Minority Men,3319 [69.8%,1996 [67.9%,1323 [72.7%
+iv_drug_user_missing,NA,1,0,1
+ldl,NA,94.5 [37,95.5 [37.5,92.5 [36
+ldl_missing,NA,2713,1573,1140
+tgl,NA,145.1 [112.3,152.4 [101.4,130.5 [130.4
+tgl_missing,NA,2707,1570,1137
+age_category,18-29,730 [15.3%,NA,NA
+age_category,30-44,1584 [33.3%,NA,NA
+age_category,45-64,2160 [45.4%,NA,NA
+age_category,65 and over,284 [6%,NA,NA
