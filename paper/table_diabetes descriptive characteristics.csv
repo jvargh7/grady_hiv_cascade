@@ -1,0 +1,39 @@
+variable,group,Overall,Detected Diabetes,No Diabetes
+alcohol_use_missing,NA,2564,322,2242
+alt,NA,18 [13 [27,21 [14 [30,18 [13 [27
+alt_missing,NA,692,36,656
+ast,NA,21 [17 [27,20 [16 [27,21 [17 [27
+ast_missing,NA,692,36,656
+bmi,NA,26.4 [6.2,29.6 [7.3,25.9 [5.9
+bmi_missing,NA,58,2,56
+dbp,NA,78.9 [11,79.9 [11.6,78.8 [10.9
+dbp_missing,NA,959,88,871
+dt_0_age_missing,NA,0,0,0
+glucose,NA,100.3 [41.7,155.7 [81.2,91.4 [19.7
+glucose_missing,NA,655,22,633
+hba1c,NA,5.6 [5.2 [6.2,6.8 [6.2 [8.1,5.4 [5.1 [5.7
+hba1c_missing,NA,3169,80,3089
+hdl,NA,44.4 [13.9,40.8 [12.1,45.1 [14.1
+hdl_missing,NA,2808,239,2569
+hiv_viral_load_lt200,NA,3656 [97.8%,507 [98.8%,3149 [97.6%
+hiv_viral_load_lt200_missing,NA,1171,93,1078
+is_black,Black,3971 [82.3%,495 [82.5%,3476 [82.2%
+is_black,Other Race,838 [17.4%,103 [17.2%,735 [17.4%
+is_black,Unknown,18 [0.4%,2 [0.3%,16 [0.4%
+is_smm,Heterosexual Men,1463 [30.3%,249 [41.5%,1214 [28.7%
+is_smm,Sexual Minority Men,3364 [69.7%,351 [58.5%,3013 [71.3%
+iv_drug_user_missing,NA,1,0,1
+ldl,NA,94 [37,89.2 [38.2,95.1 [36.7
+ldl_missing,NA,2809,239,2570
+sbp,NA,131.4 [17.3,134.9 [19.8,130.9 [16.8
+sbp_missing,NA,959,88,871
+stage1,NA,3868 [43.4%,512 [42.6%,3356 [43.6%
+stage1_missing,NA,959,88,871
+stage2,NA,3868 [34.5%,512 [45.1%,3356 [32.9%
+stage2_missing,NA,959,88,871
+tgl,NA,147.8 [123.9,199.5 [199.5,136.3 [96.2
+tgl_missing,NA,2804,234,2570
+age_category,18-29,745 [15.4%,NA,NA
+age_category,30-44,1598 [33.1%,NA,NA
+age_category,45-64,2197 [45.5%,NA,NA
+age_category,65 and over,287 [5.9%,NA,NA

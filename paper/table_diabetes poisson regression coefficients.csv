@@ -1,0 +1,4 @@
+term,Unadjusted_cp2,Unadjusted_monitored,Unadjusted_treat,Unadjusted_control,Adjusted_cp2,Adjusted_monitored,Adjusted_treat,Adjusted_control
+rasegrpNon-Black Sexual Minority Men,"0.92 (0.6, 1.39)","0.99 (0.96, 1.01)","0.95 (0.8, 1.13)","1.16 (0.71, 1.87)","0.89 (0.59, 1.34)","0.99 (0.96, 1.01)","0.94 (0.79, 1.13)","1.18 (0.7, 1.98)"
+rasegrpBlack Heterosexual Men,"1.34 (0.92, 1.96)","1 (0.99, 1)","0.92 (0.79, 1.08)","0.99 (0.63, 1.57)","1.1 (0.75, 1.61)","0.99 (0.98, 1.01)","0.9 (0.77, 1.07)","0.99 (0.61, 1.63)"
+rasegrpBlack Sexual Minority Men,"0.77 (0.53, 1.12)","1 (0.99, 1)","0.98 (0.84, 1.14)","0.95 (0.61, 1.5)","1.02 (0.7, 1.49)","0.99 (0.98, 1)","0.97 (0.82, 1.13)","0.95 (0.58, 1.56)"
