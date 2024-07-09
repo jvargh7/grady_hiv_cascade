@@ -1,339 +1,411 @@
 cp1,variable,est,value,type,group
-No Hypertension,bmi,mean,24.743541666666665,Continuous,NA
-No Hypertension,bmi,sd,5.290615514281212,Continuous,NA
+No Hypertension,bmi,mean,24.738232998885174,Continuous,NA
+No Hypertension,bmi,sd,5.275878989027669,Continuous,NA
 No Hypertension,bmi,median,21.09,Continuous,NA
 No Hypertension,bmi,q25,21.09,Continuous,NA
 No Hypertension,bmi,q75,28.12,Continuous,NA
 No Hypertension,bmi,min,0,Continuous,NA
 No Hypertension,bmi,max,63.27,Continuous,NA
-No Hypertension,bmi,freq,1776,Continuous,NA
+No Hypertension,bmi,freq,1794,Continuous,NA
 No Hypertension,bmi,missing,44,Continuous,NA
-No Hypertension,dt_0_age,mean,38.85329670329671,Continuous,NA
-No Hypertension,dt_0_age,sd,12.11239807126205,Continuous,NA
+No Hypertension,dt_0_age,mean,38.857453754080524,Continuous,NA
+No Hypertension,dt_0_age,sd,12.139469247055281,Continuous,NA
 No Hypertension,dt_0_age,median,37,Continuous,NA
 No Hypertension,dt_0_age,q25,30,Continuous,NA
 No Hypertension,dt_0_age,q75,47,Continuous,NA
 No Hypertension,dt_0_age,min,18,Continuous,NA
 No Hypertension,dt_0_age,max,83,Continuous,NA
-No Hypertension,dt_0_age,freq,1820,Continuous,NA
+No Hypertension,dt_0_age,freq,1838,Continuous,NA
 No Hypertension,dt_0_age,missing,0,Continuous,NA
-No Hypertension,hba1c,mean,5.438744588744589,Continuous,NA
-No Hypertension,hba1c,sd,0.9498675234283622,Continuous,NA
+No Hypertension,hba1c,mean,5.438279569892473,Continuous,NA
+No Hypertension,hba1c,sd,0.9474996857154355,Continuous,NA
 No Hypertension,hba1c,median,5.4,Continuous,NA
 No Hypertension,hba1c,q25,5,Continuous,NA
 No Hypertension,hba1c,q75,5.7,Continuous,NA
 No Hypertension,hba1c,min,3.5,Continuous,NA
 No Hypertension,hba1c,max,14.8,Continuous,NA
-No Hypertension,hba1c,freq,462,Continuous,NA
-No Hypertension,hba1c,missing,1358,Continuous,NA
-No Hypertension,hdl,mean,44.48164464023495,Continuous,NA
-No Hypertension,hdl,sd,14.49868252422404,Continuous,NA
+No Hypertension,hba1c,freq,465,Continuous,NA
+No Hypertension,hba1c,missing,1373,Continuous,NA
+No Hypertension,hdl,mean,44.5,Continuous,NA
+No Hypertension,hdl,sd,14.540429415641096,Continuous,NA
 No Hypertension,hdl,median,43,Continuous,NA
 No Hypertension,hdl,q25,36,Continuous,NA
 No Hypertension,hdl,q75,51,Continuous,NA
 No Hypertension,hdl,min,3,Continuous,NA
 No Hypertension,hdl,max,107,Continuous,NA
-No Hypertension,hdl,freq,681,Continuous,NA
-No Hypertension,hdl,missing,1139,Continuous,NA
-No Hypertension,ldl,mean,92.45294117647059,Continuous,NA
-No Hypertension,ldl,sd,35.97627458500505,Continuous,NA
+No Hypertension,hdl,freq,686,Continuous,NA
+No Hypertension,hdl,missing,1152,Continuous,NA
+No Hypertension,ldl,mean,92.36788321167883,Continuous,NA
+No Hypertension,ldl,sd,35.942556782406506,Continuous,NA
 No Hypertension,ldl,median,88,Continuous,NA
 No Hypertension,ldl,q25,71,Continuous,NA
 No Hypertension,ldl,q75,109,Continuous,NA
 No Hypertension,ldl,min,8,Continuous,NA
 No Hypertension,ldl,max,443,Continuous,NA
-No Hypertension,ldl,freq,680,Continuous,NA
-No Hypertension,ldl,missing,1140,Continuous,NA
-No Hypertension,tgl,mean,130.53660322108345,Continuous,NA
-No Hypertension,tgl,sd,130.38641299395545,Continuous,NA
+No Hypertension,ldl,freq,685,Continuous,NA
+No Hypertension,ldl,missing,1153,Continuous,NA
+No Hypertension,tgl,mean,130.29578488372093,Continuous,NA
+No Hypertension,tgl,sd,129.99629407872024,Continuous,NA
 No Hypertension,tgl,median,101,Continuous,NA
 No Hypertension,tgl,q25,71,Continuous,NA
 No Hypertension,tgl,q75,150,Continuous,NA
 No Hypertension,tgl,min,30,Continuous,NA
 No Hypertension,tgl,max,2579,Continuous,NA
-No Hypertension,tgl,freq,683,Continuous,NA
-No Hypertension,tgl,missing,1137,Continuous,NA
-No Hypertension,glucose,mean,90.83589572192513,Continuous,NA
-No Hypertension,glucose,sd,28.172639807305877,Continuous,NA
-No Hypertension,glucose,median,88,Continuous,NA
+No Hypertension,tgl,freq,688,Continuous,NA
+No Hypertension,tgl,missing,1150,Continuous,NA
+No Hypertension,glucose,mean,90.7247191011236,Continuous,NA
+No Hypertension,glucose,sd,28.082298218237078,Continuous,NA
+No Hypertension,glucose,median,87,Continuous,NA
 No Hypertension,glucose,q25,81,Continuous,NA
 No Hypertension,glucose,q75,95,Continuous,NA
 No Hypertension,glucose,min,37,Continuous,NA
 No Hypertension,glucose,max,634,Continuous,NA
-No Hypertension,glucose,freq,1496,Continuous,NA
-No Hypertension,glucose,missing,324,Continuous,NA
-No Hypertension,alt,mean,27.81711409395973,Continuous,NA
-No Hypertension,alt,sd,81.33626242139111,Continuous,NA
+No Hypertension,glucose,freq,1513,Continuous,NA
+No Hypertension,glucose,missing,325,Continuous,NA
+No Hypertension,alt,mean,27.72229595222296,Continuous,NA
+No Hypertension,alt,sd,80.89046062889196,Continuous,NA
 No Hypertension,alt,median,17,Continuous,NA
 No Hypertension,alt,q25,13,Continuous,NA
 No Hypertension,alt,q75,26,Continuous,NA
 No Hypertension,alt,min,3,Continuous,NA
 No Hypertension,alt,max,2303,Continuous,NA
-No Hypertension,alt,freq,1490,Continuous,NA
-No Hypertension,alt,missing,330,Continuous,NA
-No Hypertension,ast,mean,31.894295302013422,Continuous,NA
-No Hypertension,ast,sd,115.13890084845218,Continuous,NA
+No Hypertension,alt,freq,1507,Continuous,NA
+No Hypertension,alt,missing,331,Continuous,NA
+No Hypertension,ast,mean,31.840411413404116,Continuous,NA
+No Hypertension,ast,sd,114.5013102360849,Continuous,NA
 No Hypertension,ast,median,21,Continuous,NA
 No Hypertension,ast,q25,17,Continuous,NA
 No Hypertension,ast,q75,27,Continuous,NA
 No Hypertension,ast,min,8,Continuous,NA
 No Hypertension,ast,max,3667.5,Continuous,NA
-No Hypertension,ast,freq,1490,Continuous,NA
-No Hypertension,ast,missing,330,Continuous,NA
-Detected Hypertension,bmi,mean,27.39151504787962,Continuous,NA
-Detected Hypertension,bmi,sd,6.516528373440381,Continuous,NA
+No Hypertension,ast,freq,1507,Continuous,NA
+No Hypertension,ast,missing,331,Continuous,NA
+No Hypertension,sbp,mean,122.27716186252772,Continuous,NA
+No Hypertension,sbp,sd,13.198447335098209,Continuous,NA
+No Hypertension,sbp,median,122,Continuous,NA
+No Hypertension,sbp,q25,114,Continuous,NA
+No Hypertension,sbp,q75,131,Continuous,NA
+No Hypertension,sbp,min,70,Continuous,NA
+No Hypertension,sbp,max,180,Continuous,NA
+No Hypertension,sbp,freq,1353,Continuous,NA
+No Hypertension,sbp,missing,485,Continuous,NA
+No Hypertension,dbp,mean,73.76570583887657,Continuous,NA
+No Hypertension,dbp,sd,8.974187538464717,Continuous,NA
+No Hypertension,dbp,median,73,Continuous,NA
+No Hypertension,dbp,q25,68,Continuous,NA
+No Hypertension,dbp,q75,80,Continuous,NA
+No Hypertension,dbp,min,44,Continuous,NA
+No Hypertension,dbp,max,100,Continuous,NA
+No Hypertension,dbp,freq,1353,Continuous,NA
+No Hypertension,dbp,missing,485,Continuous,NA
+Detected Hypertension,bmi,mean,27.35674285714286,Continuous,NA
+Detected Hypertension,bmi,sd,6.519725213448196,Continuous,NA
 Detected Hypertension,bmi,median,28.12,Continuous,NA
 Detected Hypertension,bmi,q25,21.09,Continuous,NA
 Detected Hypertension,bmi,q75,28.12,Continuous,NA
 Detected Hypertension,bmi,min,0,Continuous,NA
 Detected Hypertension,bmi,max,70.3,Continuous,NA
-Detected Hypertension,bmi,freq,2924,Continuous,NA
+Detected Hypertension,bmi,freq,2975,Continuous,NA
 Detected Hypertension,bmi,missing,14,Continuous,NA
-Detected Hypertension,dt_0_age,mean,48.471068754254595,Continuous,NA
-Detected Hypertension,dt_0_age,sd,12.939844592879883,Continuous,NA
+Detected Hypertension,dt_0_age,mean,48.47808631649381,Continuous,NA
+Detected Hypertension,dt_0_age,sd,12.932760600049637,Continuous,NA
 Detected Hypertension,dt_0_age,median,51,Continuous,NA
 Detected Hypertension,dt_0_age,q25,39,Continuous,NA
 Detected Hypertension,dt_0_age,q75,58,Continuous,NA
 Detected Hypertension,dt_0_age,min,18,Continuous,NA
 Detected Hypertension,dt_0_age,max,86,Continuous,NA
-Detected Hypertension,dt_0_age,freq,2938,Continuous,NA
+Detected Hypertension,dt_0_age,freq,2989,Continuous,NA
 Detected Hypertension,dt_0_age,missing,0,Continuous,NA
-Detected Hypertension,hba1c,mean,6.124361158432709,Continuous,NA
-Detected Hypertension,hba1c,sd,1.7265499284620018,Continuous,NA
+Detected Hypertension,hba1c,mean,6.113043478260869,Continuous,NA
+Detected Hypertension,hba1c,sd,1.7154226632492735,Continuous,NA
 Detected Hypertension,hba1c,median,5.7,Continuous,NA
 Detected Hypertension,hba1c,q25,5.3,Continuous,NA
 Detected Hypertension,hba1c,q75,6.2,Continuous,NA
 Detected Hypertension,hba1c,min,3.5,Continuous,NA
 Detected Hypertension,hba1c,max,16.7,Continuous,NA
-Detected Hypertension,hba1c,freq,1174,Continuous,NA
-Detected Hypertension,hba1c,missing,1764,Continuous,NA
-Detected Hypertension,hdl,mean,44.741581259150806,Continuous,NA
-Detected Hypertension,hdl,sd,13.324789703705305,Continuous,NA
+Detected Hypertension,hba1c,freq,1196,Continuous,NA
+Detected Hypertension,hba1c,missing,1793,Continuous,NA
+Detected Hypertension,hdl,mean,44.695402298850574,Continuous,NA
+Detected Hypertension,hdl,sd,13.351167246357003,Continuous,NA
 Detected Hypertension,hdl,median,43,Continuous,NA
-Detected Hypertension,hdl,q25,36,Continuous,NA
+Detected Hypertension,hdl,q25,35.75,Continuous,NA
 Detected Hypertension,hdl,q75,51,Continuous,NA
 Detected Hypertension,hdl,min,7,Continuous,NA
 Detected Hypertension,hdl,max,113,Continuous,NA
-Detected Hypertension,hdl,freq,1366,Continuous,NA
-Detected Hypertension,hdl,missing,1572,Continuous,NA
-Detected Hypertension,ldl,mean,95.4959706959707,Continuous,NA
-Detected Hypertension,ldl,sd,37.4689874484179,Continuous,NA
+Detected Hypertension,hdl,freq,1392,Continuous,NA
+Detected Hypertension,hdl,missing,1597,Continuous,NA
+Detected Hypertension,ldl,mean,95.44823867721064,Continuous,NA
+Detected Hypertension,ldl,sd,37.397623065166684,Continuous,NA
 Detected Hypertension,ldl,median,91,Continuous,NA
-Detected Hypertension,ldl,q25,69,Continuous,NA
+Detected Hypertension,ldl,q25,69.5,Continuous,NA
 Detected Hypertension,ldl,q75,117,Continuous,NA
 Detected Hypertension,ldl,min,10,Continuous,NA
 Detected Hypertension,ldl,max,376,Continuous,NA
-Detected Hypertension,ldl,freq,1365,Continuous,NA
-Detected Hypertension,ldl,missing,1573,Continuous,NA
-Detected Hypertension,tgl,mean,152.41228070175438,Continuous,NA
-Detected Hypertension,tgl,sd,101.39099491837082,Continuous,NA
+Detected Hypertension,ldl,freq,1391,Continuous,NA
+Detected Hypertension,ldl,missing,1598,Continuous,NA
+Detected Hypertension,tgl,mean,152.2116212338594,Continuous,NA
+Detected Hypertension,tgl,sd,101.32533116822432,Continuous,NA
 Detected Hypertension,tgl,median,124,Continuous,NA
 Detected Hypertension,tgl,q25,87,Continuous,NA
-Detected Hypertension,tgl,q75,186.25,Continuous,NA
+Detected Hypertension,tgl,q75,185.75,Continuous,NA
 Detected Hypertension,tgl,min,31,Continuous,NA
 Detected Hypertension,tgl,max,928,Continuous,NA
-Detected Hypertension,tgl,freq,1368,Continuous,NA
-Detected Hypertension,tgl,missing,1570,Continuous,NA
-Detected Hypertension,glucose,mean,104.37055641421948,Continuous,NA
-Detected Hypertension,glucose,sd,44.764161611982,Continuous,NA
+Detected Hypertension,tgl,freq,1394,Continuous,NA
+Detected Hypertension,tgl,missing,1595,Continuous,NA
+Detected Hypertension,glucose,mean,104.24544419134396,Continuous,NA
+Detected Hypertension,glucose,sd,44.487816390441445,Continuous,NA
 Detected Hypertension,glucose,median,93,Continuous,NA
 Detected Hypertension,glucose,q25,84,Continuous,NA
 Detected Hypertension,glucose,q75,106,Continuous,NA
 Detected Hypertension,glucose,min,40,Continuous,NA
 Detected Hypertension,glucose,max,524,Continuous,NA
-Detected Hypertension,glucose,freq,2588,Continuous,NA
-Detected Hypertension,glucose,missing,350,Continuous,NA
-Detected Hypertension,alt,mean,24.91959406713505,Continuous,NA
-Detected Hypertension,alt,sd,27.759414585976458,Continuous,NA
+Detected Hypertension,glucose,freq,2634,Continuous,NA
+Detected Hypertension,glucose,missing,355,Continuous,NA
+Detected Hypertension,alt,mean,24.946894171779142,Continuous,NA
+Detected Hypertension,alt,sd,27.8356380288587,Continuous,NA
 Detected Hypertension,alt,median,19,Continuous,NA
 Detected Hypertension,alt,q25,13,Continuous,NA
 Detected Hypertension,alt,q75,28,Continuous,NA
 Detected Hypertension,alt,min,3,Continuous,NA
 Detected Hypertension,alt,max,668,Continuous,NA
-Detected Hypertension,alt,freq,2562,Continuous,NA
-Detected Hypertension,alt,missing,376,Continuous,NA
-Detected Hypertension,ast,mean,27.536104605776735,Continuous,NA
-Detected Hypertension,ast,sd,49.63828321578704,Continuous,NA
+Detected Hypertension,alt,freq,2608,Continuous,NA
+Detected Hypertension,alt,missing,381,Continuous,NA
+Detected Hypertension,ast,mean,27.60870398773006,Continuous,NA
+Detected Hypertension,ast,sd,49.56004921410896,Continuous,NA
 Detected Hypertension,ast,median,21,Continuous,NA
 Detected Hypertension,ast,q25,17,Continuous,NA
 Detected Hypertension,ast,q75,27,Continuous,NA
 Detected Hypertension,ast,min,7,Continuous,NA
 Detected Hypertension,ast,max,2156.5,Continuous,NA
-Detected Hypertension,ast,freq,2562,Continuous,NA
-Detected Hypertension,ast,missing,376,Continuous,NA
-No Hypertension,alcohol_use,proportion,61.61745827984596,Proportion,NA
-No Hypertension,alcohol_use,freq,779,Proportion,NA
-No Hypertension,alcohol_use,missing,1041,Proportion,NA
-No Hypertension,hiv_viral_load_lt200,proportion,96.89629068887207,Proportion,NA
-No Hypertension,hiv_viral_load_lt200,freq,1321,Proportion,NA
-No Hypertension,hiv_viral_load_lt200,missing,499,Proportion,NA
-No Hypertension,iv_drug_user,proportion,0.10995052226498077,Proportion,NA
-No Hypertension,iv_drug_user,freq,1819,Proportion,NA
+Detected Hypertension,ast,freq,2608,Continuous,NA
+Detected Hypertension,ast,missing,381,Continuous,NA
+Detected Hypertension,sbp,mean,137.761940022214,Continuous,NA
+Detected Hypertension,sbp,sd,17.155389256184662,Continuous,NA
+Detected Hypertension,sbp,median,139,Continuous,NA
+Detected Hypertension,sbp,q25,126,Continuous,NA
+Detected Hypertension,sbp,q75,148,Continuous,NA
+Detected Hypertension,sbp,min,83,Continuous,NA
+Detected Hypertension,sbp,max,222,Continuous,NA
+Detected Hypertension,sbp,freq,2701,Continuous,NA
+Detected Hypertension,sbp,missing,288,Continuous,NA
+Detected Hypertension,dbp,mean,82.31321732691596,Continuous,NA
+Detected Hypertension,dbp,sd,11.192276075762464,Continuous,NA
+Detected Hypertension,dbp,median,82,Continuous,NA
+Detected Hypertension,dbp,q25,74,Continuous,NA
+Detected Hypertension,dbp,q75,90,Continuous,NA
+Detected Hypertension,dbp,min,47,Continuous,NA
+Detected Hypertension,dbp,max,129,Continuous,NA
+Detected Hypertension,dbp,freq,2701,Continuous,NA
+Detected Hypertension,dbp,missing,288,Continuous,NA
+No Hypertension,alcohol_use,proportion,61.78343949044586,Proportion,NA
+No Hypertension,alcohol_use,freq,785,Proportion,NA
+No Hypertension,alcohol_use,missing,1053,Proportion,NA
+No Hypertension,hiv_viral_load_lt200,proportion,96.93572496263079,Proportion,NA
+No Hypertension,hiv_viral_load_lt200,freq,1338,Proportion,NA
+No Hypertension,hiv_viral_load_lt200,missing,500,Proportion,NA
+No Hypertension,iv_drug_user,proportion,0.10887316276537834,Proportion,NA
+No Hypertension,iv_drug_user,freq,1837,Proportion,NA
 No Hypertension,iv_drug_user,missing,1,Proportion,NA
-Detected Hypertension,alcohol_use,proportion,55.27222605099931,Proportion,NA
-Detected Hypertension,alcohol_use,freq,1451,Proportion,NA
-Detected Hypertension,alcohol_use,missing,1487,Proportion,NA
-Detected Hypertension,hiv_viral_load_lt200,proportion,98.16272965879264,Proportion,NA
-Detected Hypertension,hiv_viral_load_lt200,freq,2286,Proportion,NA
-Detected Hypertension,hiv_viral_load_lt200,missing,652,Proportion,NA
-Detected Hypertension,iv_drug_user,proportion,0.4424778761061947,Proportion,NA
-Detected Hypertension,iv_drug_user,freq,2938,Proportion,NA
+No Hypertension,stage1,proportion,36.58536585365854,Proportion,NA
+No Hypertension,stage1,freq,1353,Proportion,NA
+No Hypertension,stage1,missing,485,Proportion,NA
+No Hypertension,stage2,proportion,9.903917220990392,Proportion,NA
+No Hypertension,stage2,freq,1353,Proportion,NA
+No Hypertension,stage2,missing,485,Proportion,NA
+Detected Hypertension,alcohol_use,proportion,55.11864406779661,Proportion,NA
+Detected Hypertension,alcohol_use,freq,1475,Proportion,NA
+Detected Hypertension,alcohol_use,missing,1514,Proportion,NA
+Detected Hypertension,hiv_viral_load_lt200,proportion,98.11077715757835,Proportion,NA
+Detected Hypertension,hiv_viral_load_lt200,freq,2329,Proportion,NA
+Detected Hypertension,hiv_viral_load_lt200,missing,660,Proportion,NA
+Detected Hypertension,iv_drug_user,proportion,0.4349280695884911,Proportion,NA
+Detected Hypertension,iv_drug_user,freq,2989,Proportion,NA
 Detected Hypertension,iv_drug_user,missing,0,Proportion,NA
-No Hypertension,rasegrp,proportion,21.53846153846154,Grouped,Black Heterosexual Men
-No Hypertension,rasegrp,freq,392,Grouped,Black Heterosexual Men
-No Hypertension,rasegrp,proportion,60.10989010989011,Grouped,Black Sexual Minority Men
-No Hypertension,rasegrp,freq,1094,Grouped,Black Sexual Minority Men
-No Hypertension,rasegrp,proportion,5.604395604395604,Grouped,Non-Black Heterosexual Men
+Detected Hypertension,stage1,proportion,45.797852647167716,Proportion,NA
+Detected Hypertension,stage1,freq,2701,Proportion,NA
+Detected Hypertension,stage1,missing,288,Proportion,NA
+Detected Hypertension,stage2,proportion,54.683450573861535,Proportion,NA
+Detected Hypertension,stage2,freq,2701,Proportion,NA
+Detected Hypertension,stage2,missing,288,Proportion,NA
+No Hypertension,rasegrp,proportion,21.653971708378673,Grouped,Black Heterosexual Men
+No Hypertension,rasegrp,freq,398,Grouped,Black Heterosexual Men
+No Hypertension,rasegrp,proportion,60.010881392818284,Grouped,Black Sexual Minority Men
+No Hypertension,rasegrp,freq,1103,Grouped,Black Sexual Minority Men
+No Hypertension,rasegrp,proportion,5.549510337323177,Grouped,Non-Black Heterosexual Men
 No Hypertension,rasegrp,freq,102,Grouped,Non-Black Heterosexual Men
-No Hypertension,rasegrp,proportion,12.252747252747254,Grouped,Non-Black Sexual Minority Men
-No Hypertension,rasegrp,freq,223,Grouped,Non-Black Sexual Minority Men
-No Hypertension,rasegrp,proportion,0.4945054945054945,Grouped,Unknown
+No Hypertension,rasegrp,proportion,12.295973884657236,Grouped,Non-Black Sexual Minority Men
+No Hypertension,rasegrp,freq,226,Grouped,Non-Black Sexual Minority Men
+No Hypertension,rasegrp,proportion,0.4896626768226333,Grouped,Unknown
 No Hypertension,rasegrp,freq,9,Grouped,Unknown
-Detected Hypertension,rasegrp,proportion,28.79509870660313,Grouped,Black Heterosexual Men
-Detected Hypertension,rasegrp,freq,846,Grouped,Black Heterosexual Men
-Detected Hypertension,rasegrp,proportion,53.880190605854324,Grouped,Black Sexual Minority Men
-Detected Hypertension,rasegrp,freq,1583,Grouped,Black Sexual Minority Men
-Detected Hypertension,rasegrp,proportion,3.2334921715452687,Grouped,Non-Black Heterosexual Men
-Detected Hypertension,rasegrp,freq,95,Grouped,Non-Black Heterosexual Men
-Detected Hypertension,rasegrp,proportion,13.78488767869299,Grouped,Non-Black Sexual Minority Men
-Detected Hypertension,rasegrp,freq,405,Grouped,Non-Black Sexual Minority Men
-Detected Hypertension,rasegrp,proportion,0.3063308373042886,Grouped,Unknown
+Detected Hypertension,rasegrp,proportion,28.87253261960522,Grouped,Black Heterosexual Men
+Detected Hypertension,rasegrp,freq,863,Grouped,Black Heterosexual Men
+Detected Hypertension,rasegrp,proportion,53.86416861826698,Grouped,Black Sexual Minority Men
+Detected Hypertension,rasegrp,freq,1610,Grouped,Black Sexual Minority Men
+Detected Hypertension,rasegrp,proportion,3.278688524590164,Grouped,Non-Black Heterosexual Men
+Detected Hypertension,rasegrp,freq,98,Grouped,Non-Black Heterosexual Men
+Detected Hypertension,rasegrp,proportion,13.68350618936099,Grouped,Non-Black Sexual Minority Men
+Detected Hypertension,rasegrp,freq,409,Grouped,Non-Black Sexual Minority Men
+Detected Hypertension,rasegrp,proportion,0.3011040481766477,Grouped,Unknown
 Detected Hypertension,rasegrp,freq,9,Grouped,Unknown
-No Hypertension,is_smm,proportion,27.307692307692307,Grouped,Heterosexual Men
-No Hypertension,is_smm,freq,497,Grouped,Heterosexual Men
-No Hypertension,is_smm,proportion,72.6923076923077,Grouped,Sexual Minority Men
-No Hypertension,is_smm,freq,1323,Grouped,Sexual Minority Men
-Detected Hypertension,is_smm,proportion,32.06262763784888,Grouped,Heterosexual Men
-Detected Hypertension,is_smm,freq,942,Grouped,Heterosexual Men
-Detected Hypertension,is_smm,proportion,67.93737236215112,Grouped,Sexual Minority Men
-Detected Hypertension,is_smm,freq,1996,Grouped,Sexual Minority Men
-No Hypertension,is_black,proportion,81.64835164835165,Grouped,Black
-No Hypertension,is_black,freq,1486,Grouped,Black
-No Hypertension,is_black,proportion,17.857142857142858,Grouped,Other Race
-No Hypertension,is_black,freq,325,Grouped,Other Race
-No Hypertension,is_black,proportion,0.4945054945054945,Grouped,Unknown
+No Hypertension,is_smm,proportion,27.36670293797606,Grouped,Heterosexual Men
+No Hypertension,is_smm,freq,503,Grouped,Heterosexual Men
+No Hypertension,is_smm,proportion,72.63329706202394,Grouped,Sexual Minority Men
+No Hypertension,is_smm,freq,1335,Grouped,Sexual Minority Men
+Detected Hypertension,is_smm,proportion,32.18467714954834,Grouped,Heterosexual Men
+Detected Hypertension,is_smm,freq,962,Grouped,Heterosexual Men
+Detected Hypertension,is_smm,proportion,67.81532285045165,Grouped,Sexual Minority Men
+Detected Hypertension,is_smm,freq,2027,Grouped,Sexual Minority Men
+No Hypertension,is_black,proportion,81.66485310119695,Grouped,Black
+No Hypertension,is_black,freq,1501,Grouped,Black
+No Hypertension,is_black,proportion,17.845484221980414,Grouped,Other Race
+No Hypertension,is_black,freq,328,Grouped,Other Race
+No Hypertension,is_black,proportion,0.4896626768226333,Grouped,Unknown
 No Hypertension,is_black,freq,9,Grouped,Unknown
-Detected Hypertension,is_black,proportion,82.67528931245745,Grouped,Black
-Detected Hypertension,is_black,freq,2429,Grouped,Black
-Detected Hypertension,is_black,proportion,17.018379850238258,Grouped,Other Race
-Detected Hypertension,is_black,freq,500,Grouped,Other Race
-Detected Hypertension,is_black,proportion,0.3063308373042886,Grouped,Unknown
+Detected Hypertension,is_black,proportion,82.7367012378722,Grouped,Black
+Detected Hypertension,is_black,freq,2473,Grouped,Black
+Detected Hypertension,is_black,proportion,16.962194713951153,Grouped,Other Race
+Detected Hypertension,is_black,freq,507,Grouped,Other Race
+Detected Hypertension,is_black,proportion,0.3011040481766477,Grouped,Unknown
 Detected Hypertension,is_black,freq,9,Grouped,Unknown
-Overall,bmi,mean,26.39091914893617,Continuous,NA
-Overall,bmi,sd,6.215883440338686,Continuous,NA
+Overall,bmi,mean,26.371713147410357,Continuous,NA
+Overall,bmi,sd,6.212077816795804,Continuous,NA
 Overall,bmi,median,28.12,Continuous,NA
 Overall,bmi,q25,21.09,Continuous,NA
 Overall,bmi,q75,28.12,Continuous,NA
 Overall,bmi,min,0,Continuous,NA
 Overall,bmi,max,70.3,Continuous,NA
-Overall,bmi,freq,4700,Continuous,NA
+Overall,bmi,freq,4769,Continuous,NA
 Overall,bmi,missing,58,Continuous,NA
-Overall,dt_0_age,mean,44.792139554434634,Continuous,NA
-Overall,dt_0_age,sd,13.465918845869188,Continuous,NA
+Overall,dt_0_age,mean,44.81479179614667,Continuous,NA
+Overall,dt_0_age,sd,13.471404718986284,Continuous,NA
 Overall,dt_0_age,median,45,Continuous,NA
 Overall,dt_0_age,q25,34,Continuous,NA
 Overall,dt_0_age,q75,56,Continuous,NA
 Overall,dt_0_age,min,18,Continuous,NA
 Overall,dt_0_age,max,86,Continuous,NA
-Overall,dt_0_age,freq,4758,Continuous,NA
+Overall,dt_0_age,freq,4827,Continuous,NA
 Overall,dt_0_age,missing,0,Continuous,NA
-Overall,hba1c,mean,5.930745721271394,Continuous,NA
-Overall,hba1c,sd,1.577452653727624,Continuous,NA
+Overall,hba1c,mean,5.92414208308248,Continuous,NA
+Overall,hba1c,sd,1.5688039152101034,Continuous,NA
 Overall,hba1c,median,5.6,Continuous,NA
 Overall,hba1c,q25,5.2,Continuous,NA
 Overall,hba1c,q75,6,Continuous,NA
 Overall,hba1c,min,3.5,Continuous,NA
 Overall,hba1c,max,16.7,Continuous,NA
-Overall,hba1c,freq,1636,Continuous,NA
-Overall,hba1c,missing,3122,Continuous,NA
-Overall,hdl,mean,44.655105031753784,Continuous,NA
-Overall,hdl,sd,13.723468211138899,Continuous,NA
+Overall,hba1c,freq,1661,Continuous,NA
+Overall,hba1c,missing,3166,Continuous,NA
+Overall,hdl,mean,44.63089509143407,Continuous,NA
+Overall,hdl,sd,13.751944696113137,Continuous,NA
 Overall,hdl,median,43,Continuous,NA
 Overall,hdl,q25,36,Continuous,NA
 Overall,hdl,q75,51,Continuous,NA
 Overall,hdl,min,3,Continuous,NA
 Overall,hdl,max,113,Continuous,NA
-Overall,hdl,freq,2047,Continuous,NA
-Overall,hdl,missing,2711,Continuous,NA
-Overall,ldl,mean,94.4841075794621,Continuous,NA
-Overall,ldl,sd,36.99831562184138,Continuous,NA
+Overall,hdl,freq,2078,Continuous,NA
+Overall,hdl,missing,2749,Continuous,NA
+Overall,ldl,mean,94.43184007707129,Continuous,NA
+Overall,ldl,sd,36.94360146676791,Continuous,NA
 Overall,ldl,median,90,Continuous,NA
 Overall,ldl,q25,70,Continuous,NA
-Overall,ldl,q75,115,Continuous,NA
+Overall,ldl,q75,114,Continuous,NA
 Overall,ldl,min,8,Continuous,NA
 Overall,ldl,max,443,Continuous,NA
-Overall,ldl,freq,2045,Continuous,NA
-Overall,ldl,missing,2713,Continuous,NA
-Overall,tgl,mean,145.1274987810824,Continuous,NA
-Overall,tgl,sd,112.32654358907195,Continuous,NA
+Overall,ldl,freq,2076,Continuous,NA
+Overall,ldl,missing,2751,Continuous,NA
+Overall,tgl,mean,144.9695004803074,Continuous,NA
+Overall,tgl,sd,112.06114426702776,Continuous,NA
 Overall,tgl,median,117,Continuous,NA
 Overall,tgl,q25,81,Continuous,NA
-Overall,tgl,q75,175,Continuous,NA
+Overall,tgl,q75,174,Continuous,NA
 Overall,tgl,min,30,Continuous,NA
 Overall,tgl,max,2579,Continuous,NA
-Overall,tgl,freq,2051,Continuous,NA
-Overall,tgl,missing,2707,Continuous,NA
-Overall,glucose,mean,99.41270812928501,Continuous,NA
-Overall,glucose,sd,40.034728465831584,Continuous,NA
+Overall,tgl,freq,2082,Continuous,NA
+Overall,tgl,missing,2745,Continuous,NA
+Overall,glucose,mean,99.31251507113576,Continuous,NA
+Overall,glucose,sd,39.83567755284831,Continuous,NA
 Overall,glucose,median,91,Continuous,NA
 Overall,glucose,q25,83,Continuous,NA
 Overall,glucose,q75,102,Continuous,NA
 Overall,glucose,min,37,Continuous,NA
 Overall,glucose,max,634,Continuous,NA
-Overall,glucose,freq,4084,Continuous,NA
-Overall,glucose,missing,674,Continuous,NA
-Overall,alt,mean,25.985069101678185,Continuous,NA
-Overall,alt,sd,54.044031178460656,Continuous,NA
+Overall,glucose,freq,4147,Continuous,NA
+Overall,glucose,missing,680,Continuous,NA
+Overall,alt,mean,25.963304981773998,Continuous,NA
+Overall,alt,sd,53.7406750094799,Continuous,NA
 Overall,alt,median,18,Continuous,NA
 Overall,alt,q25,13,Continuous,NA
 Overall,alt,q75,27,Continuous,NA
 Overall,alt,min,3,Continuous,NA
 Overall,alt,max,2303,Continuous,NA
-Overall,alt,freq,4052,Continuous,NA
-Overall,alt,missing,706,Continuous,NA
-Overall,ast,mean,29.13869693978282,Continuous,NA
-Overall,ast,sd,80.21773097301252,Continuous,NA
+Overall,alt,freq,4115,Continuous,NA
+Overall,alt,missing,712,Continuous,NA
+Overall,ast,mean,29.158444714459296,Continuous,NA
+Overall,ast,sd,79.74939661275644,Continuous,NA
 Overall,ast,median,21,Continuous,NA
 Overall,ast,q25,17,Continuous,NA
 Overall,ast,q75,27,Continuous,NA
 Overall,ast,min,7,Continuous,NA
 Overall,ast,max,3667.5,Continuous,NA
-Overall,ast,freq,4052,Continuous,NA
-Overall,ast,missing,706,Continuous,NA
-Overall,alcohol_use,proportion,57.48878923766816,Proportion,NA
-Overall,alcohol_use,freq,2230,Proportion,NA
-Overall,alcohol_use,missing,2528,Proportion,NA
-Overall,hiv_viral_load_lt200,proportion,97.69891876906016,Proportion,NA
-Overall,hiv_viral_load_lt200,freq,3607,Proportion,NA
-Overall,hiv_viral_load_lt200,missing,1151,Proportion,NA
-Overall,iv_drug_user,proportion,0.3153247845280639,Proportion,NA
-Overall,iv_drug_user,freq,4757,Proportion,NA
+Overall,ast,freq,4115,Continuous,NA
+Overall,ast,missing,712,Continuous,NA
+Overall,sbp,mean,132.59398125308337,Continuous,NA
+Overall,sbp,sd,17.53565113507219,Continuous,NA
+Overall,sbp,median,132,Continuous,NA
+Overall,sbp,q25,120,Continuous,NA
+Overall,sbp,q75,144,Continuous,NA
+Overall,sbp,min,70,Continuous,NA
+Overall,sbp,max,222,Continuous,NA
+Overall,sbp,freq,4054,Continuous,NA
+Overall,sbp,missing,773,Continuous,NA
+Overall,dbp,mean,79.4605328071041,Continuous,NA
+Overall,dbp,sd,11.250080847905744,Continuous,NA
+Overall,dbp,median,79,Continuous,NA
+Overall,dbp,q25,71,Continuous,NA
+Overall,dbp,q75,87,Continuous,NA
+Overall,dbp,min,44,Continuous,NA
+Overall,dbp,max,129,Continuous,NA
+Overall,dbp,freq,4054,Continuous,NA
+Overall,dbp,missing,773,Continuous,NA
+Overall,alcohol_use,proportion,57.43362831858407,Proportion,NA
+Overall,alcohol_use,freq,2260,Proportion,NA
+Overall,alcohol_use,missing,2567,Proportion,NA
+Overall,hiv_viral_load_lt200,proportion,97.68202890646305,Proportion,NA
+Overall,hiv_viral_load_lt200,freq,3667,Proportion,NA
+Overall,hiv_viral_load_lt200,missing,1160,Proportion,NA
+Overall,iv_drug_user,proportion,0.31081641110650643,Proportion,NA
+Overall,iv_drug_user,freq,4826,Proportion,NA
 Overall,iv_drug_user,missing,1,Proportion,NA
-Overall,rasegrp,proportion,26.01933585540143,Grouped,Black Heterosexual Men
-Overall,rasegrp,freq,1238,Grouped,Black Heterosexual Men
-Overall,rasegrp,proportion,56.26313577133249,Grouped,Black Sexual Minority Men
-Overall,rasegrp,freq,2677,Grouped,Black Sexual Minority Men
-Overall,rasegrp,proportion,4.140395124001682,Grouped,Non-Black Heterosexual Men
-Overall,rasegrp,freq,197,Grouped,Non-Black Heterosexual Men
-Overall,rasegrp,proportion,13.198823034888608,Grouped,Non-Black Sexual Minority Men
-Overall,rasegrp,freq,628,Grouped,Non-Black Sexual Minority Men
-Overall,rasegrp,proportion,0.37831021437578816,Grouped,Unknown
+Overall,stage1,proportion,42.723236309817466,Proportion,NA
+Overall,stage1,freq,4054,Proportion,NA
+Overall,stage1,missing,773,Proportion,NA
+Overall,stage2,proportion,39.738529847064626,Proportion,NA
+Overall,stage2,freq,4054,Proportion,NA
+Overall,stage2,missing,773,Proportion,NA
+Overall,rasegrp,proportion,26.123886471928735,Grouped,Black Heterosexual Men
+Overall,rasegrp,freq,1261,Grouped,Black Heterosexual Men
+Overall,rasegrp,proportion,56.20468199709965,Grouped,Black Sexual Minority Men
+Overall,rasegrp,freq,2713,Grouped,Black Sexual Minority Men
+Overall,rasegrp,proportion,4.143360265175057,Grouped,Non-Black Heterosexual Men
+Overall,rasegrp,freq,200,Grouped,Non-Black Heterosexual Men
+Overall,rasegrp,proportion,13.155168841930806,Grouped,Non-Black Sexual Minority Men
+Overall,rasegrp,freq,635,Grouped,Non-Black Sexual Minority Men
+Overall,rasegrp,proportion,0.3729024238657551,Grouped,Unknown
 Overall,rasegrp,freq,18,Grouped,Unknown
-Overall,is_smm,proportion,30.243799915931064,Grouped,Heterosexual Men
-Overall,is_smm,freq,1439,Grouped,Heterosexual Men
-Overall,is_smm,proportion,69.75620008406894,Grouped,Sexual Minority Men
-Overall,is_smm,freq,3319,Grouped,Sexual Minority Men
-Overall,is_black,proportion,82.28247162673392,Grouped,Black
-Overall,is_black,freq,3915,Grouped,Black
-Overall,is_black,proportion,17.33921815889029,Grouped,Other Race
-Overall,is_black,freq,825,Grouped,Other Race
-Overall,is_black,proportion,0.37831021437578816,Grouped,Unknown
+Overall,is_smm,proportion,30.350113942407294,Grouped,Heterosexual Men
+Overall,is_smm,freq,1465,Grouped,Heterosexual Men
+Overall,is_smm,proportion,69.64988605759271,Grouped,Sexual Minority Men
+Overall,is_smm,freq,3362,Grouped,Sexual Minority Men
+Overall,is_black,proportion,82.32856846902838,Grouped,Black
+Overall,is_black,freq,3974,Grouped,Black
+Overall,is_black,proportion,17.298529107105864,Grouped,Other Race
+Overall,is_black,freq,835,Grouped,Other Race
+Overall,is_black,proportion,0.3729024238657551,Grouped,Unknown
 Overall,is_black,freq,18,Grouped,Unknown
-Overall,age_category,proportion,15.342580916351409,Grouped,18-29
-Overall,age_category,freq,730,Grouped,18-29
-Overall,age_category,proportion,33.29129886506936,Grouped,30-44
-Overall,age_category,freq,1584,Grouped,30-44
-Overall,age_category,proportion,45.39722572509458,Grouped,45-64
-Overall,age_category,freq,2160,Grouped,45-64
-Overall,age_category,proportion,5.968894493484657,Grouped,65 and over
-Overall,age_category,freq,284,Grouped,65 and over
+Overall,age_category,proportion,15.371866583799461,Grouped,18-29
+Overall,age_category,freq,742,Grouped,18-29
+Overall,age_category,proportion,33.14688212140046,Grouped,30-44
+Overall,age_category,freq,1600,Grouped,30-44
+Overall,age_category,proportion,45.514812512948,Grouped,45-64
+Overall,age_category,freq,2197,Grouped,45-64
+Overall,age_category,proportion,5.966438781852082,Grouped,65 and over
+Overall,age_category,freq,288,Grouped,65 and over

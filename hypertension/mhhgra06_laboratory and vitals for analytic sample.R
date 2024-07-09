@@ -33,4 +33,19 @@ analytic_lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/r
   dplyr::select(-lab_date)
 
 
+
+# BP ------------
+analytic_bp_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_bp_0217.RDS"))  %>% 
+  left_join(analytic_df %>% 
+              dplyr::select(mrn,contains("index_date")),
+            by = "mrn") %>% 
+  dplyr::filter(contact_date >= index_date_minus6mo, contact_date <= index_date_plus6mo) %>% 
+  arrange(mrn,contact_date) %>% 
+  group_by(mrn) %>% 
+  dplyr::filter(contact_date == max(contact_date)) %>% 
+  ungroup() %>% 
+  dplyr::select(-contact_date)
+
+
 saveRDS(analytic_lab_history,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra06_lab history for analytic sample.RDS"))
+saveRDS(analytic_bp_history,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra06_bp history for analytic sample.RDS"))
