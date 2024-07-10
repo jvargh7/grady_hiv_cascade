@@ -29,8 +29,10 @@ analytic_lab_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/r
                          "hdl","hiv_viral_load","ldl",
                          "serum_creatinine","tgl","fastingglucose")),.fns=function(x) zoo::na.locf(x,na.rm=FALSE))) %>% 
   dplyr::filter(lab_date == max(lab_date)) %>% 
-  ungroup() %>% 
-  dplyr::select(-lab_date)
+  summarize(across(one_of(c("alt","ast","glucose","hba1c",
+                            "hdl","hiv_viral_load","ldl",
+                            "serum_creatinine","tgl","fastingglucose")),~mean(.,na.rm=TRUE))) %>% 
+  ungroup() 
 
 
 
@@ -43,8 +45,8 @@ analytic_bp_history <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/ra
   arrange(mrn,contact_date) %>% 
   group_by(mrn) %>% 
   dplyr::filter(contact_date == max(contact_date)) %>% 
-  ungroup() %>% 
-  dplyr::select(-contact_date)
+  summarize(across(one_of(c("sbp","dbp","stage1","stage2")),~mean(.,na.rm=TRUE))) %>% 
+  ungroup() 
 
 
 saveRDS(analytic_lab_history,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra06_lab history for analytic sample.RDS"))

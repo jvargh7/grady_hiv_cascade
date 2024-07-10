@@ -1,7 +1,8 @@
 
 rm(list=ls());gc();source(".Rprofile")
 
-fig_df <- read_csv("hypertension/mhhgra05_figures care cascade.csv")
+fig_df <- read_csv("hypertension/mhhgra05_figures care cascade.csv") %>% 
+  dplyr::filter(!str_detect(stratification,"Unknown"))
 
 fig_df_cleaned = left_join(fig_df %>% 
                     dplyr::filter(str_detect(variable,"a")) %>% 
@@ -30,13 +31,13 @@ fig_df_cleaned = left_join(fig_df %>%
                                                          "Non-Black Heterosexual Men","Non-Black Sexual Minority Men"),
                                  labels=c("Total","Black \nHeterosexual Men","Black \nSexual Minority Men",
                                           "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"))) %>% 
-  mutate(prop = case_when(n < 30 ~ NA_real_,
-                          TRUE ~ prop))
+  mutate(prop_in_previous = case_when(n < 30 ~ NA_real_,
+                          TRUE ~ prop_in_previous))
   
 fig_A = fig_df_cleaned %>% 
   dplyr::filter(variable == "Detection") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -53,7 +54,7 @@ fig_A = fig_df_cleaned %>%
 fig_B = fig_df_cleaned %>% 
   dplyr::filter(variable == "Blood Pressure \nMonitored") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -70,7 +71,7 @@ fig_B = fig_df_cleaned %>%
 fig_C = fig_df_cleaned %>% 
   dplyr::filter(variable == "Treated") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -87,7 +88,7 @@ fig_C = fig_df_cleaned %>%
 fig_D = fig_df_cleaned %>% 
   dplyr::filter(variable == "Controlled") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +

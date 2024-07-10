@@ -1,7 +1,8 @@
 
 rm(list=ls());gc();source(".Rprofile")
 
-fig_df <- read_csv("hypertension/mhhgra05_figures care cascade.csv")
+fig_df <- read_csv("hypertension/mhhgra05_figures care cascade.csv") %>% 
+  dplyr::filter(!str_detect(stratification,"Unknown"))
 
 
 fig_A = left_join(fig_df %>% 

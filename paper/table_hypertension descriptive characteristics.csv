@@ -1,39 +1,39 @@
 variable,group,Overall,Detected Hypertension,No Hypertension
-alcohol_use_missing,NA,2567,1514,1053
+alcohol_use_missing,NA,2528,1487,1041
 alt,NA,18 [13 [27,19 [13 [28,17 [13 [26
-alt_missing,NA,712,381,331
+alt_missing,NA,706,376,330
 ast,NA,21 [17 [27,21 [17 [27,21 [17 [27
-ast_missing,NA,712,381,331
+ast_missing,NA,706,376,330
 bmi,NA,26.4 [6.2,27.4 [6.5,24.7 [5.3
 bmi_missing,NA,58,14,44
-dbp,NA,79.5 [11.3,82.3 [11.2,73.8 [9
+dbp,NA,79.5 [11.2,82.3 [11.1,73.8 [9
 dbp_missing,NA,773,288,485
 dt_0_age_missing,NA,0,0,0
-glucose,NA,99.3 [39.8,104.2 [44.5,90.7 [28.1
-glucose_missing,NA,680,355,325
+glucose,NA,99.4 [40,104.4 [44.8,90.8 [28.2
+glucose_missing,NA,674,350,324
 hba1c,NA,5.6 [5.2 [6,5.7 [5.3 [6.2,5.4 [5 [5.7
-hba1c_missing,NA,3166,1793,1373
-hdl,NA,44.6 [13.8,44.7 [13.4,44.5 [14.5
-hdl_missing,NA,2749,1597,1152
-hiv_viral_load_lt200,NA,3667 [97.7%,2329 [98.1%,1338 [96.9%
-hiv_viral_load_lt200_missing,NA,1160,660,500
-is_black,Black,3974 [82.3%,2473 [82.7%,1501 [81.7%
-is_black,Other Race,835 [17.3%,507 [17%,328 [17.8%
+hba1c_missing,NA,3122,1764,1358
+hdl,NA,44.7 [13.7,44.7 [13.3,44.5 [14.5
+hdl_missing,NA,2711,1572,1139
+hiv_viral_load_lt200,NA,3607 [97.7%,2286 [98.2%,1321 [96.9%
+hiv_viral_load_lt200_missing,NA,1151,652,499
+is_black,Black,3915 [82.3%,2429 [82.7%,1486 [81.6%
+is_black,Other Race,825 [17.3%,500 [17%,325 [17.9%
 is_black,Unknown,18 [0.4%,9 [0.3%,9 [0.5%
-is_smm,Heterosexual Men,1465 [30.4%,962 [32.2%,503 [27.4%
-is_smm,Sexual Minority Men,3362 [69.6%,2027 [67.8%,1335 [72.6%
+is_smm,Heterosexual Men,1439 [30.2%,942 [32.1%,497 [27.3%
+is_smm,Sexual Minority Men,3319 [69.8%,1996 [67.9%,1323 [72.7%
 iv_drug_user_missing,NA,1,0,1
-ldl,NA,94.4 [36.9,95.4 [37.4,92.4 [35.9
-ldl_missing,NA,2751,1598,1153
-sbp,NA,132.6 [17.5,137.8 [17.2,122.3 [13.2
+ldl,NA,94.5 [37,95.5 [37.5,92.5 [36
+ldl_missing,NA,2713,1573,1140
+sbp,NA,132.7 [17.5,137.9 [17.1,122.3 [13.1
 sbp_missing,NA,773,288,485
-stage1,NA,4054 [42.7%,2701 [45.8%,1353 [36.6%
-stage1_missing,NA,773,288,485
-stage2,NA,4054 [39.7%,2701 [54.7%,1353 [9.9%
-stage2_missing,NA,773,288,485
-tgl,NA,145 [112.1,152.2 [101.3,130.3 [130
-tgl_missing,NA,2745,1595,1150
-age_category,18-29,742 [15.4%,NA,NA
-age_category,30-44,1600 [33.1%,NA,NA
-age_category,45-64,2197 [45.5%,NA,NA
-age_category,65 and over,288 [6%,NA,NA
+stage1,NA,NA,2650 [45.9%,1335 [36.7%
+stage1_missing,NA,NA,288,485
+stage2,NA,NA,2650 [55%,1335 [10%
+stage2_missing,NA,NA,288,485
+tgl,NA,145.1 [112.3,152.4 [101.4,130.5 [130.4
+tgl_missing,NA,2707,1570,1137
+age_category,18-29,730 [15.3%,NA,NA
+age_category,30-44,1584 [33.3%,NA,NA
+age_category,45-64,2160 [45.4%,NA,NA
+age_category,65 and over,284 [6%,NA,NA
