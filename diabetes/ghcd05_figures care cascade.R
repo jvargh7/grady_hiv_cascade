@@ -27,7 +27,7 @@ analytic_df <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/gh
   mutate(treat_in_cp2 = case_when(cp2 ==1 ~ treat,
                                   TRUE ~ NA_real_),
          control_in_cp2 = case_when(cp2 == 1 ~ control,
-                                    TRUE ~ NA_real_))
+                                    TRUE ~ NA_real_)) 
 
 
 

@@ -1,42 +1,43 @@
 
 rm(list=ls());gc();source(".Rprofile")
 
-fig_df <- read_csv("diabetes/ghcd05_figures care cascade.csv")
+fig_df <- read_csv("diabetes/ghcd05_figures care cascade.csv") %>% 
+  dplyr::filter(!str_detect(stratification,"Unknown"))
 
 fig_df_cleaned = left_join(fig_df %>% 
-                    dplyr::filter(str_detect(variable,"a")) %>% 
-                    mutate(variable = factor(variable,levels=c("a1","a2","a3","a4"),
-                                             labels=c("Detection","HbA1c \nMonitored",
-                                                      "Treated","Controlled"))),
-                  
-                  fig_df %>% 
-                    dplyr::filter(str_detect(variable,"b")) %>% 
-                    mutate(variable = factor(variable,levels=c("b1","b2","b3","b4"),
-                                             labels=c("Detection","HbA1c \nMonitored",
-                                                      "Treated","Controlled"))) %>% 
-                    dplyr::select(variable,stratification,prop) %>% 
-                    rename(prop_in_previous = prop),
-                  by=c("variable","stratification")
+                             dplyr::filter(str_detect(variable,"a")) %>% 
+                             mutate(variable = factor(variable,levels=c("a1","a2","a3","a4"),
+                                                      labels=c("Detection","HbA1c \nMonitored",
+                                                               "Treated","Controlled"))),
+                           
+                           fig_df %>% 
+                             dplyr::filter(str_detect(variable,"b")) %>% 
+                             mutate(variable = factor(variable,levels=c("b1","b2","b3","b4"),
+                                                      labels=c("Detection","HbA1c \nMonitored",
+                                                               "Treated","Controlled"))) %>% 
+                             dplyr::select(variable,stratification,prop) %>% 
+                             rename(prop_in_previous = prop),
+                           by=c("variable","stratification")
 ) %>% 
   mutate(prop_in_previous = case_when(is.na(prop_in_previous) ~ prop,
                                       TRUE ~ prop_in_previous)) %>% 
   dplyr::filter(!stratification %in% c("Total","Black Sexual Minority Men","Black Heterosexual Men",
-                                      "Non-Black Sexual Minority Men","Non-Black Heterosexual Men")) %>% 
+                                       "Non-Black Sexual Minority Men","Non-Black Heterosexual Men")) %>% 
   mutate(age_category = str_split_i(stratification,pattern=";",i=1),
          rase = str_split_i(stratification,pattern=";",i=2)) %>% 
   mutate(rase = case_when(is.na(rase) ~ "Total",
                           TRUE ~ rase)) %>% 
   mutate(rase = factor(rase,levels=c("Total","Black Heterosexual Men","Black Sexual Minority Men",
-                                                         "Non-Black Heterosexual Men","Non-Black Sexual Minority Men"),
-                                 labels=c("Total","Black \nHeterosexual Men","Black \nSexual Minority Men",
-                                          "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"))) %>% 
-  mutate(prop = case_when(n < 30 ~ NA_real_,
-                          TRUE ~ prop))
-  
+                                     "Non-Black Heterosexual Men","Non-Black Sexual Minority Men"),
+                       labels=c("Total","Black \nHeterosexual Men","Black \nSexual Minority Men",
+                                "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"))) %>% 
+  mutate(prop_in_previous = case_when(n < 30 ~ NA_real_,
+                                      TRUE ~ prop_in_previous))
+
 fig_A = fig_df_cleaned %>% 
   dplyr::filter(variable == "Detection") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -53,7 +54,7 @@ fig_A = fig_df_cleaned %>%
 fig_B = fig_df_cleaned %>% 
   dplyr::filter(variable == "HbA1c \nMonitored") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -70,7 +71,7 @@ fig_B = fig_df_cleaned %>%
 fig_C = fig_df_cleaned %>% 
   dplyr::filter(variable == "Treated") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -87,7 +88,7 @@ fig_C = fig_df_cleaned %>%
 fig_D = fig_df_cleaned %>% 
   dplyr::filter(variable == "Controlled") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +

@@ -21,14 +21,15 @@ analytic_df <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mh
                                           TRUE ~ NA_real_
                                           ))
 
-source("C:/code/external/functions/nhst/table1_summary.R")
+#source("C:/code/external/functions/nhst/table1_summary.R")
+source("functions/table1_summary.R")
 
 out = bind_rows(
   
   table1_summary(analytic_df,
                c_vars = c("bmi","dt_0_age","hba1c","hdl","ldl","tgl","glucose","alt","ast","sbp","dbp"),
                p_vars = c("alcohol_use","hiv_viral_load_lt200","iv_drug_user","stage1","stage2"),
-               g_vars = c("rasegrp","is_smm","is_black"),
+               g_vars = c("rasegrp","is_smm","is_black","age_category"),
                id_vars = "cp1"),
   table1_summary(analytic_df,
                  c_vars = c("bmi","dt_0_age","hba1c","hdl","ldl","tgl","glucose","alt","ast","sbp","dbp"),
