@@ -15,12 +15,19 @@ fig_df_cleaned = left_join(fig_df %>%
                     mutate(variable = factor(variable,levels=c("b1","b2","b3","b4"),
                                              labels=c("Detection","Blood Pressure \nMonitored",
                                                       "Treated","Controlled"))) %>% 
-                    dplyr::select(variable,stratification,prop) %>% 
-                    rename(prop_in_previous = prop),
+                    dplyr::select(variable,stratification,prop,n) %>% 
+                    rename(prop_in_previous = prop,
+                           n_in_previous = n),
                   by=c("variable","stratification")
 ) %>% 
-  mutate(prop_in_previous = case_when(is.na(prop_in_previous) ~ prop,
-                                      TRUE ~ prop_in_previous)) %>% 
+  # mutate(prop_in_previous = case_when(is.na(prop_in_previous) ~ prop,
+  #                                     TRUE ~ prop_in_previous)) %>% 
+  mutate(prop_final = case_when(variable == "Detection" & n >= 30 ~ prop,
+                                variable == "Blood Pressure \nMonitored" & n_in_previous >= 30 ~ prop_in_previous,
+                                variable == "Treated" & n_in_previous >=30 ~ prop_in_previous,
+                                variable == "Controlled" & n_in_previous >=30 ~ prop_in_previous,
+                                TRUE ~ NA_real_
+  )) %>% 
   dplyr::filter(!stratification %in% c("Total","Black Sexual Minority Men","Black Heterosexual Men",
                                       "Non-Black Sexual Minority Men","Non-Black Heterosexual Men")) %>% 
   mutate(age_category = str_split_i(stratification,pattern=";",i=1),
@@ -30,14 +37,14 @@ fig_df_cleaned = left_join(fig_df %>%
   mutate(rase = factor(rase,levels=c("Total","Black Heterosexual Men","Black Sexual Minority Men",
                                                          "Non-Black Heterosexual Men","Non-Black Sexual Minority Men"),
                                  labels=c("Total","Black \nHeterosexual Men","Black \nSexual Minority Men",
-                                          "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"))) %>% 
-  mutate(prop_in_previous = case_when(n < 30 ~ NA_real_,
-                          TRUE ~ prop_in_previous))
+                                          "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"))) # %>% 
+  # mutate(prop_in_previous = case_when(n < 30 ~ NA_real_,
+  #                         TRUE ~ prop_in_previous))
   
 fig_A = fig_df_cleaned %>% 
   dplyr::filter(variable == "Detection") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_final,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -54,7 +61,7 @@ fig_A = fig_df_cleaned %>%
 fig_B = fig_df_cleaned %>% 
   dplyr::filter(variable == "Blood Pressure \nMonitored") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_final,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -71,7 +78,7 @@ fig_B = fig_df_cleaned %>%
 fig_C = fig_df_cleaned %>% 
   dplyr::filter(variable == "Treated") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_final,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
@@ -88,7 +95,7 @@ fig_C = fig_df_cleaned %>%
 fig_D = fig_df_cleaned %>% 
   dplyr::filter(variable == "Controlled") %>% 
   # Plotting 
-  ggplot(data=.,aes(x=age_category,y=prop_in_previous,ymin=lci,ymax=uci,col=rase,group=rase)) +
+  ggplot(data=.,aes(x=age_category,y=prop_final,ymin=lci,ymax=uci,col=rase,group=rase)) +
   geom_point() +
   geom_path() +
   theme_bw() +
