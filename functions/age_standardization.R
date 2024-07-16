@@ -1,3 +1,16 @@
+
+library(boot)
+bootstrapped_SE <- function(dat,inds,model){
+  
+  pred_boot = predict(model,newdata=dat,type="response")
+  est = mean(pred_boot)
+  
+  return(est)
+  
+}
+
+
+
 age_standardization <- function(outcome_var = character(),
                                 df = data.frame(),
                                 age_var = character(),
@@ -35,7 +48,13 @@ age_standardization <- function(outcome_var = character(),
     # Calculate the standard error of the standardized rate
     # Implementation of Formula 2.5 from Raulfe 2008
 
-    SE <- # Write the code to calculate age standardized standard errors 
+    
+    
+    
+    mean_distribution <- boot(data = df,statistic = bootstrapped_SE,R = 1000,model=model)
+    # Write the code to calculate age standardized standard errors 
+    SE = (quantile(mean_distribution$t,0.975) - quantile(mean_distribution$t,0.025))/(1.96*2)
+    
     
         
     # Calculate the 95% CI
@@ -50,3 +69,8 @@ age_standardization <- function(outcome_var = character(),
   
   
 }
+
+
+
+
+
