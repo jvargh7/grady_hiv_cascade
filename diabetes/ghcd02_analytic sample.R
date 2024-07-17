@@ -51,7 +51,8 @@ analytic_df = dr_hussen_cohort_0216 %>%
                                   dt_0_age >= 65 ~ 4,
                                   TRUE ~ NA_real_)) %>%
   mutate(age_category = factor(age_category,levels=c(1:4),labels=c("18-29","30-44","45-64","65 and over"))) %>% 
-  dplyr::filter(gender != "Transgender Female" & gender != "Transgender Male to Female")
+  # exclude 121 trans females and 3 trans males
+  dplyr::filter(!(gender %in% c("Transgender Female", "Transgender Male to Female", "Transgender Male"))) 
 
 
 

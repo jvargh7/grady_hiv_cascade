@@ -54,3 +54,4 @@ fig_grady_age <- analytic_df  %>%
 
 fig_grady_age %>% 
   ggsave(plot = ., filename = paste0(path_grady_hiv_cascade_folder,"/figures/grady prevalence of hypertension in men by age.jpg"),width = 6, height = 4)
+
