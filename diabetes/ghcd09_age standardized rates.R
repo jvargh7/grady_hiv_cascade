@@ -4,7 +4,7 @@ cascade_df <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghc
   dplyr::select(mrn,monitored,treat,control)
 
 
-df <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghcd02_analytic sample.RDS")) %>% 
+analytic_df <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghcd02_analytic sample.RDS")) %>% 
   left_join(cascade_df,
             by=c("mrn")) %>% 
   mutate(rasegrp = case_when(
@@ -16,8 +16,16 @@ df <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghcd02_anal
   )) %>% 
   mutate(across(one_of(c("monitored","treat","control")),.fns=function(x) case_when(is.na(x) ~ 0,
                                                                                     TRUE ~ x))) %>% 
-  dplyr::select(cp2,monitored,treat,control,rasegrp,dt_0_age) %>% 
+  mutate(monitored_in_cp2 = case_when(cp2 == 1 ~ monitored,
+                                      TRUE ~ 0),
+         treat_in_monitored = case_when(monitored == 1 ~ treat,
+                                        TRUE ~ 0),
+         control_in_monitored = case_when(monitored == 1 ~ control,
+                                          TRUE ~ 0)) %>% 
+  dplyr::select("cp2", "monitored", "treat", "control", "monitored_in_cp2", "treat_in_monitored", 
+                "control_in_monitored","rasegrp","dt_0_age") %>% 
   dplyr::filter(rasegrp != "Unknown")
+
 
 library(purrr)
 
@@ -28,16 +36,37 @@ outcomes <- c("cp2", "monitored", "treat", "control")
 
 results_list <- purrr::map(outcomes, ~age_standardization(
   outcome_var = .x,
-  df = df,
+  df = analytic_df,
   age_var = "dt_0_age",
   X_var = "rasegrp"
 ))
 
-final_results <- bind_rows(results_list, .id = "outcome") %>%
+outcomes1 <- c("monitored_in_cp2")
+
+results_list1 <- purrr::map(outcomes1, ~age_standardization(
+  outcome_var = .x,
+  df = analytic_df %>% dplyr::filter(cp2==1),
+  age_var = "dt_0_age",
+  X_var = "rasegrp"
+))
+
+outcomes2 <- c("treat_in_monitored", "control_in_monitored")
+
+results_list2 <- purrr::map(outcomes2, ~age_standardization(
+  outcome_var = .x,
+  df = analytic_df %>% dplyr::filter(monitored==1),
+  age_var = "dt_0_age",
+  X_var = "rasegrp"
+))
+
+final_results <- bind_rows(results_list,results_list1,results_list2, .id = "outcome") %>%
   mutate(outcome = recode(outcome, 
-                          `1` = "Diabetes", 
-                          `2` = "Monitoring", 
-                          `3` = "Treatment", 
-                          `4` = "Control")) %>% 
+                          `1` = "a1", 
+                          `2` = "a2", 
+                          `3` = "a3", 
+                          `4` = "a4",
+                          `5` = "b2",
+                          `6` = "b3",
+                          `7` = "b4")) %>% 
   write.csv(.,"diabetes/ghcd09_age standardized rates.csv", row.names = FALSE)
 
