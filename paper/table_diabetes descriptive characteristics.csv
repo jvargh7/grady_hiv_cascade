@@ -1,39 +1,39 @@
 variable,group,Overall,Detected Diabetes,No Diabetes
-age_category,18-29,700 [15.1%,11 [1.9%,689 [17%
+age_category,18-29,699 [15.1%,11 [1.9%,688 [17%
 age_category,30-44,1520 [32.8%,87 [14.9%,1433 [35.4%
 age_category,45-64,2130 [46%,393 [67.4%,1737 [42.9%
-age_category,65 and over,284 [6.1%,92 [15.8%,192 [4.7%
-alcohol_use_missing,NA,2473,311,2162
+age_category,65 and over,283 [6.1%,92 [15.8%,191 [4.7%
+alcohol_use_missing,NA,2471,311,2160
 alt,NA,18 [13 [27,21 [14.2 [30,18 [13 [27
-alt_missing,NA,673,36,637
+alt_missing,NA,672,36,636
 ast,NA,21 [17 [27,20 [16 [27,21 [17 [27
-ast_missing,NA,673,36,637
+ast_missing,NA,672,36,636
 bmi,NA,26.4 [6.2,29.6 [7.3,25.9 [5.9
 bmi_missing,NA,56,2,54
 dbp,NA,78.9 [11,80 [11.5,78.8 [10.9
 dbp_missing,NA,935,88,847
 dt_0_age_missing,NA,0,0,0
 glucose,NA,100.5 [41.9,156 [81,91.5 [19.8
-glucose_missing,NA,635,22,613
+glucose_missing,NA,634,22,612
 hba1c,NA,5.6 [5.2 [6.2,6.8 [6.2 [8.1,5.4 [5.1 [5.7
-hba1c_missing,NA,3043,78,2965
+hba1c_missing,NA,3041,78,2963
 hdl,NA,44.3 [13.8,40.8 [12.1,45.1 [14
-hdl_missing,NA,2694,230,2464
+hdl_missing,NA,2692,230,2462
 hiv_viral_load_lt200,NA,3508 [97.9%,491 [98.8%,3017 [97.7%
-hiv_viral_load_lt200_missing,NA,1126,92,1034
-is_black,Black,3803 [82.1%,479 [82.2%,3324 [82.1%
-is_black,Other Race,813 [17.5%,102 [17.5%,711 [17.6%
+hiv_viral_load_lt200_missing,NA,1124,92,1032
+is_black,Black,3802 [82.1%,479 [82.2%,3323 [82.1%
+is_black,Other Race,812 [17.5%,102 [17.5%,710 [17.5%
 is_black,Unknown,18 [0.4%,2 [0.3%,16 [0.4%
-is_smm,Heterosexual Men,1434 [30.9%,245 [42%,1189 [29.4%
-is_smm,Sexual Minority Men,3200 [69.1%,338 [58%,2862 [70.6%
+is_smm,Heterosexual Men,1434 [31%,245 [42%,1189 [29.4%
+is_smm,Sexual Minority Men,3198 [69%,338 [58%,2860 [70.6%
 iv_drug_user_missing,NA,1,0,1
 ldl,NA,94.1 [37.2,89 [38.1,95.3 [36.9
-ldl_missing,NA,2695,230,2465
-sbp,NA,131.5 [17.3,134.8 [19.8,131 [16.9
+ldl_missing,NA,2693,230,2463
+sbp,NA,131.6 [17.3,134.8 [19.8,131.1 [16.8
 sbp_missing,NA,935,88,847
-stage1,NA,NA,495 [41.9%,3204 [43.5%
+stage1,NA,NA,495 [41.9%,3202 [43.6%
 stage1_missing,NA,NA,88,847
-stage2,NA,NA,495 [44.7%,3204 [33.3%
+stage2,NA,NA,495 [44.7%,3202 [33.3%
 stage2_missing,NA,NA,88,847
 tgl,NA,148.2 [124.7,199.2 [200.9,136.7 [96.2
-tgl_missing,NA,2690,225,2465
+tgl_missing,NA,2688,225,2463

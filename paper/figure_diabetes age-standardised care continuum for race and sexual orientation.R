@@ -9,17 +9,18 @@ fig_df <- read_csv("diabetes/ghcd09_age standardized rates.csv") %>%
               dplyr::filter(stratification %in% c("Total")) %>% 
               dplyr::select(-c("se", "n")))
 
+write_csv(fig_df,"paper/table_diabetes age-standardized care continuum for race and sexual orientation.csv")
 
 fig_A = left_join(fig_df %>% 
                     dplyr::filter(str_detect(variable,"a")) %>% 
                     mutate(variable = factor(variable,levels=c("a1","a2","a3","a4"),
-                                             labels=c("Detection","HbA1c \nMonitored",
+                                             labels=c("Diabetes","HbA1c \nMonitored",
                                                       "Treated","Controlled"))),
                   
                   fig_df %>% 
                     dplyr::filter(str_detect(variable,"b")) %>% 
                     mutate(variable = factor(variable,levels=c("b1","b2","b3","b4"),
-                                             labels=c("Detection","HbA1c \nMonitored",
+                                             labels=c("Diabetes","HbA1c \nMonitored",
                                                       "Treated","Controlled"))) %>% 
                     dplyr::select(variable,stratification,prop) %>% 
                     rename(prop_in_previous = prop),
@@ -40,7 +41,7 @@ fig_A = left_join(fig_df %>%
   theme_bw() +
   scale_fill_manual(name="",values=c("red","#56B4E9","#E69F00","#009E73")) +
   scale_y_continuous(limits=c(0,20),breaks=seq(0,20,5)) +
-  xlab("") +ylab("Proportion (%)") +
+  xlab("") +ylab("Percentage (%)") +
   theme(legend.position = "bottom",
         axis.text = element_text(size = 12),
         axis.title = element_text(size = 14),

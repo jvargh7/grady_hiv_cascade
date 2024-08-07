@@ -1,21 +1,21 @@
 cp2,variable,est,value,type,group
-No Diabetes,bmi,mean,25.92147610708031,Continuous,NA
-No Diabetes,bmi,sd,5.87949258914814,Continuous,NA
+No Diabetes,bmi,mean,25.923894868585734,Continuous,NA
+No Diabetes,bmi,sd,5.879970095284785,Continuous,NA
 No Diabetes,bmi,median,28.12,Continuous,NA
 No Diabetes,bmi,q25,21.09,Continuous,NA
 No Diabetes,bmi,q75,28.12,Continuous,NA
 No Diabetes,bmi,min,0,Continuous,NA
 No Diabetes,bmi,max,70.3,Continuous,NA
-No Diabetes,bmi,freq,3997,Continuous,NA
+No Diabetes,bmi,freq,3995,Continuous,NA
 No Diabetes,bmi,missing,54,Continuous,NA
-No Diabetes,dt_0_age,mean,43.65341890891138,Continuous,NA
-No Diabetes,dt_0_age,sd,13.300713803811123,Continuous,NA
+No Diabetes,dt_0_age,mean,43.65275376636207,Continuous,NA
+No Diabetes,dt_0_age,sd,13.295774201210003,Continuous,NA
 No Diabetes,dt_0_age,median,43,Continuous,NA
 No Diabetes,dt_0_age,q25,33,Continuous,NA
 No Diabetes,dt_0_age,q75,55,Continuous,NA
 No Diabetes,dt_0_age,min,18,Continuous,NA
 No Diabetes,dt_0_age,max,86,Continuous,NA
-No Diabetes,dt_0_age,freq,4051,Continuous,NA
+No Diabetes,dt_0_age,freq,4049,Continuous,NA
 No Diabetes,dt_0_age,missing,0,Continuous,NA
 No Diabetes,hba1c,mean,5.351473296500921,Continuous,NA
 No Diabetes,hba1c,sd,0.5128151657440929,Continuous,NA
@@ -25,7 +25,7 @@ No Diabetes,hba1c,q75,5.7,Continuous,NA
 No Diabetes,hba1c,min,3.5,Continuous,NA
 No Diabetes,hba1c,max,7.6,Continuous,NA
 No Diabetes,hba1c,freq,1086,Continuous,NA
-No Diabetes,hba1c,missing,2965,Continuous,NA
+No Diabetes,hba1c,missing,2963,Continuous,NA
 No Diabetes,hdl,mean,45.12287334593573,Continuous,NA
 No Diabetes,hdl,sd,14.03843219964122,Continuous,NA
 No Diabetes,hdl,median,44,Continuous,NA
@@ -34,7 +34,7 @@ No Diabetes,hdl,q75,52,Continuous,NA
 No Diabetes,hdl,min,3,Continuous,NA
 No Diabetes,hdl,max,137,Continuous,NA
 No Diabetes,hdl,freq,1587,Continuous,NA
-No Diabetes,hdl,missing,2464,Continuous,NA
+No Diabetes,hdl,missing,2462,Continuous,NA
 No Diabetes,ldl,mean,95.2890920554855,Continuous,NA
 No Diabetes,ldl,sd,36.921074498725204,Continuous,NA
 No Diabetes,ldl,median,91,Continuous,NA
@@ -43,7 +43,7 @@ No Diabetes,ldl,q75,114,Continuous,NA
 No Diabetes,ldl,min,8,Continuous,NA
 No Diabetes,ldl,max,443,Continuous,NA
 No Diabetes,ldl,freq,1586,Continuous,NA
-No Diabetes,ldl,missing,2465,Continuous,NA
+No Diabetes,ldl,missing,2463,Continuous,NA
 No Diabetes,tgl,mean,136.65195460277428,Continuous,NA
 No Diabetes,tgl,sd,96.18991591441336,Continuous,NA
 No Diabetes,tgl,median,110.5,Continuous,NA
@@ -52,51 +52,51 @@ No Diabetes,tgl,q75,167,Continuous,NA
 No Diabetes,tgl,min,30,Continuous,NA
 No Diabetes,tgl,max,1308,Continuous,NA
 No Diabetes,tgl,freq,1586,Continuous,NA
-No Diabetes,tgl,missing,2465,Continuous,NA
-No Diabetes,glucose,mean,91.4741128563118,Continuous,NA
-No Diabetes,glucose,sd,19.802958637570846,Continuous,NA
+No Diabetes,tgl,missing,2463,Continuous,NA
+No Diabetes,glucose,mean,91.4687227233052,Continuous,NA
+No Diabetes,glucose,sd,19.80331759000624,Continuous,NA
 No Diabetes,glucose,median,89,Continuous,NA
 No Diabetes,glucose,q25,82,Continuous,NA
 No Diabetes,glucose,q75,98,Continuous,NA
 No Diabetes,glucose,min,37,Continuous,NA
 No Diabetes,glucose,max,634,Continuous,NA
-No Diabetes,glucose,freq,3438,Continuous,NA
-No Diabetes,glucose,missing,613,Continuous,NA
-No Diabetes,alt,mean,26.100468658465143,Continuous,NA
-No Diabetes,alt,sd,57.9669388057222,Continuous,NA
+No Diabetes,glucose,freq,3437,Continuous,NA
+No Diabetes,glucose,missing,612,Continuous,NA
+No Diabetes,alt,mean,26.101963082332258,Continuous,NA
+No Diabetes,alt,sd,57.9753669768315,Continuous,NA
 No Diabetes,alt,median,18,Continuous,NA
 No Diabetes,alt,q25,13,Continuous,NA
 No Diabetes,alt,q75,27,Continuous,NA
 No Diabetes,alt,min,3,Continuous,NA
 No Diabetes,alt,max,2303,Continuous,NA
-No Diabetes,alt,freq,3414,Continuous,NA
-No Diabetes,alt,missing,637,Continuous,NA
-No Diabetes,ast,mean,29.883567662565905,Continuous,NA
-No Diabetes,ast,sd,86.54641783531413,Continuous,NA
+No Diabetes,alt,freq,3413,Continuous,NA
+No Diabetes,alt,missing,636,Continuous,NA
+No Diabetes,ast,mean,29.887635511280397,Continuous,NA
+No Diabetes,ast,sd,86.55877313698956,Continuous,NA
 No Diabetes,ast,median,21,Continuous,NA
 No Diabetes,ast,q25,17,Continuous,NA
 No Diabetes,ast,q75,27,Continuous,NA
 No Diabetes,ast,min,7,Continuous,NA
 No Diabetes,ast,max,3667.5,Continuous,NA
-No Diabetes,ast,freq,3414,Continuous,NA
-No Diabetes,ast,missing,637,Continuous,NA
-No Diabetes,sbp,mean,131.04452767374116,Continuous,NA
-No Diabetes,sbp,sd,16.85367384505164,Continuous,NA
+No Diabetes,ast,freq,3413,Continuous,NA
+No Diabetes,ast,missing,636,Continuous,NA
+No Diabetes,sbp,mean,131.05080158234438,Continuous,NA
+No Diabetes,sbp,sd,16.847260796471264,Continuous,NA
 No Diabetes,sbp,median,131,Continuous,NA
 No Diabetes,sbp,q25,119,Continuous,NA
 No Diabetes,sbp,q75,141,Continuous,NA
 No Diabetes,sbp,min,70,Continuous,NA
 No Diabetes,sbp,max,222,Continuous,NA
-No Diabetes,sbp,freq,3204,Continuous,NA
+No Diabetes,sbp,freq,3202,Continuous,NA
 No Diabetes,sbp,missing,847,Continuous,NA
-No Diabetes,dbp,mean,78.76633374947981,Continuous,NA
-No Diabetes,dbp,sd,10.895522337522792,Continuous,NA
+No Diabetes,dbp,mean,78.76368936081616,Continuous,NA
+No Diabetes,dbp,sd,10.886939479585397,Continuous,NA
 No Diabetes,dbp,median,78,Continuous,NA
 No Diabetes,dbp,q25,71,Continuous,NA
 No Diabetes,dbp,q75,86,Continuous,NA
 No Diabetes,dbp,min,44,Continuous,NA
 No Diabetes,dbp,max,129,Continuous,NA
-No Diabetes,dbp,freq,3204,Continuous,NA
+No Diabetes,dbp,freq,3202,Continuous,NA
 No Diabetes,dbp,missing,847,Continuous,NA
 Detected Diabetes,bmi,mean,29.57197934595525,Continuous,NA
 Detected Diabetes,bmi,sd,7.252030396277871,Continuous,NA
@@ -199,18 +199,18 @@ Detected Diabetes,dbp,freq,495,Continuous,NA
 Detected Diabetes,dbp,missing,88,Continuous,NA
 No Diabetes,alcohol_use,proportion,58.44362096347274,Proportion,NA
 No Diabetes,alcohol_use,freq,1889,Proportion,NA
-No Diabetes,alcohol_use,missing,2162,Proportion,NA
+No Diabetes,alcohol_use,missing,2160,Proportion,NA
 No Diabetes,hiv_viral_load_lt200,proportion,97.74610540271793,Proportion,NA
 No Diabetes,hiv_viral_load_lt200,freq,3017,Proportion,NA
-No Diabetes,hiv_viral_load_lt200,missing,1034,Proportion,NA
-No Diabetes,iv_drug_user,proportion,0.24691358024691357,Proportion,NA
-No Diabetes,iv_drug_user,freq,4050,Proportion,NA
+No Diabetes,hiv_viral_load_lt200,missing,1032,Proportion,NA
+No Diabetes,iv_drug_user,proportion,0.24703557312252966,Proportion,NA
+No Diabetes,iv_drug_user,freq,4048,Proportion,NA
 No Diabetes,iv_drug_user,missing,1,Proportion,NA
-No Diabetes,stage1,proportion,43.54452767374116,Proportion,NA
-No Diabetes,stage1,freq,3204,Proportion,NA
+No Diabetes,stage1,proportion,43.57172600458047,Proportion,NA
+No Diabetes,stage1,freq,3202,Proportion,NA
 No Diabetes,stage1,missing,847,Proportion,NA
-No Diabetes,stage2,proportion,33.31252600915523,Proportion,NA
-No Diabetes,stage2,freq,3204,Proportion,NA
+No Diabetes,stage2,proportion,33.302102852383925,Proportion,NA
+No Diabetes,stage2,freq,3202,Proportion,NA
 No Diabetes,stage2,missing,847,Proportion,NA
 Detected Diabetes,alcohol_use,proportion,52.57352941176471,Proportion,NA
 Detected Diabetes,alcohol_use,freq,272,Proportion,NA
@@ -227,15 +227,15 @@ Detected Diabetes,stage1,missing,88,Proportion,NA
 Detected Diabetes,stage2,proportion,44.74747474747475,Proportion,NA
 Detected Diabetes,stage2,freq,495,Proportion,NA
 Detected Diabetes,stage2,missing,88,Proportion,NA
-No Diabetes,rasegrp,proportion,25.08022710441866,Grouped,Black Heterosexual Men
+No Diabetes,rasegrp,proportion,25.092615460607558,Grouped,Black Heterosexual Men
 No Diabetes,rasegrp,freq,1016,Grouped,Black Heterosexual Men
-No Diabetes,rasegrp,proportion,56.973586768699086,Grouped,Black Sexual Minority Men
-No Diabetes,rasegrp,freq,2308,Grouped,Black Sexual Minority Men
-No Diabetes,rasegrp,proportion,4.196494692668477,Grouped,Non-Black Heterosexual Men
+No Diabetes,rasegrp,proportion,56.97703136576933,Grouped,Black Sexual Minority Men
+No Diabetes,rasegrp,freq,2307,Grouped,Black Sexual Minority Men
+No Diabetes,rasegrp,proportion,4.198567547542603,Grouped,Non-Black Heterosexual Men
 No Diabetes,rasegrp,freq,170,Grouped,Non-Black Heterosexual Men
-No Diabetes,rasegrp,proportion,13.354727227844977,Grouped,Non-Black Sexual Minority Men
-No Diabetes,rasegrp,freq,541,Grouped,Non-Black Sexual Minority Men
-No Diabetes,rasegrp,proportion,0.3949642063687978,Grouped,Unknown
+No Diabetes,rasegrp,proportion,13.336626327488268,Grouped,Non-Black Sexual Minority Men
+No Diabetes,rasegrp,freq,540,Grouped,Non-Black Sexual Minority Men
+No Diabetes,rasegrp,proportion,0.395159298592245,Grouped,Unknown
 No Diabetes,rasegrp,freq,16,Grouped,Unknown
 Detected Diabetes,rasegrp,proportion,37.39279588336192,Grouped,Black Heterosexual Men
 Detected Diabetes,rasegrp,freq,218,Grouped,Black Heterosexual Men
@@ -247,19 +247,19 @@ Detected Diabetes,rasegrp,proportion,13.036020583190394,Grouped,Non-Black Sexual
 Detected Diabetes,rasegrp,freq,76,Grouped,Non-Black Sexual Minority Men
 Detected Diabetes,rasegrp,proportion,0.34305317324185247,Grouped,Unknown
 Detected Diabetes,rasegrp,freq,2,Grouped,Unknown
-No Diabetes,is_smm,proportion,29.350777585781287,Grouped,Heterosexual Men
+No Diabetes,is_smm,proportion,29.365275376636205,Grouped,Heterosexual Men
 No Diabetes,is_smm,freq,1189,Grouped,Heterosexual Men
-No Diabetes,is_smm,proportion,70.64922241421871,Grouped,Sexual Minority Men
-No Diabetes,is_smm,freq,2862,Grouped,Sexual Minority Men
+No Diabetes,is_smm,proportion,70.6347246233638,Grouped,Sexual Minority Men
+No Diabetes,is_smm,freq,2860,Grouped,Sexual Minority Men
 Detected Diabetes,is_smm,proportion,42.02401372212693,Grouped,Heterosexual Men
 Detected Diabetes,is_smm,freq,245,Grouped,Heterosexual Men
 Detected Diabetes,is_smm,proportion,57.97598627787307,Grouped,Sexual Minority Men
 Detected Diabetes,is_smm,freq,338,Grouped,Sexual Minority Men
-No Diabetes,is_black,proportion,82.05381387311775,Grouped,Black
-No Diabetes,is_black,freq,3324,Grouped,Black
-No Diabetes,is_black,proportion,17.551221920513452,Grouped,Other Race
-No Diabetes,is_black,freq,711,Grouped,Other Race
-No Diabetes,is_black,proportion,0.3949642063687978,Grouped,Unknown
+No Diabetes,is_black,proportion,82.06964682637688,Grouped,Black
+No Diabetes,is_black,freq,3323,Grouped,Black
+No Diabetes,is_black,proportion,17.53519387503087,Grouped,Other Race
+No Diabetes,is_black,freq,710,Grouped,Other Race
+No Diabetes,is_black,proportion,0.395159298592245,Grouped,Unknown
 No Diabetes,is_black,freq,16,Grouped,Unknown
 Detected Diabetes,is_black,proportion,82.16123499142367,Grouped,Black
 Detected Diabetes,is_black,freq,479,Grouped,Black
@@ -267,14 +267,14 @@ Detected Diabetes,is_black,proportion,17.495711835334475,Grouped,Other Race
 Detected Diabetes,is_black,freq,102,Grouped,Other Race
 Detected Diabetes,is_black,proportion,0.34305317324185247,Grouped,Unknown
 Detected Diabetes,is_black,freq,2,Grouped,Unknown
-No Diabetes,age_category,proportion,17.008146136756356,Grouped,18-29
-No Diabetes,age_category,freq,689,Grouped,18-29
-No Diabetes,age_category,proportion,35.373981732905456,Grouped,30-44
+No Diabetes,age_category,proportion,16.991849839466536,Grouped,18-29
+No Diabetes,age_category,freq,688,Grouped,18-29
+No Diabetes,age_category,proportion,35.39145468016794,Grouped,30-44
 No Diabetes,age_category,freq,1433,Grouped,30-44
-No Diabetes,age_category,proportion,42.878301653912615,Grouped,45-64
+No Diabetes,age_category,proportion,42.8994813534206,Grouped,45-64
 No Diabetes,age_category,freq,1737,Grouped,45-64
-No Diabetes,age_category,proportion,4.739570476425574,Grouped,65 and over
-No Diabetes,age_category,freq,192,Grouped,65 and over
+No Diabetes,age_category,proportion,4.717214126944925,Grouped,65 and over
+No Diabetes,age_category,freq,191,Grouped,65 and over
 Detected Diabetes,age_category,proportion,1.8867924528301887,Grouped,18-29
 Detected Diabetes,age_category,freq,11,Grouped,18-29
 Detected Diabetes,age_category,proportion,14.922813036020584,Grouped,30-44
@@ -283,23 +283,23 @@ Detected Diabetes,age_category,proportion,67.40994854202401,Grouped,45-64
 Detected Diabetes,age_category,freq,393,Grouped,45-64
 Detected Diabetes,age_category,proportion,15.780445969125214,Grouped,65 and over
 Detected Diabetes,age_category,freq,92,Grouped,65 and over
-Overall,bmi,mean,26.38476627348187,Continuous,NA
-Overall,bmi,sd,6.190456933545454,Continuous,NA
+Overall,bmi,mean,26.38708041958042,Continuous,NA
+Overall,bmi,sd,6.190819721925221,Continuous,NA
 Overall,bmi,median,28.12,Continuous,NA
 Overall,bmi,q25,21.09,Continuous,NA
 Overall,bmi,q75,28.12,Continuous,NA
 Overall,bmi,min,0,Continuous,NA
 Overall,bmi,max,70.3,Continuous,NA
-Overall,bmi,freq,4578,Continuous,NA
+Overall,bmi,freq,4576,Continuous,NA
 Overall,bmi,missing,56,Continuous,NA
-Overall,dt_0_age,mean,45.01057401812689,Continuous,NA
-Overall,dt_0_age,sd,13.464252515711548,Continuous,NA
+Overall,dt_0_age,mean,45.01057858376511,Continuous,NA
+Overall,dt_0_age,sd,13.460086647278091,Continuous,NA
 Overall,dt_0_age,median,46,Continuous,NA
 Overall,dt_0_age,q25,34,Continuous,NA
 Overall,dt_0_age,q75,56,Continuous,NA
 Overall,dt_0_age,min,18,Continuous,NA
 Overall,dt_0_age,max,86,Continuous,NA
-Overall,dt_0_age,freq,4634,Continuous,NA
+Overall,dt_0_age,freq,4632,Continuous,NA
 Overall,dt_0_age,missing,0,Continuous,NA
 Overall,hba1c,mean,6.063104965430547,Continuous,NA
 Overall,hba1c,sd,1.7350229298089264,Continuous,NA
@@ -309,7 +309,7 @@ Overall,hba1c,q75,6.2,Continuous,NA
 Overall,hba1c,min,3.5,Continuous,NA
 Overall,hba1c,max,18.7,Continuous,NA
 Overall,hba1c,freq,1591,Continuous,NA
-Overall,hba1c,missing,3043,Continuous,NA
+Overall,hba1c,missing,3041,Continuous,NA
 Overall,hdl,mean,44.32886597938144,Continuous,NA
 Overall,hdl,sd,13.804316198070621,Continuous,NA
 Overall,hdl,median,43,Continuous,NA
@@ -318,7 +318,7 @@ Overall,hdl,q75,51,Continuous,NA
 Overall,hdl,min,3,Continuous,NA
 Overall,hdl,max,137,Continuous,NA
 Overall,hdl,freq,1940,Continuous,NA
-Overall,hdl,missing,2694,Continuous,NA
+Overall,hdl,missing,2692,Continuous,NA
 Overall,ldl,mean,94.13692625064466,Continuous,NA
 Overall,ldl,sd,37.210373788530724,Continuous,NA
 Overall,ldl,median,90,Continuous,NA
@@ -327,7 +327,7 @@ Overall,ldl,q75,114,Continuous,NA
 Overall,ldl,min,8,Continuous,NA
 Overall,ldl,max,443,Continuous,NA
 Overall,ldl,freq,1939,Continuous,NA
-Overall,ldl,missing,2695,Continuous,NA
+Overall,ldl,missing,2693,Continuous,NA
 Overall,tgl,mean,148.1684670781893,Continuous,NA
 Overall,tgl,sd,124.69268363067665,Continuous,NA
 Overall,tgl,median,117,Continuous,NA
@@ -336,86 +336,86 @@ Overall,tgl,q75,178,Continuous,NA
 Overall,tgl,min,30,Continuous,NA
 Overall,tgl,max,2579,Continuous,NA
 Overall,tgl,freq,1944,Continuous,NA
-Overall,tgl,missing,2690,Continuous,NA
-Overall,glucose,mean,100.52463115778944,Continuous,NA
-Overall,glucose,sd,41.9328661504259,Continuous,NA
+Overall,tgl,missing,2688,Continuous,NA
+Overall,glucose,mean,100.52226113056528,Continuous,NA
+Overall,glucose,sd,41.937843491617336,Continuous,NA
 Overall,glucose,median,91,Continuous,NA
 Overall,glucose,q25,83,Continuous,NA
 Overall,glucose,q75,102,Continuous,NA
 Overall,glucose,min,37,Continuous,NA
 Overall,glucose,max,634,Continuous,NA
-Overall,glucose,freq,3999,Continuous,NA
-Overall,glucose,missing,635,Continuous,NA
-Overall,alt,mean,26.25094673062358,Continuous,NA
-Overall,alt,sd,54.71118973814288,Continuous,NA
+Overall,glucose,freq,3998,Continuous,NA
+Overall,glucose,missing,634,Continuous,NA
+Overall,alt,mean,26.25227272727273,Continuous,NA
+Overall,alt,sd,54.71803536935379,Continuous,NA
 Overall,alt,median,18,Continuous,NA
 Overall,alt,q25,13,Continuous,NA
 Overall,alt,q75,27,Continuous,NA
 Overall,alt,min,3,Continuous,NA
 Overall,alt,max,2303,Continuous,NA
-Overall,alt,freq,3961,Continuous,NA
-Overall,alt,missing,673,Continuous,NA
-Overall,ast,mean,29.494445847008333,Continuous,NA
-Overall,ast,sd,81.2093113003113,Continuous,NA
+Overall,alt,freq,3960,Continuous,NA
+Overall,alt,missing,672,Continuous,NA
+Overall,ast,mean,29.497853535353535,Continuous,NA
+Overall,ast,sd,81.2192837103019,Continuous,NA
 Overall,ast,median,21,Continuous,NA
 Overall,ast,q25,17,Continuous,NA
 Overall,ast,q75,27,Continuous,NA
 Overall,ast,min,7,Continuous,NA
 Overall,ast,max,3667.5,Continuous,NA
-Overall,ast,freq,3961,Continuous,NA
-Overall,ast,missing,673,Continuous,NA
-Overall,sbp,mean,131.5495178877174,Continuous,NA
-Overall,sbp,sd,17.32575882170055,Continuous,NA
+Overall,ast,freq,3960,Continuous,NA
+Overall,ast,missing,672,Continuous,NA
+Overall,sbp,mean,131.55522495717247,Continuous,NA
+Overall,sbp,sd,17.320445829689646,Continuous,NA
 Overall,sbp,median,131,Continuous,NA
 Overall,sbp,q25,120,Continuous,NA
 Overall,sbp,q75,142,Continuous,NA
 Overall,sbp,min,70,Continuous,NA
 Overall,sbp,max,222,Continuous,NA
-Overall,sbp,freq,3699,Continuous,NA
+Overall,sbp,freq,3697,Continuous,NA
 Overall,sbp,missing,935,Continuous,NA
-Overall,dbp,mean,78.93385599711634,Continuous,NA
-Overall,dbp,sd,10.991455142055798,Continuous,NA
+Overall,dbp,mean,78.9316562978992,Continuous,NA
+Overall,dbp,sd,10.984173108391131,Continuous,NA
 Overall,dbp,median,79,Continuous,NA
 Overall,dbp,q25,71,Continuous,NA
 Overall,dbp,q75,86,Continuous,NA
 Overall,dbp,min,44,Continuous,NA
 Overall,dbp,max,129,Continuous,NA
-Overall,dbp,freq,3699,Continuous,NA
+Overall,dbp,freq,3697,Continuous,NA
 Overall,dbp,missing,935,Continuous,NA
 Overall,alcohol_use,proportion,57.70476631189264,Proportion,NA
 Overall,alcohol_use,freq,2161,Proportion,NA
-Overall,alcohol_use,missing,2473,Proportion,NA
+Overall,alcohol_use,missing,2471,Proportion,NA
 Overall,hiv_viral_load_lt200,proportion,97.89053591790193,Proportion,NA
 Overall,hiv_viral_load_lt200,freq,3508,Proportion,NA
-Overall,hiv_viral_load_lt200,missing,1126,Proportion,NA
-Overall,iv_drug_user,proportion,0.32376429958989855,Proportion,NA
-Overall,iv_drug_user,freq,4633,Proportion,NA
+Overall,hiv_viral_load_lt200,missing,1124,Proportion,NA
+Overall,iv_drug_user,proportion,0.32390412437918376,Proportion,NA
+Overall,iv_drug_user,freq,4631,Proportion,NA
 Overall,iv_drug_user,missing,1,Proportion,NA
-Overall,rasegrp,proportion,26.629261976694,Grouped,Black Heterosexual Men
+Overall,rasegrp,proportion,26.640759930915372,Grouped,Black Heterosexual Men
 Overall,rasegrp,freq,1234,Grouped,Black Heterosexual Men
-Overall,rasegrp,proportion,55.438066465256796,Grouped,Black Sexual Minority Men
-Overall,rasegrp,freq,2569,Grouped,Black Sexual Minority Men
-Overall,rasegrp,proportion,4.229607250755287,Grouped,Non-Black Heterosexual Men
+Overall,rasegrp,proportion,55.44041450777202,Grouped,Black Sexual Minority Men
+Overall,rasegrp,freq,2568,Grouped,Black Sexual Minority Men
+Overall,rasegrp,proportion,4.231433506044905,Grouped,Non-Black Heterosexual Men
 Overall,rasegrp,freq,196,Grouped,Non-Black Heterosexual Men
-Overall,rasegrp,proportion,13.314630988347,Grouped,Non-Black Sexual Minority Men
-Overall,rasegrp,freq,617,Grouped,Non-Black Sexual Minority Men
-Overall,rasegrp,proportion,0.38843331894691413,Grouped,Unknown
+Overall,rasegrp,proportion,13.298791018998273,Grouped,Non-Black Sexual Minority Men
+Overall,rasegrp,freq,616,Grouped,Non-Black Sexual Minority Men
+Overall,rasegrp,proportion,0.38860103626943004,Grouped,Unknown
 Overall,rasegrp,freq,18,Grouped,Unknown
-Overall,is_smm,proportion,30.945187742770823,Grouped,Heterosexual Men
+Overall,is_smm,proportion,30.958549222797927,Grouped,Heterosexual Men
 Overall,is_smm,freq,1434,Grouped,Heterosexual Men
-Overall,is_smm,proportion,69.05481225722917,Grouped,Sexual Minority Men
-Overall,is_smm,freq,3200,Grouped,Sexual Minority Men
-Overall,is_black,proportion,82.06732844195079,Grouped,Black
-Overall,is_black,freq,3803,Grouped,Black
-Overall,is_black,proportion,17.544238239102288,Grouped,Other Race
-Overall,is_black,freq,813,Grouped,Other Race
-Overall,is_black,proportion,0.38843331894691413,Grouped,Unknown
+Overall,is_smm,proportion,69.04145077720207,Grouped,Sexual Minority Men
+Overall,is_smm,freq,3198,Grouped,Sexual Minority Men
+Overall,is_black,proportion,82.0811744386874,Grouped,Black
+Overall,is_black,freq,3802,Grouped,Black
+Overall,is_black,proportion,17.530224525043177,Grouped,Other Race
+Overall,is_black,freq,812,Grouped,Other Race
+Overall,is_black,proportion,0.38860103626943004,Grouped,Unknown
 Overall,is_black,freq,18,Grouped,Unknown
-Overall,age_category,proportion,15.105740181268882,Grouped,18-29
-Overall,age_category,freq,700,Grouped,18-29
-Overall,age_category,proportion,32.801035822183856,Grouped,30-44
+Overall,age_category,proportion,15.090673575129534,Grouped,18-29
+Overall,age_category,freq,699,Grouped,18-29
+Overall,age_category,proportion,32.81519861830743,Grouped,30-44
 Overall,age_category,freq,1520,Grouped,30-44
-Overall,age_category,proportion,45.96460940871817,Grouped,45-64
+Overall,age_category,proportion,45.984455958549226,Grouped,45-64
 Overall,age_category,freq,2130,Grouped,45-64
-Overall,age_category,proportion,6.128614587829089,Grouped,65 and over
-Overall,age_category,freq,284,Grouped,65 and over
+Overall,age_category,proportion,6.109671848013817,Grouped,65 and over
+Overall,age_category,freq,283,Grouped,65 and over

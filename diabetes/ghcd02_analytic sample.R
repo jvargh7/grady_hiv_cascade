@@ -6,6 +6,7 @@ cp2 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghcd01_cp2
 dr_hussen_cohort_0216 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_cohort_0216.RDS")) 
 dr_hussen_0217 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/dr_hussen_0217.RDS")) 
 
+t1dm = readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghcd01b_type 1 diabetes.RDS"))
 
 sexual_orientation <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/raw/sexual orientation.RDS"))
 
@@ -52,7 +53,10 @@ analytic_df = dr_hussen_cohort_0216 %>%
                                   TRUE ~ NA_real_)) %>%
   mutate(age_category = factor(age_category,levels=c(1:4),labels=c("18-29","30-44","45-64","65 and over"))) %>% 
   # exclude 121 trans females and 3 trans males
-  dplyr::filter(!(gender %in% c("Transgender Female", "Transgender Male to Female", "Transgender Male"))) 
+  dplyr::filter(!(gender %in% c("Transgender Female", "Transgender Male to Female", "Transgender Male"))) %>% 
+  mutate(t1dm = case_when(cp2 == 0 & person_key %in% t1dm$person_key ~ 1,
+                          TRUE ~ 0)) %>% 
+  dplyr::filter(t1dm == 0)
 
 
 
