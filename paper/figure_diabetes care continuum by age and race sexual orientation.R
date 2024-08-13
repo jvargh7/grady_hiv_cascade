@@ -122,5 +122,5 @@ ggarrange(fig_A,
           labels = c("A","B","C","D"),
           legend = "bottom",
           common.legend = TRUE) %>% 
-  ggsave(.,filename=paste0(path_grady_hiv_cascade_folder,"/figures/diabetes care continuum by age and rase sexual orientation.jpg"),width=9, height = 8)
+  ggsave(.,filename=paste0(path_grady_hiv_cascade_folder,"/figures/diabetes care continuum by age and rase sexual orientation.tif"),width=9, height = 8)
 

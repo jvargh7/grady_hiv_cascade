@@ -47,5 +47,5 @@ fig_A = left_join(fig_df %>%
         axis.title = element_text(size = 14),
         legend.text = element_text(size = 14))
 
-ggsave(fig_A,filename=paste0(path_grady_hiv_cascade_folder,"/figures/age-standardised diabetes care continuum by race and sexual orientation.png"),width=10, height = 5)
+ggsave(fig_A,filename=paste0(path_grady_hiv_cascade_folder,"/figures/age-standardised diabetes care continuum by race and sexual orientation.tif"),width=10, height = 5)
 
