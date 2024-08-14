@@ -39,7 +39,7 @@ fig_df_cleaned = left_join(fig_df %>%
   mutate(rase = factor(rase,levels=c("Total","Black Heterosexual Men","Black Sexual Minority Men",
                                      "Non-Black Heterosexual Men","Non-Black Sexual Minority Men"),
                        labels=c("Total","Black \nHeterosexual Men","Black \nSexual Minority Men",
-                                "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men")))  
+                                "Heterosexual Men \nof Other Races","Sexual Minority Men \nof Other Races")))  
   # mutate(prop_in_previous = case_when(n < 30 ~ NA_real_,
   #                                     TRUE ~ prop_in_previous))
 

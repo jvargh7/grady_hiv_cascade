@@ -28,7 +28,7 @@ fig_A = left_join(fig_df %>%
   mutate(stratification = factor(stratification,levels=c("Total","Black Heterosexual Men","Black Sexual Minority Men",
                                                          "Non-Black Heterosexual Men","Non-Black Sexual Minority Men"),
                                  labels=c("Total","Black \nHeterosexual Men","Black \nSexual Minority Men",
-                                          "Non-Black \nHeterosexual Men","Non-Black \nSexual Minority Men"))) %>% 
+                                          "Heterosexual Men \nof Other Races","Sexual Minority Men \nof Other Races"))) %>% 
   ggplot(data=.,aes(x=stratification,y=prop,ymin=lci,ymax=uci,fill=variable)) +
   geom_col(position = position_dodge(width = 0.9)) +
   geom_errorbar(position = position_dodge(width = 0.9),width = 0.1) +
