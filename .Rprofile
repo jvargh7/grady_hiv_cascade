@@ -11,7 +11,7 @@ if(Sys.info()["user"]=="JVARGH7"){
 }
 
 if(Sys.info()["user"]=="JGUO258"){
-  path_grady_hiv_cascade_folder <- "C:/Users/JGUO258/OneDrive - Emory/GRADY HIV Care Cascade"
+  path_grady_hiv_cascade_folder <- "C:/Users/JGUO258/OneDrive - Emory/Papers/GRADY HIV Care Cascade"
 }
 
 strata_cutoff = 30
