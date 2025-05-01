@@ -1,0 +1,653 @@
+rasegrp,variable,est,value,type,group
+Black Heterosexual Men,bmi,mean,26.22686371100164,Continuous,NA
+Black Heterosexual Men,bmi,sd,6.307398833813258,Continuous,NA
+Black Heterosexual Men,bmi,median,28.12,Continuous,NA
+Black Heterosexual Men,bmi,q25,21.09,Continuous,NA
+Black Heterosexual Men,bmi,q75,28.12,Continuous,NA
+Black Heterosexual Men,bmi,min,0,Continuous,NA
+Black Heterosexual Men,bmi,max,63.27,Continuous,NA
+Black Heterosexual Men,bmi,freq,1218,Continuous,NA
+Black Heterosexual Men,bmi,missing,16,Continuous,NA
+Black Heterosexual Men,dt_0_age,mean,50.71150729335494,Continuous,NA
+Black Heterosexual Men,dt_0_age,sd,13.602135244467576,Continuous,NA
+Black Heterosexual Men,dt_0_age,median,53,Continuous,NA
+Black Heterosexual Men,dt_0_age,q25,42,Continuous,NA
+Black Heterosexual Men,dt_0_age,q75,60,Continuous,NA
+Black Heterosexual Men,dt_0_age,min,18,Continuous,NA
+Black Heterosexual Men,dt_0_age,max,86,Continuous,NA
+Black Heterosexual Men,dt_0_age,freq,1234,Continuous,NA
+Black Heterosexual Men,dt_0_age,missing,0,Continuous,NA
+Black Heterosexual Men,hba1c,mean,6.217052631578947,Continuous,NA
+Black Heterosexual Men,hba1c,sd,1.7664189821304639,Continuous,NA
+Black Heterosexual Men,hba1c,median,5.8,Continuous,NA
+Black Heterosexual Men,hba1c,q25,5.4,Continuous,NA
+Black Heterosexual Men,hba1c,q75,6.3,Continuous,NA
+Black Heterosexual Men,hba1c,min,3.8,Continuous,NA
+Black Heterosexual Men,hba1c,max,16.7,Continuous,NA
+Black Heterosexual Men,hba1c,freq,475,Continuous,NA
+Black Heterosexual Men,hba1c,missing,759,Continuous,NA
+Black Heterosexual Men,hdl,mean,45.3742802303263,Continuous,NA
+Black Heterosexual Men,hdl,sd,13.959006973379532,Continuous,NA
+Black Heterosexual Men,hdl,median,43,Continuous,NA
+Black Heterosexual Men,hdl,q25,36,Continuous,NA
+Black Heterosexual Men,hdl,q75,52,Continuous,NA
+Black Heterosexual Men,hdl,min,7,Continuous,NA
+Black Heterosexual Men,hdl,max,107,Continuous,NA
+Black Heterosexual Men,hdl,freq,521,Continuous,NA
+Black Heterosexual Men,hdl,missing,713,Continuous,NA
+Black Heterosexual Men,ldl,mean,95.12115384615385,Continuous,NA
+Black Heterosexual Men,ldl,sd,36.22740122920968,Continuous,NA
+Black Heterosexual Men,ldl,median,91,Continuous,NA
+Black Heterosexual Men,ldl,q25,70,Continuous,NA
+Black Heterosexual Men,ldl,q75,117,Continuous,NA
+Black Heterosexual Men,ldl,min,10,Continuous,NA
+Black Heterosexual Men,ldl,max,268,Continuous,NA
+Black Heterosexual Men,ldl,freq,520,Continuous,NA
+Black Heterosexual Men,ldl,missing,714,Continuous,NA
+Black Heterosexual Men,tgl,mean,137.4885496183206,Continuous,NA
+Black Heterosexual Men,tgl,sd,87.8517614564956,Continuous,NA
+Black Heterosexual Men,tgl,median,114,Continuous,NA
+Black Heterosexual Men,tgl,q25,81,Continuous,NA
+Black Heterosexual Men,tgl,q75,165.5,Continuous,NA
+Black Heterosexual Men,tgl,min,31,Continuous,NA
+Black Heterosexual Men,tgl,max,928,Continuous,NA
+Black Heterosexual Men,tgl,freq,524,Continuous,NA
+Black Heterosexual Men,tgl,missing,710,Continuous,NA
+Black Heterosexual Men,glucose,mean,103.37347703842549,Continuous,NA
+Black Heterosexual Men,glucose,sd,47.149869029840715,Continuous,NA
+Black Heterosexual Men,glucose,median,91,Continuous,NA
+Black Heterosexual Men,glucose,q25,83,Continuous,NA
+Black Heterosexual Men,glucose,q75,105,Continuous,NA
+Black Heterosexual Men,glucose,min,37,Continuous,NA
+Black Heterosexual Men,glucose,max,449,Continuous,NA
+Black Heterosexual Men,glucose,freq,1067,Continuous,NA
+Black Heterosexual Men,glucose,missing,167,Continuous,NA
+Black Heterosexual Men,alt,mean,23.757102272727273,Continuous,NA
+Black Heterosexual Men,alt,sd,28.478410326476787,Continuous,NA
+Black Heterosexual Men,alt,median,18,Continuous,NA
+Black Heterosexual Men,alt,q25,13,Continuous,NA
+Black Heterosexual Men,alt,q75,26,Continuous,NA
+Black Heterosexual Men,alt,min,3,Continuous,NA
+Black Heterosexual Men,alt,max,506.5,Continuous,NA
+Black Heterosexual Men,alt,freq,1056,Continuous,NA
+Black Heterosexual Men,alt,missing,178,Continuous,NA
+Black Heterosexual Men,ast,mean,29.221117424242426,Continuous,NA
+Black Heterosexual Men,ast,sd,76.69767459466324,Continuous,NA
+Black Heterosexual Men,ast,median,21,Continuous,NA
+Black Heterosexual Men,ast,q25,17,Continuous,NA
+Black Heterosexual Men,ast,q75,27,Continuous,NA
+Black Heterosexual Men,ast,min,8,Continuous,NA
+Black Heterosexual Men,ast,max,2156.5,Continuous,NA
+Black Heterosexual Men,ast,freq,1056,Continuous,NA
+Black Heterosexual Men,ast,missing,178,Continuous,NA
+Black Heterosexual Men,sbp,mean,133.60738255033556,Continuous,NA
+Black Heterosexual Men,sbp,sd,18.3538469494784,Continuous,NA
+Black Heterosexual Men,sbp,median,133,Continuous,NA
+Black Heterosexual Men,sbp,q25,120,Continuous,NA
+Black Heterosexual Men,sbp,q75,145,Continuous,NA
+Black Heterosexual Men,sbp,min,78,Continuous,NA
+Black Heterosexual Men,sbp,max,212,Continuous,NA
+Black Heterosexual Men,sbp,freq,1043,Continuous,NA
+Black Heterosexual Men,sbp,missing,191,Continuous,NA
+Black Heterosexual Men,dbp,mean,79.82070949185044,Continuous,NA
+Black Heterosexual Men,dbp,sd,11.49590900591762,Continuous,NA
+Black Heterosexual Men,dbp,median,80,Continuous,NA
+Black Heterosexual Men,dbp,q25,72,Continuous,NA
+Black Heterosexual Men,dbp,q75,88,Continuous,NA
+Black Heterosexual Men,dbp,min,47,Continuous,NA
+Black Heterosexual Men,dbp,max,119,Continuous,NA
+Black Heterosexual Men,dbp,freq,1043,Continuous,NA
+Black Heterosexual Men,dbp,missing,191,Continuous,NA
+Black Sexual Minority Men,bmi,mean,26.4115690129768,Continuous,NA
+Black Sexual Minority Men,bmi,sd,6.422752204856381,Continuous,NA
+Black Sexual Minority Men,bmi,median,28.12,Continuous,NA
+Black Sexual Minority Men,bmi,q25,21.09,Continuous,NA
+Black Sexual Minority Men,bmi,q75,28.12,Continuous,NA
+Black Sexual Minority Men,bmi,min,0,Continuous,NA
+Black Sexual Minority Men,bmi,max,70.3,Continuous,NA
+Black Sexual Minority Men,bmi,freq,2543,Continuous,NA
+Black Sexual Minority Men,bmi,missing,26,Continuous,NA
+Black Sexual Minority Men,dt_0_age,mean,41.3550019462826,Continuous,NA
+Black Sexual Minority Men,dt_0_age,sd,12.460283293125157,Continuous,NA
+Black Sexual Minority Men,dt_0_age,median,40,Continuous,NA
+Black Sexual Minority Men,dt_0_age,q25,31,Continuous,NA
+Black Sexual Minority Men,dt_0_age,q75,52,Continuous,NA
+Black Sexual Minority Men,dt_0_age,min,18,Continuous,NA
+Black Sexual Minority Men,dt_0_age,max,85,Continuous,NA
+Black Sexual Minority Men,dt_0_age,freq,2569,Continuous,NA
+Black Sexual Minority Men,dt_0_age,missing,0,Continuous,NA
+Black Sexual Minority Men,hba1c,mean,5.8525872442839955,Continuous,NA
+Black Sexual Minority Men,hba1c,sd,1.5628102342327548,Continuous,NA
+Black Sexual Minority Men,hba1c,median,5.5,Continuous,NA
+Black Sexual Minority Men,hba1c,q25,5.2,Continuous,NA
+Black Sexual Minority Men,hba1c,q75,6,Continuous,NA
+Black Sexual Minority Men,hba1c,min,3.5,Continuous,NA
+Black Sexual Minority Men,hba1c,max,15.8,Continuous,NA
+Black Sexual Minority Men,hba1c,freq,831,Continuous,NA
+Black Sexual Minority Men,hba1c,missing,1738,Continuous,NA
+Black Sexual Minority Men,hdl,mean,44.84892086330935,Continuous,NA
+Black Sexual Minority Men,hdl,sd,14.084501913590973,Continuous,NA
+Black Sexual Minority Men,hdl,median,43,Continuous,NA
+Black Sexual Minority Men,hdl,q25,35.75,Continuous,NA
+Black Sexual Minority Men,hdl,q75,51,Continuous,NA
+Black Sexual Minority Men,hdl,min,3,Continuous,NA
+Black Sexual Minority Men,hdl,max,113,Continuous,NA
+Black Sexual Minority Men,hdl,freq,1112,Continuous,NA
+Black Sexual Minority Men,hdl,missing,1457,Continuous,NA
+Black Sexual Minority Men,ldl,mean,94.84172661870504,Continuous,NA
+Black Sexual Minority Men,ldl,sd,37.35447784667753,Continuous,NA
+Black Sexual Minority Men,ldl,median,90,Continuous,NA
+Black Sexual Minority Men,ldl,q25,71,Continuous,NA
+Black Sexual Minority Men,ldl,q75,113.25,Continuous,NA
+Black Sexual Minority Men,ldl,min,8,Continuous,NA
+Black Sexual Minority Men,ldl,max,443,Continuous,NA
+Black Sexual Minority Men,ldl,freq,1112,Continuous,NA
+Black Sexual Minority Men,ldl,missing,1457,Continuous,NA
+Black Sexual Minority Men,tgl,mean,133.11666666666667,Continuous,NA
+Black Sexual Minority Men,tgl,sd,114.6109825208621,Continuous,NA
+Black Sexual Minority Men,tgl,median,109.5,Continuous,NA
+Black Sexual Minority Men,tgl,q25,76.25,Continuous,NA
+Black Sexual Minority Men,tgl,q75,158,Continuous,NA
+Black Sexual Minority Men,tgl,min,30,Continuous,NA
+Black Sexual Minority Men,tgl,max,2579,Continuous,NA
+Black Sexual Minority Men,tgl,freq,1110,Continuous,NA
+Black Sexual Minority Men,tgl,missing,1459,Continuous,NA
+Black Sexual Minority Men,glucose,mean,97.16332574031891,Continuous,NA
+Black Sexual Minority Men,glucose,sd,36.723189066144954,Continuous,NA
+Black Sexual Minority Men,glucose,median,90,Continuous,NA
+Black Sexual Minority Men,glucose,q25,82,Continuous,NA
+Black Sexual Minority Men,glucose,q75,99,Continuous,NA
+Black Sexual Minority Men,glucose,min,41,Continuous,NA
+Black Sexual Minority Men,glucose,max,634,Continuous,NA
+Black Sexual Minority Men,glucose,freq,2195,Continuous,NA
+Black Sexual Minority Men,glucose,missing,374,Continuous,NA
+Black Sexual Minority Men,alt,mean,26.448512585812356,Continuous,NA
+Black Sexual Minority Men,alt,sd,68.97359563293529,Continuous,NA
+Black Sexual Minority Men,alt,median,17,Continuous,NA
+Black Sexual Minority Men,alt,q25,13,Continuous,NA
+Black Sexual Minority Men,alt,q75,26,Continuous,NA
+Black Sexual Minority Men,alt,min,3,Continuous,NA
+Black Sexual Minority Men,alt,max,2303,Continuous,NA
+Black Sexual Minority Men,alt,freq,2185,Continuous,NA
+Black Sexual Minority Men,alt,missing,384,Continuous,NA
+Black Sexual Minority Men,ast,mean,30.379633867276887,Continuous,NA
+Black Sexual Minority Men,ast,sd,94.19335907397495,Continuous,NA
+Black Sexual Minority Men,ast,median,21,Continuous,NA
+Black Sexual Minority Men,ast,q25,17,Continuous,NA
+Black Sexual Minority Men,ast,q75,27,Continuous,NA
+Black Sexual Minority Men,ast,min,7,Continuous,NA
+Black Sexual Minority Men,ast,max,3667.5,Continuous,NA
+Black Sexual Minority Men,ast,freq,2185,Continuous,NA
+Black Sexual Minority Men,ast,missing,384,Continuous,NA
+Black Sexual Minority Men,sbp,mean,132.59858613800523,Continuous,NA
+Black Sexual Minority Men,sbp,sd,17.207341768884575,Continuous,NA
+Black Sexual Minority Men,sbp,median,132,Continuous,NA
+Black Sexual Minority Men,sbp,q25,120,Continuous,NA
+Black Sexual Minority Men,sbp,q75,144,Continuous,NA
+Black Sexual Minority Men,sbp,min,70,Continuous,NA
+Black Sexual Minority Men,sbp,max,204,Continuous,NA
+Black Sexual Minority Men,sbp,freq,2169,Continuous,NA
+Black Sexual Minority Men,sbp,missing,400,Continuous,NA
+Black Sexual Minority Men,dbp,mean,79.4409097894575,Continuous,NA
+Black Sexual Minority Men,dbp,sd,11.221563508209776,Continuous,NA
+Black Sexual Minority Men,dbp,median,79,Continuous,NA
+Black Sexual Minority Men,dbp,q25,71,Continuous,NA
+Black Sexual Minority Men,dbp,q75,87,Continuous,NA
+Black Sexual Minority Men,dbp,min,48,Continuous,NA
+Black Sexual Minority Men,dbp,max,129,Continuous,NA
+Black Sexual Minority Men,dbp,freq,2169,Continuous,NA
+Black Sexual Minority Men,dbp,missing,400,Continuous,NA
+Non-Black Heterosexual Men,bmi,mean,27.041322751322753,Continuous,NA
+Non-Black Heterosexual Men,bmi,sd,5.1921208562304315,Continuous,NA
+Non-Black Heterosexual Men,bmi,median,28.12,Continuous,NA
+Non-Black Heterosexual Men,bmi,q25,21.09,Continuous,NA
+Non-Black Heterosexual Men,bmi,q75,28.12,Continuous,NA
+Non-Black Heterosexual Men,bmi,min,14.06,Continuous,NA
+Non-Black Heterosexual Men,bmi,max,42.18,Continuous,NA
+Non-Black Heterosexual Men,bmi,freq,189,Continuous,NA
+Non-Black Heterosexual Men,bmi,missing,7,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,mean,47,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,sd,12.127104628338401,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,median,47,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,q25,39.75,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,q75,56,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,min,18,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,max,75,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,freq,196,Continuous,NA
+Non-Black Heterosexual Men,dt_0_age,missing,0,Continuous,NA
+Non-Black Heterosexual Men,hba1c,mean,5.788,Continuous,NA
+Non-Black Heterosexual Men,hba1c,sd,1.3392171977325795,Continuous,NA
+Non-Black Heterosexual Men,hba1c,median,5.6,Continuous,NA
+Non-Black Heterosexual Men,hba1c,q25,5.1,Continuous,NA
+Non-Black Heterosexual Men,hba1c,q75,5.9,Continuous,NA
+Non-Black Heterosexual Men,hba1c,min,3.9,Continuous,NA
+Non-Black Heterosexual Men,hba1c,max,12.3,Continuous,NA
+Non-Black Heterosexual Men,hba1c,freq,75,Continuous,NA
+Non-Black Heterosexual Men,hba1c,missing,121,Continuous,NA
+Non-Black Heterosexual Men,hdl,mean,41.94252873563219,Continuous,NA
+Non-Black Heterosexual Men,hdl,sd,12.917768834852104,Continuous,NA
+Non-Black Heterosexual Men,hdl,median,40,Continuous,NA
+Non-Black Heterosexual Men,hdl,q25,34,Continuous,NA
+Non-Black Heterosexual Men,hdl,q75,48,Continuous,NA
+Non-Black Heterosexual Men,hdl,min,3,Continuous,NA
+Non-Black Heterosexual Men,hdl,max,88,Continuous,NA
+Non-Black Heterosexual Men,hdl,freq,87,Continuous,NA
+Non-Black Heterosexual Men,hdl,missing,109,Continuous,NA
+Non-Black Heterosexual Men,ldl,mean,95.28735632183908,Continuous,NA
+Non-Black Heterosexual Men,ldl,sd,42.56429010058675,Continuous,NA
+Non-Black Heterosexual Men,ldl,median,91,Continuous,NA
+Non-Black Heterosexual Men,ldl,q25,61,Continuous,NA
+Non-Black Heterosexual Men,ldl,q75,118,Continuous,NA
+Non-Black Heterosexual Men,ldl,min,14,Continuous,NA
+Non-Black Heterosexual Men,ldl,max,210,Continuous,NA
+Non-Black Heterosexual Men,ldl,freq,87,Continuous,NA
+Non-Black Heterosexual Men,ldl,missing,109,Continuous,NA
+Non-Black Heterosexual Men,tgl,mean,218.80459770114942,Continuous,NA
+Non-Black Heterosexual Men,tgl,sd,141.27087942659725,Continuous,NA
+Non-Black Heterosexual Men,tgl,median,200,Continuous,NA
+Non-Black Heterosexual Men,tgl,q25,109.5,Continuous,NA
+Non-Black Heterosexual Men,tgl,q75,257,Continuous,NA
+Non-Black Heterosexual Men,tgl,min,42,Continuous,NA
+Non-Black Heterosexual Men,tgl,max,655,Continuous,NA
+Non-Black Heterosexual Men,tgl,freq,87,Continuous,NA
+Non-Black Heterosexual Men,tgl,missing,109,Continuous,NA
+Non-Black Heterosexual Men,glucose,mean,101.27678571428571,Continuous,NA
+Non-Black Heterosexual Men,glucose,sd,39.544743056175705,Continuous,NA
+Non-Black Heterosexual Men,glucose,median,94.5,Continuous,NA
+Non-Black Heterosexual Men,glucose,q25,86,Continuous,NA
+Non-Black Heterosexual Men,glucose,q75,105,Continuous,NA
+Non-Black Heterosexual Men,glucose,min,64,Continuous,NA
+Non-Black Heterosexual Men,glucose,max,524,Continuous,NA
+Non-Black Heterosexual Men,glucose,freq,168,Continuous,NA
+Non-Black Heterosexual Men,glucose,missing,28,Continuous,NA
+Non-Black Heterosexual Men,alt,mean,28.740963855421686,Continuous,NA
+Non-Black Heterosexual Men,alt,sd,21.72184509236882,Continuous,NA
+Non-Black Heterosexual Men,alt,median,23.5,Continuous,NA
+Non-Black Heterosexual Men,alt,q25,16,Continuous,NA
+Non-Black Heterosexual Men,alt,q75,31,Continuous,NA
+Non-Black Heterosexual Men,alt,min,6,Continuous,NA
+Non-Black Heterosexual Men,alt,max,166,Continuous,NA
+Non-Black Heterosexual Men,alt,freq,166,Continuous,NA
+Non-Black Heterosexual Men,alt,missing,30,Continuous,NA
+Non-Black Heterosexual Men,ast,mean,26.813253012048193,Continuous,NA
+Non-Black Heterosexual Men,ast,sd,20.78456753304232,Continuous,NA
+Non-Black Heterosexual Men,ast,median,21.5,Continuous,NA
+Non-Black Heterosexual Men,ast,q25,17,Continuous,NA
+Non-Black Heterosexual Men,ast,q75,29,Continuous,NA
+Non-Black Heterosexual Men,ast,min,11,Continuous,NA
+Non-Black Heterosexual Men,ast,max,221,Continuous,NA
+Non-Black Heterosexual Men,ast,freq,166,Continuous,NA
+Non-Black Heterosexual Men,ast,missing,30,Continuous,NA
+Non-Black Heterosexual Men,sbp,mean,129.25641025641025,Continuous,NA
+Non-Black Heterosexual Men,sbp,sd,17.936400831062493,Continuous,NA
+Non-Black Heterosexual Men,sbp,median,129,Continuous,NA
+Non-Black Heterosexual Men,sbp,q25,116.75,Continuous,NA
+Non-Black Heterosexual Men,sbp,q75,140,Continuous,NA
+Non-Black Heterosexual Men,sbp,min,72,Continuous,NA
+Non-Black Heterosexual Men,sbp,max,180,Continuous,NA
+Non-Black Heterosexual Men,sbp,freq,156,Continuous,NA
+Non-Black Heterosexual Men,sbp,missing,40,Continuous,NA
+Non-Black Heterosexual Men,dbp,mean,77.38141025641026,Continuous,NA
+Non-Black Heterosexual Men,dbp,sd,10.068973772786153,Continuous,NA
+Non-Black Heterosexual Men,dbp,median,77,Continuous,NA
+Non-Black Heterosexual Men,dbp,q25,70,Continuous,NA
+Non-Black Heterosexual Men,dbp,q75,85,Continuous,NA
+Non-Black Heterosexual Men,dbp,min,49,Continuous,NA
+Non-Black Heterosexual Men,dbp,max,104,Continuous,NA
+Non-Black Heterosexual Men,dbp,freq,156,Continuous,NA
+Non-Black Heterosexual Men,dbp,missing,40,Continuous,NA
+Non-Black Sexual Minority Men,bmi,mean,26.37112929623568,Continuous,NA
+Non-Black Sexual Minority Men,bmi,sd,5.172138144413239,Continuous,NA
+Non-Black Sexual Minority Men,bmi,median,28.12,Continuous,NA
+Non-Black Sexual Minority Men,bmi,q25,21.09,Continuous,NA
+Non-Black Sexual Minority Men,bmi,q75,28.12,Continuous,NA
+Non-Black Sexual Minority Men,bmi,min,14.06,Continuous,NA
+Non-Black Sexual Minority Men,bmi,max,42.18,Continuous,NA
+Non-Black Sexual Minority Men,bmi,freq,611,Continuous,NA
+Non-Black Sexual Minority Men,bmi,missing,6,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,mean,48.42139384116694,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,sd,12.601048554681057,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,median,51,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,q25,40,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,q75,58,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,min,18,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,max,76,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,freq,617,Continuous,NA
+Non-Black Sexual Minority Men,dt_0_age,missing,0,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,mean,5.6676190476190476,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,sd,1.1314973132846495,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,median,5.4,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,q25,5.1,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,q75,5.8,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,min,3.5,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,max,13.2,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,freq,210,Continuous,NA
+Non-Black Sexual Minority Men,hba1c,missing,407,Continuous,NA
+Non-Black Sexual Minority Men,hdl,mean,43.169741697416974,Continuous,NA
+Non-Black Sexual Minority Men,hdl,sd,11.712638296257534,Continuous,NA
+Non-Black Sexual Minority Men,hdl,median,42,Continuous,NA
+Non-Black Sexual Minority Men,hdl,q25,35,Continuous,NA
+Non-Black Sexual Minority Men,hdl,q75,49,Continuous,NA
+Non-Black Sexual Minority Men,hdl,min,10,Continuous,NA
+Non-Black Sexual Minority Men,hdl,max,87,Continuous,NA
+Non-Black Sexual Minority Men,hdl,freq,271,Continuous,NA
+Non-Black Sexual Minority Men,hdl,missing,346,Continuous,NA
+Non-Black Sexual Minority Men,ldl,mean,91.64814814814815,Continuous,NA
+Non-Black Sexual Minority Men,ldl,sd,36.204477843061774,Continuous,NA
+Non-Black Sexual Minority Men,ldl,median,87,Continuous,NA
+Non-Black Sexual Minority Men,ldl,q25,66,Continuous,NA
+Non-Black Sexual Minority Men,ldl,q75,112.5,Continuous,NA
+Non-Black Sexual Minority Men,ldl,min,19,Continuous,NA
+Non-Black Sexual Minority Men,ldl,max,220,Continuous,NA
+Non-Black Sexual Minority Men,ldl,freq,270,Continuous,NA
+Non-Black Sexual Minority Men,ldl,missing,347,Continuous,NA
+Non-Black Sexual Minority Men,tgl,mean,185.8065693430657,Continuous,NA
+Non-Black Sexual Minority Men,tgl,sd,119.19468404227764,Continuous,NA
+Non-Black Sexual Minority Men,tgl,median,152,Continuous,NA
+Non-Black Sexual Minority Men,tgl,q25,99.75,Continuous,NA
+Non-Black Sexual Minority Men,tgl,q75,235,Continuous,NA
+Non-Black Sexual Minority Men,tgl,min,35,Continuous,NA
+Non-Black Sexual Minority Men,tgl,max,782,Continuous,NA
+Non-Black Sexual Minority Men,tgl,freq,274,Continuous,NA
+Non-Black Sexual Minority Men,tgl,missing,343,Continuous,NA
+Non-Black Sexual Minority Men,glucose,mean,101.30038022813689,Continuous,NA
+Non-Black Sexual Minority Men,glucose,sd,37.44823830617541,Continuous,NA
+Non-Black Sexual Minority Men,glucose,median,93,Continuous,NA
+Non-Black Sexual Minority Men,glucose,q25,84,Continuous,NA
+Non-Black Sexual Minority Men,glucose,q75,106,Continuous,NA
+Non-Black Sexual Minority Men,glucose,min,38,Continuous,NA
+Non-Black Sexual Minority Men,glucose,max,515,Continuous,NA
+Non-Black Sexual Minority Men,glucose,freq,526,Continuous,NA
+Non-Black Sexual Minority Men,glucose,missing,91,Continuous,NA
+Non-Black Sexual Minority Men,alt,mean,28.595744680851062,Continuous,NA
+Non-Black Sexual Minority Men,alt,sd,29.945833225903073,Continuous,NA
+Non-Black Sexual Minority Men,alt,median,21,Continuous,NA
+Non-Black Sexual Minority Men,alt,q25,15,Continuous,NA
+Non-Black Sexual Minority Men,alt,q75,32,Continuous,NA
+Non-Black Sexual Minority Men,alt,min,5,Continuous,NA
+Non-Black Sexual Minority Men,alt,max,294,Continuous,NA
+Non-Black Sexual Minority Men,alt,freq,517,Continuous,NA
+Non-Black Sexual Minority Men,alt,missing,100,Continuous,NA
+Non-Black Sexual Minority Men,ast,mean,26.052224371373306,Continuous,NA
+Non-Black Sexual Minority Men,ast,sd,27.121642790205065,Continuous,NA
+Non-Black Sexual Minority Men,ast,median,21,Continuous,NA
+Non-Black Sexual Minority Men,ast,q25,17,Continuous,NA
+Non-Black Sexual Minority Men,ast,q75,26,Continuous,NA
+Non-Black Sexual Minority Men,ast,min,10,Continuous,NA
+Non-Black Sexual Minority Men,ast,max,369,Continuous,NA
+Non-Black Sexual Minority Men,ast,freq,517,Continuous,NA
+Non-Black Sexual Minority Men,ast,missing,100,Continuous,NA
+Non-Black Sexual Minority Men,sbp,mean,132.86327345309383,Continuous,NA
+Non-Black Sexual Minority Men,sbp,sd,17.03586711802701,Continuous,NA
+Non-Black Sexual Minority Men,sbp,median,135,Continuous,NA
+Non-Black Sexual Minority Men,sbp,q25,121,Continuous,NA
+Non-Black Sexual Minority Men,sbp,q75,143,Continuous,NA
+Non-Black Sexual Minority Men,sbp,min,87,Continuous,NA
+Non-Black Sexual Minority Men,sbp,max,222,Continuous,NA
+Non-Black Sexual Minority Men,sbp,freq,501,Continuous,NA
+Non-Black Sexual Minority Men,sbp,missing,116,Continuous,NA
+Non-Black Sexual Minority Men,dbp,mean,79.6996007984032,Continuous,NA
+Non-Black Sexual Minority Men,dbp,sd,10.911969567420877,Continuous,NA
+Non-Black Sexual Minority Men,dbp,median,79,Continuous,NA
+Non-Black Sexual Minority Men,dbp,q25,72,Continuous,NA
+Non-Black Sexual Minority Men,dbp,q75,87,Continuous,NA
+Non-Black Sexual Minority Men,dbp,min,47,Continuous,NA
+Non-Black Sexual Minority Men,dbp,max,128,Continuous,NA
+Non-Black Sexual Minority Men,dbp,freq,501,Continuous,NA
+Non-Black Sexual Minority Men,dbp,missing,116,Continuous,NA
+Unknown,bmi,mean,26.879411764705882,Continuous,NA
+Unknown,bmi,sd,6.206386298189385,Continuous,NA
+Unknown,bmi,median,28.12,Continuous,NA
+Unknown,bmi,q25,21.09,Continuous,NA
+Unknown,bmi,q75,28.12,Continuous,NA
+Unknown,bmi,min,21.09,Continuous,NA
+Unknown,bmi,max,42.18,Continuous,NA
+Unknown,bmi,freq,17,Continuous,NA
+Unknown,bmi,missing,1,Continuous,NA
+Unknown,dt_0_age,mean,37.333333333333336,Continuous,NA
+Unknown,dt_0_age,sd,13.560322744727593,Continuous,NA
+Unknown,dt_0_age,median,35,Continuous,NA
+Unknown,dt_0_age,q25,29.25,Continuous,NA
+Unknown,dt_0_age,q75,46.25,Continuous,NA
+Unknown,dt_0_age,min,18,Continuous,NA
+Unknown,dt_0_age,max,71,Continuous,NA
+Unknown,dt_0_age,freq,18,Continuous,NA
+Unknown,dt_0_age,missing,0,Continuous,NA
+Unknown,hba1c,mean,5.45,Continuous,NA
+Unknown,hba1c,sd,0.5196152422706634,Continuous,NA
+Unknown,hba1c,median,5.5,Continuous,NA
+Unknown,hba1c,q25,5.175,Continuous,NA
+Unknown,hba1c,q75,5.775,Continuous,NA
+Unknown,hba1c,min,4.8,Continuous,NA
+Unknown,hba1c,max,6,Continuous,NA
+Unknown,hba1c,freq,4,Continuous,NA
+Unknown,hba1c,missing,14,Continuous,NA
+Unknown,hdl,mean,44.57142857142857,Continuous,NA
+Unknown,hdl,sd,12.461368876881636,Continuous,NA
+Unknown,hdl,median,42,Continuous,NA
+Unknown,hdl,q25,38,Continuous,NA
+Unknown,hdl,q75,50.5,Continuous,NA
+Unknown,hdl,min,27,Continuous,NA
+Unknown,hdl,max,66,Continuous,NA
+Unknown,hdl,freq,7,Continuous,NA
+Unknown,hdl,missing,11,Continuous,NA
+Unknown,ldl,mean,102.14285714285714,Continuous,NA
+Unknown,ldl,sd,48.49202192604666,Continuous,NA
+Unknown,ldl,median,88,Continuous,NA
+Unknown,ldl,q25,82,Continuous,NA
+Unknown,ldl,q75,95.5,Continuous,NA
+Unknown,ldl,min,63,Continuous,NA
+Unknown,ldl,max,209,Continuous,NA
+Unknown,ldl,freq,7,Continuous,NA
+Unknown,ldl,missing,11,Continuous,NA
+Unknown,tgl,mean,147.71428571428572,Continuous,NA
+Unknown,tgl,sd,45.69359650875341,Continuous,NA
+Unknown,tgl,median,154,Continuous,NA
+Unknown,tgl,q25,111,Continuous,NA
+Unknown,tgl,q75,164.5,Continuous,NA
+Unknown,tgl,min,99,Continuous,NA
+Unknown,tgl,max,230,Continuous,NA
+Unknown,tgl,freq,7,Continuous,NA
+Unknown,tgl,missing,11,Continuous,NA
+Unknown,glucose,mean,89.5625,Continuous,NA
+Unknown,glucose,sd,14.546334016972569,Continuous,NA
+Unknown,glucose,median,88,Continuous,NA
+Unknown,glucose,q25,83.75,Continuous,NA
+Unknown,glucose,q75,93.75,Continuous,NA
+Unknown,glucose,min,65,Continuous,NA
+Unknown,glucose,max,121,Continuous,NA
+Unknown,glucose,freq,16,Continuous,NA
+Unknown,glucose,missing,2,Continuous,NA
+Unknown,alt,mean,29.1875,Continuous,NA
+Unknown,alt,sd,27.61936216980158,Continuous,NA
+Unknown,alt,median,22.5,Continuous,NA
+Unknown,alt,q25,14.25,Continuous,NA
+Unknown,alt,q75,30.75,Continuous,NA
+Unknown,alt,min,9,Continuous,NA
+Unknown,alt,max,121,Continuous,NA
+Unknown,alt,freq,16,Continuous,NA
+Unknown,alt,missing,2,Continuous,NA
+Unknown,ast,mean,28.5625,Continuous,NA
+Unknown,ast,sd,21.795928518877098,Continuous,NA
+Unknown,ast,median,22.5,Continuous,NA
+Unknown,ast,q25,18,Continuous,NA
+Unknown,ast,q75,27.5,Continuous,NA
+Unknown,ast,min,9,Continuous,NA
+Unknown,ast,max,101,Continuous,NA
+Unknown,ast,freq,16,Continuous,NA
+Unknown,ast,missing,2,Continuous,NA
+Unknown,sbp,mean,135.69230769230768,Continuous,NA
+Unknown,sbp,sd,8.360468641017434,Continuous,NA
+Unknown,sbp,median,131,Continuous,NA
+Unknown,sbp,q25,130,Continuous,NA
+Unknown,sbp,q75,142,Continuous,NA
+Unknown,sbp,min,126,Continuous,NA
+Unknown,sbp,max,149,Continuous,NA
+Unknown,sbp,freq,13,Continuous,NA
+Unknown,sbp,missing,5,Continuous,NA
+Unknown,dbp,mean,76.76923076923077,Continuous,NA
+Unknown,dbp,sd,9.875507127517098,Continuous,NA
+Unknown,dbp,median,78,Continuous,NA
+Unknown,dbp,q25,69,Continuous,NA
+Unknown,dbp,q75,80,Continuous,NA
+Unknown,dbp,min,63,Continuous,NA
+Unknown,dbp,max,99,Continuous,NA
+Unknown,dbp,freq,13,Continuous,NA
+Unknown,dbp,missing,5,Continuous,NA
+Black Heterosexual Men,alcohol_use,proportion,52.13358070500927,Proportion,NA
+Black Heterosexual Men,alcohol_use,freq,539,Proportion,NA
+Black Heterosexual Men,alcohol_use,missing,695,Proportion,NA
+Black Heterosexual Men,hiv_viral_load_lt200,proportion,98.63013698630137,Proportion,NA
+Black Heterosexual Men,hiv_viral_load_lt200,freq,949,Proportion,NA
+Black Heterosexual Men,hiv_viral_load_lt200,missing,285,Proportion,NA
+Black Heterosexual Men,iv_drug_user,proportion,0.6482982171799028,Proportion,NA
+Black Heterosexual Men,iv_drug_user,freq,1234,Proportion,NA
+Black Heterosexual Men,iv_drug_user,missing,0,Proportion,NA
+Black Heterosexual Men,stage1,proportion,41.690635985938,Proportion,NA
+Black Heterosexual Men,stage1,freq,1043,Proportion,NA
+Black Heterosexual Men,stage1,missing,191,Proportion,NA
+Black Heterosexual Men,stage2,proportion,42.09012464046021,Proportion,NA
+Black Heterosexual Men,stage2,freq,1043,Proportion,NA
+Black Heterosexual Men,stage2,missing,191,Proportion,NA
+Black Sexual Minority Men,alcohol_use,proportion,60.68237205523964,Proportion,NA
+Black Sexual Minority Men,alcohol_use,freq,1231,Proportion,NA
+Black Sexual Minority Men,alcohol_use,missing,1338,Proportion,NA
+Black Sexual Minority Men,hiv_viral_load_lt200,proportion,97.14285714285714,Proportion,NA
+Black Sexual Minority Men,hiv_viral_load_lt200,freq,1925,Proportion,NA
+Black Sexual Minority Men,hiv_viral_load_lt200,missing,644,Proportion,NA
+Black Sexual Minority Men,iv_drug_user,proportion,0.03894080996884735,Proportion,NA
+Black Sexual Minority Men,iv_drug_user,freq,2568,Proportion,NA
+Black Sexual Minority Men,iv_drug_user,missing,1,Proportion,NA
+Black Sexual Minority Men,stage1,proportion,43.41478407868449,Proportion,NA
+Black Sexual Minority Men,stage1,freq,2169,Proportion,NA
+Black Sexual Minority Men,stage1,missing,400,Proportion,NA
+Black Sexual Minority Men,stage2,proportion,39.119409866297836,Proportion,NA
+Black Sexual Minority Men,stage2,freq,2169,Proportion,NA
+Black Sexual Minority Men,stage2,missing,400,Proportion,NA
+Non-Black Heterosexual Men,alcohol_use,proportion,50,Proportion,NA
+Non-Black Heterosexual Men,alcohol_use,freq,72,Proportion,NA
+Non-Black Heterosexual Men,alcohol_use,missing,124,Proportion,NA
+Non-Black Heterosexual Men,hiv_viral_load_lt200,proportion,100,Proportion,NA
+Non-Black Heterosexual Men,hiv_viral_load_lt200,freq,150,Proportion,NA
+Non-Black Heterosexual Men,hiv_viral_load_lt200,missing,46,Proportion,NA
+Non-Black Heterosexual Men,iv_drug_user,proportion,0,Proportion,NA
+Non-Black Heterosexual Men,iv_drug_user,freq,196,Proportion,NA
+Non-Black Heterosexual Men,iv_drug_user,missing,0,Proportion,NA
+Non-Black Heterosexual Men,stage1,proportion,41.66666666666667,Proportion,NA
+Non-Black Heterosexual Men,stage1,freq,156,Proportion,NA
+Non-Black Heterosexual Men,stage1,missing,40,Proportion,NA
+Non-Black Heterosexual Men,stage2,proportion,35.8974358974359,Proportion,NA
+Non-Black Heterosexual Men,stage2,freq,156,Proportion,NA
+Non-Black Heterosexual Men,stage2,missing,40,Proportion,NA
+Non-Black Sexual Minority Men,alcohol_use,proportion,57.05128205128205,Proportion,NA
+Non-Black Sexual Minority Men,alcohol_use,freq,312,Proportion,NA
+Non-Black Sexual Minority Men,alcohol_use,missing,305,Proportion,NA
+Non-Black Sexual Minority Men,hiv_viral_load_lt200,proportion,98.30148619957538,Proportion,NA
+Non-Black Sexual Minority Men,hiv_viral_load_lt200,freq,471,Proportion,NA
+Non-Black Sexual Minority Men,hiv_viral_load_lt200,missing,146,Proportion,NA
+Non-Black Sexual Minority Men,iv_drug_user,proportion,0.9724473257698543,Proportion,NA
+Non-Black Sexual Minority Men,iv_drug_user,freq,617,Proportion,NA
+Non-Black Sexual Minority Men,iv_drug_user,missing,0,Proportion,NA
+Non-Black Sexual Minority Men,stage1,proportion,41.81636726546906,Proportion,NA
+Non-Black Sexual Minority Men,stage1,freq,501,Proportion,NA
+Non-Black Sexual Minority Men,stage1,missing,116,Proportion,NA
+Non-Black Sexual Minority Men,stage2,proportion,42.115768463073856,Proportion,NA
+Non-Black Sexual Minority Men,stage2,freq,501,Proportion,NA
+Non-Black Sexual Minority Men,stage2,missing,116,Proportion,NA
+Unknown,alcohol_use,proportion,71.42857142857143,Proportion,NA
+Unknown,alcohol_use,freq,7,Proportion,NA
+Unknown,alcohol_use,missing,11,Proportion,NA
+Unknown,hiv_viral_load_lt200,proportion,86.66666666666667,Proportion,NA
+Unknown,hiv_viral_load_lt200,freq,15,Proportion,NA
+Unknown,hiv_viral_load_lt200,missing,3,Proportion,NA
+Unknown,iv_drug_user,proportion,0,Proportion,NA
+Unknown,iv_drug_user,freq,18,Proportion,NA
+Unknown,iv_drug_user,missing,0,Proportion,NA
+Unknown,stage1,proportion,61.53846153846154,Proportion,NA
+Unknown,stage1,freq,13,Proportion,NA
+Unknown,stage1,missing,5,Proportion,NA
+Unknown,stage2,proportion,38.46153846153847,Proportion,NA
+Unknown,stage2,freq,13,Proportion,NA
+Unknown,stage2,missing,5,Proportion,NA
+Black Heterosexual Men,cp1,proportion,31.68557536466775,Grouped,0
+Black Heterosexual Men,cp1,freq,391,Grouped,0
+Black Heterosexual Men,cp1,proportion,68.31442463533226,Grouped,1
+Black Heterosexual Men,cp1,freq,843,Grouped,1
+Black Sexual Minority Men,cp1,proportion,41.76722460101207,Grouped,0
+Black Sexual Minority Men,cp1,freq,1073,Grouped,0
+Black Sexual Minority Men,cp1,proportion,58.23277539898793,Grouped,1
+Black Sexual Minority Men,cp1,freq,1496,Grouped,1
+Non-Black Heterosexual Men,cp1,proportion,52.04081632653061,Grouped,0
+Non-Black Heterosexual Men,cp1,freq,102,Grouped,0
+Non-Black Heterosexual Men,cp1,proportion,47.95918367346939,Grouped,1
+Non-Black Heterosexual Men,cp1,freq,94,Grouped,1
+Non-Black Sexual Minority Men,cp1,proportion,35.980551053484604,Grouped,0
+Non-Black Sexual Minority Men,cp1,freq,222,Grouped,0
+Non-Black Sexual Minority Men,cp1,proportion,64.0194489465154,Grouped,1
+Non-Black Sexual Minority Men,cp1,freq,395,Grouped,1
+Unknown,cp1,proportion,50,Grouped,0
+Unknown,cp1,freq,9,Grouped,0
+Unknown,cp1,proportion,50,Grouped,1
+Unknown,cp1,freq,9,Grouped,1
+Black Heterosexual Men,is_smm,proportion,100,Grouped,Heterosexual Men
+Black Heterosexual Men,is_smm,freq,1234,Grouped,Heterosexual Men
+Black Sexual Minority Men,is_smm,proportion,100,Grouped,Sexual Minority Men
+Black Sexual Minority Men,is_smm,freq,2569,Grouped,Sexual Minority Men
+Non-Black Heterosexual Men,is_smm,proportion,100,Grouped,Heterosexual Men
+Non-Black Heterosexual Men,is_smm,freq,196,Grouped,Heterosexual Men
+Non-Black Sexual Minority Men,is_smm,proportion,100,Grouped,Sexual Minority Men
+Non-Black Sexual Minority Men,is_smm,freq,617,Grouped,Sexual Minority Men
+Unknown,is_smm,proportion,22.22222222222222,Grouped,Heterosexual Men
+Unknown,is_smm,freq,4,Grouped,Heterosexual Men
+Unknown,is_smm,proportion,77.77777777777777,Grouped,Sexual Minority Men
+Unknown,is_smm,freq,14,Grouped,Sexual Minority Men
+Black Heterosexual Men,is_black,proportion,100,Grouped,Black
+Black Heterosexual Men,is_black,freq,1234,Grouped,Black
+Black Sexual Minority Men,is_black,proportion,100,Grouped,Black
+Black Sexual Minority Men,is_black,freq,2569,Grouped,Black
+Non-Black Heterosexual Men,is_black,proportion,100,Grouped,Other Race
+Non-Black Heterosexual Men,is_black,freq,196,Grouped,Other Race
+Non-Black Sexual Minority Men,is_black,proportion,100,Grouped,Other Race
+Non-Black Sexual Minority Men,is_black,freq,617,Grouped,Other Race
+Unknown,is_black,proportion,100,Grouped,Unknown
+Unknown,is_black,freq,18,Grouped,Unknown
+Black Heterosexual Men,age_category,proportion,10.12965964343598,Grouped,18-29
+Black Heterosexual Men,age_category,freq,125,Grouped,18-29
+Black Heterosexual Men,age_category,proportion,18.881685575364667,Grouped,30-44
+Black Heterosexual Men,age_category,freq,233,Grouped,30-44
+Black Heterosexual Men,age_category,proportion,58.50891410048622,Grouped,45-64
+Black Heterosexual Men,age_category,freq,722,Grouped,45-64
+Black Heterosexual Men,age_category,proportion,12.479740680713128,Grouped,65 and over
+Black Heterosexual Men,age_category,freq,154,Grouped,65 and over
+Black Sexual Minority Men,age_category,proportion,18.995718178279485,Grouped,18-29
+Black Sexual Minority Men,age_category,freq,488,Grouped,18-29
+Black Sexual Minority Men,age_category,proportion,41.57259634098871,Grouped,30-44
+Black Sexual Minority Men,age_category,freq,1068,Grouped,30-44
+Black Sexual Minority Men,age_category,proportion,36.629038536395484,Grouped,45-64
+Black Sexual Minority Men,age_category,freq,941,Grouped,45-64
+Black Sexual Minority Men,age_category,proportion,2.802646944336318,Grouped,65 and over
+Black Sexual Minority Men,age_category,freq,72,Grouped,65 and over
+Non-Black Heterosexual Men,age_category,proportion,9.693877551020408,Grouped,18-29
+Non-Black Heterosexual Men,age_category,freq,19,Grouped,18-29
+Non-Black Heterosexual Men,age_category,proportion,33.673469387755105,Grouped,30-44
+Non-Black Heterosexual Men,age_category,freq,66,Grouped,30-44
+Non-Black Heterosexual Men,age_category,proportion,50.51020408163265,Grouped,45-64
+Non-Black Heterosexual Men,age_category,freq,99,Grouped,45-64
+Non-Black Heterosexual Men,age_category,proportion,6.122448979591836,Grouped,65 and over
+Non-Black Heterosexual Men,age_category,freq,12,Grouped,65 and over
+Non-Black Sexual Minority Men,age_category,proportion,10.210696920583468,Grouped,18-29
+Non-Black Sexual Minority Men,age_category,freq,63,Grouped,18-29
+Non-Black Sexual Minority Men,age_category,proportion,23.500810372771475,Grouped,30-44
+Non-Black Sexual Minority Men,age_category,freq,145,Grouped,30-44
+Non-Black Sexual Minority Men,age_category,proportion,58.99513776337115,Grouped,45-64
+Non-Black Sexual Minority Men,age_category,freq,364,Grouped,45-64
+Non-Black Sexual Minority Men,age_category,proportion,7.293354943273906,Grouped,65 and over
+Non-Black Sexual Minority Men,age_category,freq,45,Grouped,65 and over
+Unknown,age_category,proportion,27.77777777777778,Grouped,18-29
+Unknown,age_category,freq,5,Grouped,18-29
+Unknown,age_category,proportion,44.44444444444444,Grouped,30-44
+Unknown,age_category,freq,8,Grouped,30-44
+Unknown,age_category,proportion,22.22222222222222,Grouped,45-64
+Unknown,age_category,freq,4,Grouped,45-64
+Unknown,age_category,proportion,5.555555555555555,Grouped,65 and over
+Unknown,age_category,freq,1,Grouped,65 and over

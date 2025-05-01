@@ -7,7 +7,7 @@ if(Sys.info()["user"]=="JVARGH7"){
   # path_msm_hiv_htn_proposal <- "C:/Cloud/Emory University/Hussen, Sophia A. - Couples HIV-HTN Grant"
   path_nchat_data_folder <- "C:/Cloud/OneDrive - Emory University/data/NCHAT"
   path_cfar_grady_data <- "C:/Cloud/Emory University/SOM CFAR HIV Registry Team - Dr. Sophia Hussen-Kamini Doraivelu Data Request"
-  path_grady_hiv_cascade_folder <- "C:/Cloud/OneDrive - Emory University/Papers/GRADY HIV Care Cascade"
+  path_grady_hiv_cascade_folder <- "C:/Cloud/OneDrive - Emory University/Papers/_Limbo/GRADY HIV Care Cascade"
 }
 
 if(Sys.info()["user"]=="JGUO258"){
