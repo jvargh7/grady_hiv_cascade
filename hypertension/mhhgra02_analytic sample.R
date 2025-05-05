@@ -57,3 +57,6 @@ analytic_df = dr_hussen_cohort_0216 %>%
 
 
 saveRDS(analytic_df,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra02_analytic sample.RDS"))
+
+readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra02_analytic sample.RDS")) %>% 
+haven::write_dta(.,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra02_analytic sample.dta"))

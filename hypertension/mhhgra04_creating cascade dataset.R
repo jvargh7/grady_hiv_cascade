@@ -99,4 +99,5 @@ cascade_df = cp1 %>%
          control_in_monitored = case_when(monitored == 1 ~ control,
                                            TRUE ~ NA_real_))
 
-saveRDS(cascade_df,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra04_hypertension cascade.RDS"))
+readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra04_hypertension cascade.RDS")) %>% 
+  haven::write_dta(.,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra04_hypertension cascade.dta"))

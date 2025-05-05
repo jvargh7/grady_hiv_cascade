@@ -161,4 +161,28 @@ cp1_encounter_check = cp1 %>%
   dplyr::filter(n>=1)
 
 
-
+readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra01_cp1 hypertension.RDS")) %>% 
+  dplyr::rename(dispensed_ccb = 'dispensed_CALCIUM CHANNEL BLOCKERS',
+                ordered_ccb = 'ordered_CALCIUM CHANNEL BLOCKERS',
+                dispensed_k_spar_diur = 'dispensed_POTASSIUM-SPARING DIURETICS',
+                dispensed_aldo_rec_antag = 'dispensed_ALDOSTERONE RECEPTOR ANTAGONISTS',
+                ordered_k_spar_diur = 'ordered_POTASSIUM-SPARING DIURETICS',
+                ordered_aldo_rec_antag = 'ordered_ALDOSTERONE RECEPTOR ANTAGONISTS',
+                
+                dispensed_thiazide_diur = 'dispensed_THIAZIDE DIURETICS',
+                dispensed_ace_inh = 'dispensed_ACE INHIBITORS',
+                dispensed_beta_bl = 'dispensed_BETA BLOCKERS',
+                dispensed_central_agon = 'dispensed_CENTRAL AGONISTS',
+                dispensed_loop_diur = 'dispensed_LOOP DIURETICS',
+                dispensed_alph_bet_blo = 'dispensed_ALPHA BETA BLOCKERS',
+                dispensed_alph_blo = 'dispensed_ALPHA BLOCKERS',
+                
+                ordered_thiazide_diur = 'ordered_THIAZIDE DIURETICS',
+                ordered_ace_inh = 'ordered_ACE INHIBITORS',
+                ordered_beta_bl = 'ordered_BETA BLOCKERS',
+                ordered_central_agon = 'ordered_CENTRAL AGONISTS',
+                ordered_loop_diur = 'ordered_LOOP DIURETICS',
+                ordered_alph_bet_blo = 'ordered_ALPHA BETA BLOCKERS',
+                ordered_alph_blo = 'ordered_ALPHA BLOCKERS'
+                ) %>% 
+  haven::write_dta(.,paste0(path_grady_hiv_cascade_folder,"/working/cleaned/mhhgra01_cp1 hypertension.dta"))
