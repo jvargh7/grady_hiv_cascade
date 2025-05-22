@@ -43,3 +43,16 @@ out = bind_rows(
 
 write_csv(out,"hypertension/mhhgra07_descriptive characteristics.csv")
 
+
+# Stratified by rasegrp -------------
+
+out_stratified = bind_rows(
+  
+  table1_summary(analytic_df,
+                 c_vars = c("bmi","dt_0_age","hba1c","hdl","ldl","tgl","glucose","alt","ast","sbp","dbp"),
+                 p_vars = c("alcohol_use","hiv_viral_load_lt200","iv_drug_user","stage1","stage2"),
+                 g_vars = c("cp1","is_smm","is_black","age_category"),
+                 id_vars = "rasegrp")
+) 
+
+write_csv(out_stratified,"hypertension/mhhgra07_descriptive characteristics by rasegrp.csv")
