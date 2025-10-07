@@ -495,79 +495,104 @@ Unknown,dbp,max,99,Continuous,NA
 Unknown,dbp,freq,13,Continuous,NA
 Unknown,dbp,missing,5,Continuous,NA
 Black Heterosexual Men,alcohol_use,proportion,52.13358070500927,Proportion,NA
-Black Heterosexual Men,alcohol_use,freq,539,Proportion,NA
+Black Heterosexual Men,alcohol_use,n,539,Proportion,NA
+Black Heterosexual Men,alcohol_use,freq,281,Proportion,NA
 Black Heterosexual Men,alcohol_use,missing,695,Proportion,NA
 Black Heterosexual Men,hiv_viral_load_lt200,proportion,98.63013698630137,Proportion,NA
-Black Heterosexual Men,hiv_viral_load_lt200,freq,949,Proportion,NA
+Black Heterosexual Men,hiv_viral_load_lt200,n,949,Proportion,NA
+Black Heterosexual Men,hiv_viral_load_lt200,freq,936,Proportion,NA
 Black Heterosexual Men,hiv_viral_load_lt200,missing,285,Proportion,NA
 Black Heterosexual Men,iv_drug_user,proportion,0.6482982171799028,Proportion,NA
-Black Heterosexual Men,iv_drug_user,freq,1234,Proportion,NA
+Black Heterosexual Men,iv_drug_user,n,1234,Proportion,NA
+Black Heterosexual Men,iv_drug_user,freq,8,Proportion,NA
 Black Heterosexual Men,iv_drug_user,missing,0,Proportion,NA
 Black Heterosexual Men,stage1,proportion,41.690635985938,Proportion,NA
-Black Heterosexual Men,stage1,freq,1043,Proportion,NA
+Black Heterosexual Men,stage1,n,1043,Proportion,NA
+Black Heterosexual Men,stage1,freq,434.8333333333333,Proportion,NA
 Black Heterosexual Men,stage1,missing,191,Proportion,NA
 Black Heterosexual Men,stage2,proportion,42.09012464046021,Proportion,NA
-Black Heterosexual Men,stage2,freq,1043,Proportion,NA
+Black Heterosexual Men,stage2,n,1043,Proportion,NA
+Black Heterosexual Men,stage2,freq,439,Proportion,NA
 Black Heterosexual Men,stage2,missing,191,Proportion,NA
 Black Sexual Minority Men,alcohol_use,proportion,60.68237205523964,Proportion,NA
-Black Sexual Minority Men,alcohol_use,freq,1231,Proportion,NA
+Black Sexual Minority Men,alcohol_use,n,1231,Proportion,NA
+Black Sexual Minority Men,alcohol_use,freq,747,Proportion,NA
 Black Sexual Minority Men,alcohol_use,missing,1338,Proportion,NA
 Black Sexual Minority Men,hiv_viral_load_lt200,proportion,97.14285714285714,Proportion,NA
-Black Sexual Minority Men,hiv_viral_load_lt200,freq,1925,Proportion,NA
+Black Sexual Minority Men,hiv_viral_load_lt200,n,1925,Proportion,NA
+Black Sexual Minority Men,hiv_viral_load_lt200,freq,1870,Proportion,NA
 Black Sexual Minority Men,hiv_viral_load_lt200,missing,644,Proportion,NA
 Black Sexual Minority Men,iv_drug_user,proportion,0.03894080996884735,Proportion,NA
-Black Sexual Minority Men,iv_drug_user,freq,2568,Proportion,NA
+Black Sexual Minority Men,iv_drug_user,n,2568,Proportion,NA
+Black Sexual Minority Men,iv_drug_user,freq,1,Proportion,NA
 Black Sexual Minority Men,iv_drug_user,missing,1,Proportion,NA
 Black Sexual Minority Men,stage1,proportion,43.41478407868449,Proportion,NA
-Black Sexual Minority Men,stage1,freq,2169,Proportion,NA
+Black Sexual Minority Men,stage1,n,2169,Proportion,NA
+Black Sexual Minority Men,stage1,freq,941.6666666666666,Proportion,NA
 Black Sexual Minority Men,stage1,missing,400,Proportion,NA
 Black Sexual Minority Men,stage2,proportion,39.119409866297836,Proportion,NA
-Black Sexual Minority Men,stage2,freq,2169,Proportion,NA
+Black Sexual Minority Men,stage2,n,2169,Proportion,NA
+Black Sexual Minority Men,stage2,freq,848.5,Proportion,NA
 Black Sexual Minority Men,stage2,missing,400,Proportion,NA
 Non-Black Heterosexual Men,alcohol_use,proportion,50,Proportion,NA
-Non-Black Heterosexual Men,alcohol_use,freq,72,Proportion,NA
+Non-Black Heterosexual Men,alcohol_use,n,72,Proportion,NA
+Non-Black Heterosexual Men,alcohol_use,freq,36,Proportion,NA
 Non-Black Heterosexual Men,alcohol_use,missing,124,Proportion,NA
 Non-Black Heterosexual Men,hiv_viral_load_lt200,proportion,100,Proportion,NA
+Non-Black Heterosexual Men,hiv_viral_load_lt200,n,150,Proportion,NA
 Non-Black Heterosexual Men,hiv_viral_load_lt200,freq,150,Proportion,NA
 Non-Black Heterosexual Men,hiv_viral_load_lt200,missing,46,Proportion,NA
 Non-Black Heterosexual Men,iv_drug_user,proportion,0,Proportion,NA
-Non-Black Heterosexual Men,iv_drug_user,freq,196,Proportion,NA
+Non-Black Heterosexual Men,iv_drug_user,n,196,Proportion,NA
+Non-Black Heterosexual Men,iv_drug_user,freq,0,Proportion,NA
 Non-Black Heterosexual Men,iv_drug_user,missing,0,Proportion,NA
 Non-Black Heterosexual Men,stage1,proportion,41.66666666666667,Proportion,NA
-Non-Black Heterosexual Men,stage1,freq,156,Proportion,NA
+Non-Black Heterosexual Men,stage1,n,156,Proportion,NA
+Non-Black Heterosexual Men,stage1,freq,65,Proportion,NA
 Non-Black Heterosexual Men,stage1,missing,40,Proportion,NA
 Non-Black Heterosexual Men,stage2,proportion,35.8974358974359,Proportion,NA
-Non-Black Heterosexual Men,stage2,freq,156,Proportion,NA
+Non-Black Heterosexual Men,stage2,n,156,Proportion,NA
+Non-Black Heterosexual Men,stage2,freq,56,Proportion,NA
 Non-Black Heterosexual Men,stage2,missing,40,Proportion,NA
 Non-Black Sexual Minority Men,alcohol_use,proportion,57.05128205128205,Proportion,NA
-Non-Black Sexual Minority Men,alcohol_use,freq,312,Proportion,NA
+Non-Black Sexual Minority Men,alcohol_use,n,312,Proportion,NA
+Non-Black Sexual Minority Men,alcohol_use,freq,178,Proportion,NA
 Non-Black Sexual Minority Men,alcohol_use,missing,305,Proportion,NA
 Non-Black Sexual Minority Men,hiv_viral_load_lt200,proportion,98.30148619957538,Proportion,NA
-Non-Black Sexual Minority Men,hiv_viral_load_lt200,freq,471,Proportion,NA
+Non-Black Sexual Minority Men,hiv_viral_load_lt200,n,471,Proportion,NA
+Non-Black Sexual Minority Men,hiv_viral_load_lt200,freq,463,Proportion,NA
 Non-Black Sexual Minority Men,hiv_viral_load_lt200,missing,146,Proportion,NA
 Non-Black Sexual Minority Men,iv_drug_user,proportion,0.9724473257698543,Proportion,NA
-Non-Black Sexual Minority Men,iv_drug_user,freq,617,Proportion,NA
+Non-Black Sexual Minority Men,iv_drug_user,n,617,Proportion,NA
+Non-Black Sexual Minority Men,iv_drug_user,freq,6,Proportion,NA
 Non-Black Sexual Minority Men,iv_drug_user,missing,0,Proportion,NA
 Non-Black Sexual Minority Men,stage1,proportion,41.81636726546906,Proportion,NA
-Non-Black Sexual Minority Men,stage1,freq,501,Proportion,NA
+Non-Black Sexual Minority Men,stage1,n,501,Proportion,NA
+Non-Black Sexual Minority Men,stage1,freq,209.5,Proportion,NA
 Non-Black Sexual Minority Men,stage1,missing,116,Proportion,NA
 Non-Black Sexual Minority Men,stage2,proportion,42.115768463073856,Proportion,NA
-Non-Black Sexual Minority Men,stage2,freq,501,Proportion,NA
+Non-Black Sexual Minority Men,stage2,n,501,Proportion,NA
+Non-Black Sexual Minority Men,stage2,freq,211,Proportion,NA
 Non-Black Sexual Minority Men,stage2,missing,116,Proportion,NA
 Unknown,alcohol_use,proportion,71.42857142857143,Proportion,NA
-Unknown,alcohol_use,freq,7,Proportion,NA
+Unknown,alcohol_use,n,7,Proportion,NA
+Unknown,alcohol_use,freq,5,Proportion,NA
 Unknown,alcohol_use,missing,11,Proportion,NA
 Unknown,hiv_viral_load_lt200,proportion,86.66666666666667,Proportion,NA
-Unknown,hiv_viral_load_lt200,freq,15,Proportion,NA
+Unknown,hiv_viral_load_lt200,n,15,Proportion,NA
+Unknown,hiv_viral_load_lt200,freq,13,Proportion,NA
 Unknown,hiv_viral_load_lt200,missing,3,Proportion,NA
 Unknown,iv_drug_user,proportion,0,Proportion,NA
-Unknown,iv_drug_user,freq,18,Proportion,NA
+Unknown,iv_drug_user,n,18,Proportion,NA
+Unknown,iv_drug_user,freq,0,Proportion,NA
 Unknown,iv_drug_user,missing,0,Proportion,NA
 Unknown,stage1,proportion,61.53846153846154,Proportion,NA
-Unknown,stage1,freq,13,Proportion,NA
+Unknown,stage1,n,13,Proportion,NA
+Unknown,stage1,freq,8,Proportion,NA
 Unknown,stage1,missing,5,Proportion,NA
 Unknown,stage2,proportion,38.46153846153847,Proportion,NA
-Unknown,stage2,freq,13,Proportion,NA
+Unknown,stage2,n,13,Proportion,NA
+Unknown,stage2,freq,5,Proportion,NA
 Unknown,stage2,missing,5,Proportion,NA
 Black Heterosexual Men,cp1,proportion,31.68557536466775,Grouped,0
 Black Heterosexual Men,cp1,freq,391,Grouped,0

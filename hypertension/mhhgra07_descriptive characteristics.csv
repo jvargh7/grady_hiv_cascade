@@ -198,34 +198,44 @@ Detected Hypertension,dbp,max,129,Continuous,NA
 Detected Hypertension,dbp,freq,2564,Continuous,NA
 Detected Hypertension,dbp,missing,273,Continuous,NA
 No Hypertension,alcohol_use,proportion,61.71875,Proportion,NA
-No Hypertension,alcohol_use,freq,768,Proportion,NA
+No Hypertension,alcohol_use,n,768,Proportion,NA
+No Hypertension,alcohol_use,freq,474,Proportion,NA
 No Hypertension,alcohol_use,missing,1029,Proportion,NA
 No Hypertension,hiv_viral_load_lt200,proportion,97.01149425287356,Proportion,NA
-No Hypertension,hiv_viral_load_lt200,freq,1305,Proportion,NA
+No Hypertension,hiv_viral_load_lt200,n,1305,Proportion,NA
+No Hypertension,hiv_viral_load_lt200,freq,1266,Proportion,NA
 No Hypertension,hiv_viral_load_lt200,missing,492,Proportion,NA
 No Hypertension,iv_drug_user,proportion,0.11135857461024498,Proportion,NA
-No Hypertension,iv_drug_user,freq,1796,Proportion,NA
+No Hypertension,iv_drug_user,n,1796,Proportion,NA
+No Hypertension,iv_drug_user,freq,2,Proportion,NA
 No Hypertension,iv_drug_user,missing,1,Proportion,NA
 No Hypertension,stage1,proportion,36.53262518968133,Proportion,NA
-No Hypertension,stage1,freq,1318,Proportion,NA
+No Hypertension,stage1,n,1318,Proportion,NA
+No Hypertension,stage1,freq,481.5,Proportion,NA
 No Hypertension,stage1,missing,479,Proportion,NA
 No Hypertension,stage2,proportion,9.939301972685888,Proportion,NA
-No Hypertension,stage2,freq,1318,Proportion,NA
+No Hypertension,stage2,n,1318,Proportion,NA
+No Hypertension,stage2,freq,131,Proportion,NA
 No Hypertension,stage2,missing,479,Proportion,NA
 Detected Hypertension,alcohol_use,proportion,55.49174443646806,Proportion,NA
-Detected Hypertension,alcohol_use,freq,1393,Proportion,NA
+Detected Hypertension,alcohol_use,n,1393,Proportion,NA
+Detected Hypertension,alcohol_use,freq,773,Proportion,NA
 Detected Hypertension,alcohol_use,missing,1444,Proportion,NA
 Detected Hypertension,hiv_viral_load_lt200,proportion,98.2312925170068,Proportion,NA
-Detected Hypertension,hiv_viral_load_lt200,freq,2205,Proportion,NA
+Detected Hypertension,hiv_viral_load_lt200,n,2205,Proportion,NA
+Detected Hypertension,hiv_viral_load_lt200,freq,2166,Proportion,NA
 Detected Hypertension,hiv_viral_load_lt200,missing,632,Proportion,NA
 Detected Hypertension,iv_drug_user,proportion,0.45823052520267893,Proportion,NA
-Detected Hypertension,iv_drug_user,freq,2837,Proportion,NA
+Detected Hypertension,iv_drug_user,n,2837,Proportion,NA
+Detected Hypertension,iv_drug_user,freq,13,Proportion,NA
 Detected Hypertension,iv_drug_user,missing,0,Proportion,NA
 Detected Hypertension,stage1,proportion,45.924336973478944,Proportion,NA
-Detected Hypertension,stage1,freq,2564,Proportion,NA
+Detected Hypertension,stage1,n,2564,Proportion,NA
+Detected Hypertension,stage1,freq,1177.5,Proportion,NA
 Detected Hypertension,stage1,missing,273,Proportion,NA
 Detected Hypertension,stage2,proportion,55.71372854914196,Proportion,NA
-Detected Hypertension,stage2,freq,2564,Proportion,NA
+Detected Hypertension,stage2,n,2564,Proportion,NA
+Detected Hypertension,stage2,freq,1428.5,Proportion,NA
 Detected Hypertension,stage2,missing,273,Proportion,NA
 No Hypertension,rasegrp,proportion,21.758486366165833,Grouped,Black Heterosexual Men
 No Hypertension,rasegrp,freq,391,Grouped,Black Heterosexual Men
@@ -383,13 +393,16 @@ Overall,dbp,max,129,Continuous,NA
 Overall,dbp,freq,3882,Continuous,NA
 Overall,dbp,missing,752,Continuous,NA
 Overall,alcohol_use,proportion,57.70476631189264,Proportion,NA
-Overall,alcohol_use,freq,2161,Proportion,NA
+Overall,alcohol_use,n,2161,Proportion,NA
+Overall,alcohol_use,freq,1247,Proportion,NA
 Overall,alcohol_use,missing,2473,Proportion,NA
 Overall,hiv_viral_load_lt200,proportion,97.77777777777777,Proportion,NA
-Overall,hiv_viral_load_lt200,freq,3510,Proportion,NA
+Overall,hiv_viral_load_lt200,n,3510,Proportion,NA
+Overall,hiv_viral_load_lt200,freq,3432,Proportion,NA
 Overall,hiv_viral_load_lt200,missing,1124,Proportion,NA
 Overall,iv_drug_user,proportion,0.32376429958989855,Proportion,NA
-Overall,iv_drug_user,freq,4633,Proportion,NA
+Overall,iv_drug_user,n,4633,Proportion,NA
+Overall,iv_drug_user,freq,15,Proportion,NA
 Overall,iv_drug_user,missing,1,Proportion,NA
 Overall,rasegrp,proportion,26.629261976694,Grouped,Black Heterosexual Men
 Overall,rasegrp,freq,1234,Grouped,Black Heterosexual Men

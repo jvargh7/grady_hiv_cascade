@@ -52,7 +52,8 @@ table1_summary <- function(df, c_vars = character(),
     table1_summary_proportions <- df %>% 
       summarize(across(one_of(p_vars),
                    .fns = list(proportion = ~mean(.,na.rm=TRUE),
-                                freq = ~sum(!is.na(.)),
+                                n = ~sum(!is.na(.)),
+                               freq = ~sum(.,na.rm=TRUE),
                                missing = ~sum(is.na(.))),
                    .names = "{col}__{fn}")) 
     
