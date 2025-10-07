@@ -1,5 +1,6 @@
 rm(list=ls());gc();source(".Rprofile")
 
+# analytic sample codes
 cp2 <- readRDS(paste0(path_grady_hiv_cascade_folder,"/working/cleaned/ghcd01_cp2 diabetes.RDS"))
 
 
